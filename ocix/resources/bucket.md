@@ -12,9 +12,22 @@ Unlike other kinds of storage like file storage, data is not stored in a
 hierarchical structure, but rather as a flat list of objects, each associated
 with a key.
 
-## API Reference
+## Table of Contents
 
-### Initializers
+<!-- markdownlint-disable MD007 -->
+- [API Reference](#api-reference)
+    - [Initializers](#initializers)
+    - [Methods](#methods)
+        - [Preflight Methods](#preflight-methods)
+        - [Inflight Methods](#inflight-methods)
+- [Structs](#structs)
+- [Protocols](#protocols)
+- [Enums](#enums)
+<!-- markdownlint-enable MD007 -->
+
+## API Reference <a id="api-reference"></a>
+
+### Initializers <a id="initializers"></a>
 
 ```wing
 new Bucket(props?: BucketProps);
@@ -32,20 +45,20 @@ new Bucket(props?: BucketProps);
 
 ---
 
-### Methods
+### Methods <a id="methods"></a>
 
-#### Preflight Methods
+#### Preflight Methods <a id="preflight-methods"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| [`addFile`](#preflight-addFile-) | Add a file to the bucket from system folder. |
-| [`addObject`](#preflight-addObject-) | Add a file to the bucket that is uploaded when the app is deployed. |
-| [`onCreate`](#preflight-onCreate-) | Run an inflight whenever a file is uploaded to the bucket. |
-| [`onDelete`](#preflight-onDelete-) | Run an inflight whenever a file is deleted from the bucket. |
-| [`onEvent`](#preflight-onEvent-) | Run an inflight whenever a file is uploaded, modified, or deleted from the bucket. |
-| [`onUpdate`](#preflight-onUpdate-) | Run an inflight whenever a file is updated in the bucket. |
+| [`addFile`](#addFile-) | Add a file to the bucket from system folder. |
+| [`addObject`](#addObject-) | Add a file to the bucket that is uploaded when the app is deployed. |
+| [`onCreate`](#onCreate-) | Run an inflight whenever a file is uploaded to the bucket. |
+| [`onDelete`](#onDelete-) | Run an inflight whenever a file is deleted from the bucket. |
+| [`onEvent`](#onEvent-) | Run an inflight whenever a file is uploaded, modified, or deleted from the bucket. |
+| [`onUpdate`](#onUpdate-) | Run an inflight whenever a file is updated in the bucket. |
 
-#### Inflight Methods
+#### Inflight Methods <a id="inflight-methods"></a>
 
 | **Name** | **Description** |
 | --- | --- |
@@ -67,7 +80,7 @@ new Bucket(props?: BucketProps);
 
 ---
 
-##### preflight addFile <a id="preflight-addFile-"></a>
+##### addFile <a id="addFile-"></a>
 
 ```wing
 addFile(key: str, path: str, encoding?: str): void
@@ -101,7 +114,7 @@ Defaults to "utf-8".
 
 ---
 
-##### `preflight addObject` <a id="preflight-addObject-"></a>
+##### `addObject` <a id="addObject-"></a>
 
 ```wing
 addObject(key: str, body: str): void
@@ -124,7 +137,7 @@ referencing a file from the local filesystem.
 
 ---
 
-##### `preflight onCreate` <a id="preflight-onCreate-"></a>
+##### `onCreate` <a id="onCreate-"></a>
 
 ```wing
 onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
@@ -144,7 +157,7 @@ Run an inflight whenever a file is uploaded to the bucket.
 
 ---
 
-##### `preflight onDelete` <a id="preflight-onDelete-"></a>
+##### `onDelete` <a id="onDelete-"></a>
 
 ```wing
 onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
@@ -164,7 +177,7 @@ Run an inflight whenever a file is deleted from the bucket.
 
 ---
 
-##### `preflight onEvent` <a id="preflight-onEvent-"></a>
+##### `onEvent` <a id="onEvent-"></a>
 
 ```wing
 onEvent(fn: IBucketEventHandler, opts?: BucketOnEventOptions): void
@@ -184,7 +197,7 @@ Run an inflight whenever a file is uploaded, modified, or deleted from the bucke
 
 ---
 
-##### `preflight onUpdate` <a id="preflight-onUpdate-"></a>
+##### `onUpdate` <a id="onUpdate-"></a>
 
 ```wing
 onUpdate(fn: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
@@ -521,17 +534,11 @@ Key of the object.
 
 ---
 
-## Structs <a name="Structs" id="Structs"></a>
+## Structs <a id="structs"></a>
 
 ### BucketDeleteOptions <a id="BucketDeleteOptions-"></a>
 
 Options for `Bucket.delete()`.
-
-#### Initializer <a id="BucketDeleteOptions.Initializer"></a>
-
-```wing
-let BucketDeleteOptions = BucketDeleteOptions{ ... };
-```
 
 #### Properties <a name="Properties" id="BucketDeleteOptions.Properties"></a>
 
@@ -555,12 +562,6 @@ Check failures on the method and retrieve errors if any.
 ---
 
 ### BucketEvent <a id="BucketEvent-"></a>
-
-#### Initializer <a id="BucketEvent.Initializer"></a>
-
-```wing
-let BucketEvent = BucketEvent{ ... };
-```
 
 #### Properties <a id="BucketEvent.Properties"></a>
 
@@ -598,12 +599,6 @@ Type of event.
 ### BucketGetOptions <a id="BucketGetOptions-"></a>
 
 Options for `Bucket.get()`.
-
-#### Initializer <a id="BucketGetOptions.Initializer"></a>
-
-```wing
-let BucketGetOptions = BucketGetOptions{ ... };
-```
 
 #### Properties <a id="BucketGetOptions.Properties"></a>
 
@@ -644,51 +639,21 @@ The starting byte to read from.
 
 `onCreate` event options.
 
-#### Initializer <a id="BucketOnCreateOptions.Initializer"></a>
-
-```wing
-let BucketOnCreateOptions = BucketOnCreateOptions{ ... };
-```
-
 ### BucketOnDeleteOptions <a id="BucketOnDeleteOptions-"></a>
 
 `onDelete` event options.
-
-#### Initializer <a id="BucketOnDeleteOptions.Initializer"></a>
-
-```wing
-let BucketOnDeleteOptions = BucketOnDeleteOptions{ ... };
-```
 
 ### BucketOnEventOptions <a id="BucketOnEventOptions-"></a>
 
 `onEvent` options.
 
-#### Initializer <a id="BucketOnEventOptions.Initializer"></a>
-
-```wing
-let BucketOnEventOptions = BucketOnEventOptions{ ... };
-```
-
-### BucketOnUpdateOptions <a id="BucketOnUpdateOptions"></a>
+### BucketOnUpdateOptions <a id="BucketOnUpdateOptions-"></a>
 
 `onUpdate` event options.
-
-#### Initializer <a id="BucketOnUpdateOptions.Initializer"></a>
-
-```wing
-let BucketOnUpdateOptions = BucketOnUpdateOptions{ ... };
-```
 
 ### BucketProps <a id="BucketProps-"></a>
 
 Options for `Bucket`.
-
-#### Initializer <a id="BucketProps.Initializer"></a>
-
-```wing
-let BucketProps = BucketProps{ ... };
-```
 
 #### Properties <a id="BucketProps.Properties"></a>
 
@@ -714,12 +679,6 @@ Whether the bucket's objects should be publicly accessible.
 ### BucketPutOptions <a name id="BucketPutOptions-"></a>
 
 Options for `Bucket.put()`.
-
-#### Initializer <a id="BucketPutOptions.Initializer"></a>
-
-```wing
-let BucketPutOptions = BucketPutOptions{ ... };
-```
 
 #### Properties <a id="BucketPutOptions.Properties"></a>
 
@@ -747,12 +706,6 @@ The HTTP Content-Type of the object.
 ### BucketSignedUrlOptions <a id="BucketSignedUrlOptions-"></a>
 
 Options for `Bucket.signedUrl()`.
-
-#### Initializer <a id="BucketSignedUrlOptions.Initializer"></a>
-
-```wing
-let BucketSignedUrlOptions = BucketSignedUrlOptions{ ... };
-```
 
 #### Properties <a id="BucketSignedUrlOptions.Properties"></a>
 
@@ -793,12 +746,6 @@ The duration for the signed URL to expire.
 
 Options for `Bucket.tryGet()`.
 
-#### Initializer <a id="BucketTryGetOptions.Initializer"></a>
-
-```wing
-let BucketTryGetOptions = BucketTryGetOptions{ ... };
-```
-
 #### Properties <a id="BucketTryGetOptions.Properties"></a>
 
 | **Name** | **Type** | **Description** |
@@ -837,12 +784,6 @@ The starting byte to read from.
 ### ObjectMetadata <a id="ObjectMetadata-"></a>
 
 Metadata of a bucket object.
-
-#### Initializer <a id="ObjectMetadata.Initializer"></a>
-
-```wing
-let ObjectMetadata = ObjectMetadata{ ... };
-```
 
 #### Properties <a id="ObjectMetadata.Properties"></a>
 
@@ -890,7 +831,7 @@ The content type of the object, if it is known.
 
 ---
 
-## Protocols <a id="Protocols"></a>
+## Protocols <a id="protocols"></a>
 
 ### IBucketEventHandler <a id="IBucketEventHandler-"></a>
 
@@ -922,7 +863,7 @@ Function that will be called when an event notification is fired.
 
 ---
 
-## Enums <a id="Enums"></a>
+## Enums <a id="enums"></a>
 
 ### BucketEventType <a id="BucketEventType-"></a>
 
