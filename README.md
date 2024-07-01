@@ -1,2 +1,2 @@
-# Open Cloud Specification
+# Open Cloud Interface Specification (OCIX)
 TBC
