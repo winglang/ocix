@@ -22,13 +22,13 @@ new Bucket(props?: BucketProps);
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| '[props](#Bucket.Initializer.parameter.props)` | `[BucketProps]()` | *No description.* TODO |
+| [`props`](#Bucket.Initializer.parameter.props) | [`BucketProps`](#BucketProps) | *No description.* TODO |
 
 ---
 
 #### `props`<sup>Optional</sup> <a name="props" id="Bucket.Initializer.parameter.props"></a>
 
-- *Type:* `[BucketProps](#BucketProps)`
+- *Type:* [`BucketProps`](#BucketProps)
 
 ---
 
@@ -38,32 +38,32 @@ new Bucket(props?: BucketProps);
 
 | **Name** | **Description** |
 | --- | --- |
-| `[addFile](#Bucket.addFile)` | Add a file to the bucket from system folder. |
-| `[addObject](#Bucket.addObject)` | Add a file to the bucket that is uploaded when the app is deployed. |
-| `[onCreate](#Bucket.onCreate)` | Run an inflight whenever a file is uploaded to the bucket. |
-| `[onDelete](#Bucket.onDelete)` | Run an inflight whenever a file is deleted from the bucket. |
-| `[onEvent](#Bucket.onEvent)` | Run an inflight whenever a file is uploaded, modified, or deleted from the bucket. |
-| `[onUpdate](#Bucket.onUpdate)` | Run an inflight whenever a file is updated in the bucket. |
+| [`addFile`](#Bucket.addFile) | Add a file to the bucket from system folder. |
+| [`addObject`](#Bucket.addObject) | Add a file to the bucket that is uploaded when the app is deployed. |
+| [`onCreate`](#Bucket.onCreate) | Run an inflight whenever a file is uploaded to the bucket. |
+| [`onDelete`](#Bucket.onDelete) | Run an inflight whenever a file is deleted from the bucket. |
+| [`onEvent`](#Bucket.onEvent) | Run an inflight whenever a file is uploaded, modified, or deleted from the bucket. |
+| [`onUpdate`](#Bucket.onUpdate) | Run an inflight whenever a file is updated in the bucket. |
 
 #### Inflight Methods
 
 | **Name** | **Description** |
 | --- | --- |
-| `[copy](#IBucketClient.copy)` | Copy an object to a new location in the bucket. |
-| `[delete](#IBucketClient.delete)` | Delete an existing object using a key from the bucket. |
-| `[exists](#IBucketClient.exists)` | Check if an object exists in the bucket. |
-| `[get](#IBucketClient.get)` | Retrieve an object from the bucket. |
-| `[getJson](#IBucketClient.getJson)` | Retrieve a Json object from the bucket. |
-| `[list](#IBucketClient.list)` | Retrieve existing objects keys from the bucket. |
-| `[metadata](#IBucketClient.metadata)` | Get the metadata of an object in the bucket. |
-| `[publicUrl](#IBucketClient.publicUrl)` | Returns a url to the given file. |
-| `[put](#IBucketClient.put)` | Put an object in the bucket. |
-| `[putJson](#IBucketClient.putJson)` | Put a Json object in the bucket. |
-| `[rename](#IBucketClient.rename)` | Move an object to a new location in the bucket. |
-| `[signedUrl](#IBucketClient.signedUrl)` | Returns a signed url to the given file. |
-| `[tryDelete](#IBucketClient.tryDelete)` | Delete an object from the bucket if it exists. |
-| `[tryGet]#IBucketClient.tryGet()` | Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown. |
-| `[tryGetJson](#IBucketClient.tryGetJson)` | Gets an object from the bucket if it exists, parsing it as Json. |
+| [`copy`](#IBucketClient.copy) | Copy an object to a new location in the bucket. |
+| [`delete`](#IBucketClient.delete) | Delete an existing object using a key from the bucket. |
+| [`exists`](#IBucketClient.exists) | Check if an object exists in the bucket. |
+| [`get`](#IBucketClient.get) | Retrieve an object from the bucket. |
+| [`getJson`](#IBucketClient.getJson) | Retrieve a Json object from the bucket. |
+| [`list`](#IBucketClient.list) | Retrieve existing objects keys from the bucket. |
+| [`metadata`](#IBucketClient.metadata) | Get the metadata of an object in the bucket. |
+| [`publicUrl`](#IBucketClient.publicUrl) | Returns a url to the given file. |
+| [`put`](#IBucketClient.put) | Put an object in the bucket. |
+| [`putJson`](#IBucketClient.putJson) | Put a Json object in the bucket. |
+| [`rename`](#IBucketClient.rename) | Move an object to a new location in the bucket. |
+| [`signedUrl`](#IBucketClient.signedUrl) | Returns a signed url to the given file. |
+| [`tryDelete`](#IBucketClient.tryDelete) | Delete an object from the bucket if it exists. |
+| [`tryGet`]#IBucketClient.tryGet() | Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown. |
+| [`tryGetJson`](#IBucketClient.tryGetJson) | Gets an object from the bucket if it exists, parsing it as Json. |
 
 ---
 
@@ -124,7 +124,7 @@ referencing a file from the local filesystem.
 
 ---
 
-##### `onCreate` <a name="onCreate" id="@Bucket.onCreate"></a>
+##### `onCreate` <a name="onCreate" id="Bucket.onCreate"></a>
 
 ```wing
 onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
@@ -134,13 +134,13 @@ Run an inflight whenever a file is uploaded to the bucket.
 
 ###### `fn`<sup>Required</sup> <a name="fn" id="Bucket.onCreate.parameter.fn"></a>
 
-- *Type:* `[IBucketEventHandler](#IBucketEventHandler)`
+- *Type:* [`IBucketEventHandler`](#IBucketEventHandler)
 
 ---
 
 ###### `opts`<sup>Optional</sup> <a name="opts" id="Bucket.onCreate.parameter.opts"></a>
 
-- *Type:* `[BucketOnCreateOptions](#BucketCreateOptions)`
+- *Type:* [`BucketOnCreateOptions`](#BucketCreateOptions)
 
 ---
 
@@ -154,13 +154,13 @@ Run an inflight whenever a file is deleted from the bucket.
 
 ###### `fn`<sup>Required</sup> <a name="fn" id="Bucket.onDelete.parameter.fn"></a>
 
-- *Type:* `[IBucketEventHandler](#IBucketEventHandler)`
+- *Type:* [`IBucketEventHandler`](#IBucketEventHandler)
 
 ---
 
 ###### `opts`<sup>Optional</sup> <a name="opts" id="Bucket.onDelete.parameter.opts"></a>
 
-- *Type:* `[BucketOnDeleteOptions](#BucketOnDeleteOptions)`
+- *Type:* [`BucketOnDeleteOptions`](#BucketOnDeleteOptions)
 
 ---
 
@@ -174,13 +174,13 @@ Run an inflight whenever a file is uploaded, modified, or deleted from the bucke
 
 ###### `fn`<sup>Required</sup> <a name="fn" id="Bucket.onEvent.parameter.fn"></a>
 
-- *Type:* `[IBucketEventHandler](#IBucketEventHandler)`
+- *Type:* [`IBucketEventHandler`](#IBucketEventHandler)
 
 ---
 
 ###### `opts`<sup>Optional</sup> <a name="opts" id="Bucket.onEvent.parameter.opts"></a>
 
-- *Type:* `[BucketOnEventOptions](#BucketOnEventOptions)`
+- *Type:* [`BucketOnEventOptions`](#BucketOnEventOptions)
 
 ---
 
@@ -194,13 +194,13 @@ Run an inflight whenever a file is updated in the bucket.
 
 ###### `fn`<sup>Required</sup> <a name="fn" id="Bucket.onUpdate.parameter.fn"></a>
 
-- *Type:* `[IBucketEventHandler](#IBucketEventHandler)`
+- *Type:* [`IBucketEventHandler`](#IBucketEventHandler)
 
 ---
 
 ###### `opts`<sup>Optional</sup> <a name="opts" id="Bucket.onUpdate.parameter.opts"></a>
 
-- *Type:* `[BucketOnUpdateOptions](#BucketOnUpdateOptions)`
+- *Type:* [`BucketOnUpdateOptions`](#BucketOnUpdateOptions)
 
 ---
 
@@ -212,8 +212,7 @@ inflight copy(srcKey: str, dstKey: str): void
 
 Copy an object to a new location in the bucket.
 
-If the destination object
-already exists, it will be overwritten.
+If the destination object already exists, it will be overwritten.
 
 ###### `srcKey`<sup>Required</sup> <a name="srcKey" id="IBucketClient.copy.parameter.srcKey"></a>
 
@@ -249,7 +248,7 @@ Key of the object.
 
 ###### `opts`<sup>Optional</sup> <a name="opts" id="IBucketClient.delete.parameter.opts"></a>
 
-- *Type:* `[BucketDeleteOptions](#BucketDeleteOptions)`
+- *Type:* [`BucketDeleteOptions`](#BucketDeleteOptions)
 
 Options available for delete an item from a bucket.
 
@@ -291,7 +290,7 @@ Key of the object.
 
 ###### `options`<sup>Optional</sup> <a name="options" id="IBucketClient.get.parameter.options"></a>
 
-- *Type:* `[BucketGetOptions](#BucketGetOptions)`
+- *Type:* [`BucketGetOptions`](#BucketGetOptions)
 
 Additional get options.
 
@@ -385,7 +384,7 @@ Content of the object we want to store into the bucket.
 
 ###### `options`<sup>Optional</sup> <a name="options" id="IBucketClient.put.parameter.options"></a>
 
-- *Type:* `[BucketPutOptions](#BucketPutOptions)`
+- *Type:* [`BucketPutOptions`](#BucketPutOptions)
 
 Additional options.
 
@@ -409,7 +408,7 @@ Key of the object.
 
 ###### `body`<sup>Required</sup> <a name="body" id="IBucketClient.putJson.parameter.body"></a>
 
-- *Type:* `[Json](#Json)`
+- *Type:* [`Json`](#Json)
 
 Json object that we want to store into the bucket.
 
@@ -423,8 +422,8 @@ inflight rename(srcKey: str, dstKey: str): void
 
 Move an object to a new location in the bucket.
 
-If the destination object
-already exists, it will be overwritten. Returns once the renaming is finished.
+If the destination object already exists, it will be overwritten. 
+Returns once the renaming is finished.
 
 ###### `srcKey`<sup>Required</sup> <a name="srcKey" id="IBucketClient.rename.parameter.srcKey"></a>
 
@@ -460,7 +459,7 @@ The key to access the cloud object.
 
 ###### `options`<sup>Optional</sup> <a name="options" id="IBucketClient.signedUrl.parameter.options"></a>
 
-- *Type:* `[BucketSignedUrlOptions](#BucketSignedUrlOptions)`
+- *Type:* [`BucketSignedUrlOptions`](#BucketSignedUrlOptions)
 
 The signedUrlOptions where you can provide the configurations of the signed url.
 
@@ -500,7 +499,7 @@ Key of the object.
 
 ###### `options`<sup>Optional</sup> <a name="options" id="IBucketClient.tryGet.parameter.options"></a>
 
-- *Type:* `[BucketTryGetOptions](#BucketTryGetOptions)`
+- *Type:* [`BucketTryGetOptions`](#BucketTryGetOptions)
 
 Additional get options.
 
@@ -538,7 +537,7 @@ let BucketDeleteOptions = BucketDeleteOptions{ ... };
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| `[mustExist](#BucketDeleteOptions.property.mustExist)` | `bool` | Check failures on the method and retrieve errors if any. |
+| [`mustExist`](#BucketDeleteOptions.property.mustExist) | `bool` | Check failures on the method and retrieve errors if any. |
 
 ---
 
@@ -563,12 +562,12 @@ Check failures on the method and retrieve errors if any.
 let BucketEvent = BucketEvent{ ... };
 ```
 
-#### Properties <a name="Properties" id="BucketEvent.Initializer.Properties"></a>
+#### Properties <a name="Properties" id="BucketEvent.Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| `[key](#BucketEvent.property.key)` | `str` | The bucket key that triggered the event. |
-| `[type](#BucketEvent.property.type)` | `[BucketEventType](#BucketEventType)` | Type of event. |
+| [`key`](#BucketEvent.property.key) | `str` | The bucket key that triggered the event. |
+| [`type`](#BucketEvent.property.type) | [`BucketEventType`](#BucketEventType) | Type of event. |
 
 ---
 
@@ -590,7 +589,7 @@ The bucket key that triggered the event.
 type: BucketEventType;
 ```
 
-- *Type:* `[BucketEventType](#BucketEventType)`
+- *Type:* [`BucketEventType`](#BucketEventType)
 
 Type of event.
 
@@ -606,12 +605,12 @@ Options for `Bucket.get()`.
 let BucketGetOptions = BucketGetOptions{ ... };
 ```
 
-#### Properties <a name="Properties" id="BucketGetOptions.Initializer.Properties"></a>
+#### Properties <a name="Properties" id="BucketGetOptions.Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| `[endByte](#BucketGetOptions.property.endByte)` | `num` | The ending byte to read up to (including). |
-| `[startByte](#BucketGetOptions.property.startByte)` | `num` | The starting byte to read from. |
+| [`endByte`](#BucketGetOptions.property.endByte) | `num` | The ending byte to read up to (including). |
+| [`startByte`](#BucketGetOptions.property.startByte) | `num` | The starting byte to read from. |
 
 ---
 
@@ -691,11 +690,11 @@ Options for `Bucket`.
 let BucketProps = BucketProps{ ... };
 ```
 
-#### Properties <a name="Properties" id="BucketProps.Initializer.Properties"></a>
+#### Properties <a name="Properties" id="BucketProps.Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| `[public](#BucketProps.property.public)` | bool | Whether the bucket's objects should be publicly accessible. |
+| [`public`](#BucketProps.property.public) | `bool` | Whether the bucket's objects should be publicly accessible. |
 
 ---
 
@@ -722,11 +721,11 @@ Options for `Bucket.put()`.
 let BucketPutOptions = BucketPutOptions{ ... };
 ```
 
-#### Properties <a name="Properties" id="BucketPutOptions.Initializer.Properties"></a>
+#### Properties <a name="Properties" id="BucketPutOptions.Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| `[contentType](#BucketPutOptions.property.contentType)` | `str` | The HTTP Content-Type of the object. |
+| [`contentType`](#BucketPutOptions.property.contentType) | `str` | The HTTP Content-Type of the object. |
 
 ---
 
@@ -759,8 +758,8 @@ let BucketSignedUrlOptions = BucketSignedUrlOptions{ ... };
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| `[action](#BucketSignedUrlOptions.property.action)` | `[BucketSignedUrlAction](#BucketSignedUrlAction)` | The action allowed by the signed URL. |
-| `[duration](#BucketSignedUrlOptions.property.duration)` | `[duration](#Duration)` | The duration for the signed URL to expire. |
+| [`action`](#BucketSignedUrlOptions.property.action) | [`BucketSignedUrlAction`](#BucketSignedUrlAction) | The action allowed by the signed URL. |
+| [`duration`](#BucketSignedUrlOptions.property.duration) | [`duration`](#Duration) | The duration for the signed URL to expire. |
 
 ---
 
@@ -770,8 +769,8 @@ let BucketSignedUrlOptions = BucketSignedUrlOptions{ ... };
 action: BucketSignedUrlAction;
 ```
 
-- *Type:* `[BucketSignedUrlAction](#BucketSignedUrlAction)`
-- *Default:* BucketSignedUrlAction.DOWNLOAD
+- *Type:* [`BucketSignedUrlAction`](#BucketSignedUrlAction)
+- *Default:* [`BucketSignedUrlAction.DOWNLOAD`](#BucketSignedUrlAction.DOWNLOAD)
 
 The action allowed by the signed URL.
 
@@ -783,7 +782,7 @@ The action allowed by the signed URL.
 duration: duration;
 ```
 
-- *Type:* `[duration](#Duration)`
+- *Type:* [`duration`](#Duration)
 - *Default:* 15m
 
 The duration for the signed URL to expire.
@@ -804,8 +803,8 @@ let BucketTryGetOptions = BucketTryGetOptions{ ... };
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| `[endByte](#BucketTryGetOptions.property.endByte)` | `num` | The ending byte to read up to (including). |
-| `[startByte](#BucketTryGetOptions.property.startByte)` | `num` | The starting byte to read from. |
+| [`endByte`](#BucketTryGetOptions.property.endByte) | `num` | The ending byte to read up to (including). |
+| [`startByte`](#BucketTryGetOptions.property.startByte) | `num` | The starting byte to read from. |
 
 ---
 
@@ -849,9 +848,9 @@ let ObjectMetadata = ObjectMetadata{ ... };
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| `[lastModified](#ObjectMetadata.property.lastModified)` | `[datetime](#Datetime)` | The time the object was last modified. |
-| `[size](#ObjectMetadata.property.size)` | `num` | The size of the object in bytes. |
-| `[contentType](#ObjectMetadata.property.contentType)` | `str` | The content type of the object, if it is known. |
+| [`lastModified`](#ObjectMetadata.property.lastModified) | [`datetime`](#Datetime) | The time the object was last modified. |
+| [`size`](#ObjectMetadata.property.size) | `num` | The size of the object in bytes. |
+| [`contentType`](#ObjectMetadata.property.contentType) | `str` | The content type of the object, if it is known. |
 
 ---
 
@@ -861,7 +860,7 @@ let ObjectMetadata = ObjectMetadata{ ... };
 lastModified: datetime;
 ```
 
-- *Type:* `[datetime](#Datetime)`
+- *Type:* [`datetime`](#Datetime)
 
 The time the object was last modified.
 
@@ -899,7 +898,7 @@ The content type of the object, if it is known.
 
 | **Name** | **Description** |
 | --- | --- |
-| `[handle](#IBucketEventHandler.handle)` | Function that will be called when an event notification is fired. |
+| [`handle`](#IBucketEventHandler.handle) | Function that will be called when an event notification is fired. |
 
 ---
 
@@ -919,10 +918,9 @@ Function that will be called when an event notification is fired.
 
 ###### `type`<sup>Required</sup> <a name="type" id="IBucketEventHandler.handle.parameter.type"></a>
 
-- *Type:* `[BucketEventType](#BucketEventType)`
+- *Type:* [`BucketEventType`](#BucketEventType)
 
 ---
-
 
 ## Enums <a name="Enums" id="Enums"></a>
 
@@ -934,9 +932,9 @@ Bucket events to subscribe to.
 
 | **Name** | **Description** |
 | --- | --- |
-| `[CREATE](#BucketEventType.CREATE)` | Create. |
-| `[CREATE](#BucketEventType.DELETE)` | Delete. |
-| `[CREATE](#BucketEventType.UPDATE)` | Update. |
+| [`CREATE`](#BucketEventType.CREATE) | Create. |
+| [`CREATE`](#BucketEventType.DELETE) | Delete. |
+| [`CREATE`](#BucketEventType.UPDATE) | Update. |
 
 ---
 
@@ -946,20 +944,17 @@ Create.
 
 ---
 
-
 ##### `DELETE` <a name="DELETE" id="BucketEventType.DELETE"></a>
 
 Delete.
 
 ---
 
-
 ##### `UPDATE` <a name="UPDATE" id="BucketEventType.UPDATE"></a>
 
 Update.
 
 ---
-
 
 ### BucketSignedUrlAction <a name="BucketSignedUrlAction" id="BucketSignedUrlAction"></a>
 
@@ -969,8 +964,8 @@ Specifies the action permitted by a presigned URL for a bucket.
 
 | **Name** | **Description** |
 | --- | --- |
-| `[DOWNLOAD](#BucketSignedUrlAction.DOWNLOAD)` | Represents a HTTP GET request for a presigned URL, allowing read access for an object in the bucket. |
-| `[UPLOAD](#BucketSignedUrlAction.UPLOAD)` | Represents a HTTP PUT request for a presigned URL, allowing write access for an object in the bucket. |
+| [`DOWNLOAD`](#BucketSignedUrlAction.DOWNLOAD) | Represents a HTTP GET request for a presigned URL, allowing read access for an object in the bucket. |
+| [`UPLOAD`](#BucketSignedUrlAction.UPLOAD) | Represents a HTTP PUT request for a presigned URL, allowing write access for an object in the bucket. |
 
 ---
 
