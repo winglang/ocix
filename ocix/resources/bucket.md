@@ -124,7 +124,7 @@ referencing a file from the local filesystem.
 
 ---
 
-##### `onCreate` <a id="onCreate></a>
+##### `onCreate` <a id="onCreate"></a>
 
 ```wing
 onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
@@ -144,7 +144,7 @@ Run an inflight whenever a file is uploaded to the bucket.
 
 ---
 
-##### `Bucket.onDelete` <a id="onDelete"></a>
+##### `onDelete` <a id="onDelete"></a>
 
 ```wing
 onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
@@ -270,7 +270,7 @@ Key of the object.
 
 ---
 
-##### `inflight get` <a id="infight-get"></a>
+##### `inflight get` <a id="inflight-get"></a>
 
 ```wing
 inflight get(key: str, options?: BucketGetOptions): str
