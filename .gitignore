@@ -3,6 +3,7 @@ dist/
 node_modules/
 package-lock.json
 build/
+wing/docs/docs/
 *.snap.md
 *.js
 *.extern.d.ts

@@ -18,3 +18,7 @@
 
 | Resource Name | Description              |
 | :------------ | :----------------------- |
+| [Bucket](resources/bucket.md) | A built-in resource for handling object storage in the cloud. |
+| [Queue](resources/queue.md) | A built-in resource for creating distributed queues - a data structure for storing messages. |
+| [Topic](resources/topic.md) | A built-in resource for publishing messages to subscribers. |
+
