@@ -38,12 +38,12 @@ new Bucket(props?: BucketProps);
 
 | **Name** | **Description** |
 | --- | --- |
-| [`addFile`](#addFile) | Add a file to the bucket from system folder. |
-| [`addObject`](#addObject) | Add a file to the bucket that is uploaded when the app is deployed. |
-| [`onCreate`](#onCreate) | Run an inflight whenever a file is uploaded to the bucket. |
-| [`onDelete`](#onDelete) | Run an inflight whenever a file is deleted from the bucket. |
-| [`onEvent`](#onEvent) | Run an inflight whenever a file is uploaded, modified, or deleted from the bucket. |
-| [`onUpdate`](#onUpdate) | Run an inflight whenever a file is updated in the bucket. |
+| [`addFile`](#preflight-addFile) | Add a file to the bucket from system folder. |
+| [`addObject`](#preflight-addObject) | Add a file to the bucket that is uploaded when the app is deployed. |
+| [`onCreate`](#preflight-onCreate) | Run an inflight whenever a file is uploaded to the bucket. |
+| [`onDelete`](#preflight-onDelete) | Run an inflight whenever a file is deleted from the bucket. |
+| [`onEvent`](#preflight-onEvent) | Run an inflight whenever a file is uploaded, modified, or deleted from the bucket. |
+| [`onUpdate`](#preflight-onUpdate) | Run an inflight whenever a file is updated in the bucket. |
 
 #### Inflight Methods
 
@@ -67,7 +67,7 @@ new Bucket(props?: BucketProps);
 
 ---
 
-##### addFile <a id="addFile"></a>
+##### preflight addFile <a id="preflight-addFile"></a>
 
 ```wing
 addFile(key: str, path: str, encoding?: str): void
@@ -101,7 +101,7 @@ Defaults to "utf-8".
 
 ---
 
-##### `addObject` <a id="addObject"></a>
+##### `preflight addObject` <a id="preflight-addObject"></a>
 
 ```wing
 addObject(key: str, body: str): void
@@ -124,7 +124,7 @@ referencing a file from the local filesystem.
 
 ---
 
-##### `onCreate` <a id="onCreate"></a>
+##### `preflight onCreate` <a id="preflight-onCreate"></a>
 
 ```wing
 onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
@@ -144,7 +144,7 @@ Run an inflight whenever a file is uploaded to the bucket.
 
 ---
 
-##### `onDelete` <a id="onDelete"></a>
+##### `preflight onDelete` <a id="preflight-onDelete"></a>
 
 ```wing
 onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
@@ -164,7 +164,7 @@ Run an inflight whenever a file is deleted from the bucket.
 
 ---
 
-##### `onEvent` <a id="onEvent"></a>
+##### `preflight onEvent` <a id="preflight-onEvent"></a>
 
 ```wing
 onEvent(fn: IBucketEventHandler, opts?: BucketOnEventOptions): void
@@ -184,7 +184,7 @@ Run an inflight whenever a file is uploaded, modified, or deleted from the bucke
 
 ---
 
-##### `onUpdate` <a id="onUpdate"></a>
+##### `preflight onUpdate` <a id="preflight-onUpdate"></a>
 
 ```wing
 onUpdate(fn: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
