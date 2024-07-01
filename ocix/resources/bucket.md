@@ -62,7 +62,7 @@ new Bucket(props?: BucketProps);
 | [`rename`](#IBucketClient.rename) | Move an object to a new location in the bucket. |
 | [`signedUrl`](#IBucketClient.signedUrl) | Returns a signed url to the given file. |
 | [`tryDelete`](#IBucketClient.tryDelete) | Delete an object from the bucket if it exists. |
-| [`tryGet`]#IBucketClient.tryGet() | Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown. |
+| [`tryGet`](#IBucketClient.tryGet) | Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown. |
 | [`tryGetJson`](#IBucketClient.tryGetJson) | Gets an object from the bucket if it exists, parsing it as Json. |
 
 ---
