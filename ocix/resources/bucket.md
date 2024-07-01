@@ -22,13 +22,13 @@ new Bucket(props?: BucketProps);
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| `props` | [`BucketProps`](#BucketProps) | *No description.* TODO |
+| `props` | [`BucketProps`](#BucketProps-) | *No description.* TODO |
 
 ---
 
 #### `props`<sup>Optional</sup>
 
-- *Type:* [`BucketProps`](#BucketProps)
+- *Type:* [`BucketProps`](#BucketProps-)
 
 ---
 
@@ -38,12 +38,12 @@ new Bucket(props?: BucketProps);
 
 | **Name** | **Description** |
 | --- | --- |
-| [`addFile`](#preflight-addFile) | Add a file to the bucket from system folder. |
-| [`addObject`](#preflight-addObject) | Add a file to the bucket that is uploaded when the app is deployed. |
-| [`onCreate`](#preflight-onCreate) | Run an inflight whenever a file is uploaded to the bucket. |
-| [`onDelete`](#preflight-onDelete) | Run an inflight whenever a file is deleted from the bucket. |
-| [`onEvent`](#preflight-onEvent) | Run an inflight whenever a file is uploaded, modified, or deleted from the bucket. |
-| [`onUpdate`](#preflight-onUpdate) | Run an inflight whenever a file is updated in the bucket. |
+| [`addFile`](#preflight-addFile-) | Add a file to the bucket from system folder. |
+| [`addObject`](#preflight-addObject-) | Add a file to the bucket that is uploaded when the app is deployed. |
+| [`onCreate`](#preflight-onCreate-) | Run an inflight whenever a file is uploaded to the bucket. |
+| [`onDelete`](#preflight-onDelete-) | Run an inflight whenever a file is deleted from the bucket. |
+| [`onEvent`](#preflight-onEvent-) | Run an inflight whenever a file is uploaded, modified, or deleted from the bucket. |
+| [`onUpdate`](#preflight-onUpdate-) | Run an inflight whenever a file is updated in the bucket. |
 
 #### Inflight Methods
 
@@ -53,21 +53,21 @@ new Bucket(props?: BucketProps);
 | [`delete`](#inflight-delete) | Delete an existing object using a key from the bucket. |
 | [`exists`](#inflight-exists) | Check if an object exists in the bucket. |
 | [`get`](#inflight-get) | Retrieve an object from the bucket. |
-| [`getJson`](#inflight-getJson) | Retrieve a Json object from the bucket. |
+| [`getJson`](#inflight-getJson-) | Retrieve a Json object from the bucket. |
 | [`list`](#inflight-list) | Retrieve existing objects keys from the bucket. |
 | [`metadata`](#inflight-metadata) | Get the metadata of an object in the bucket. |
-| [`publicUrl`](#inflight-publicUrl) | Returns a url to the given file. |
+| [`publicUrl`](#inflight-publicUrl-) | Returns a url to the given file. |
 | [`put`](#inflight-put) | Put an object in the bucket. |
-| [`putJson`](#inflight-putJson) | Put a Json object in the bucket. |
+| [`putJson`](#inflight-putJson-) | Put a Json object in the bucket. |
 | [`rename`](#inflight-rename) | Move an object to a new location in the bucket. |
-| [`signedUrl`](#inflight-signedUrl) | Returns a signed url to the given file. |
-| [`tryDelete`](#inflight-tryDelete) | Delete an object from the bucket if it exists. |
-| [`tryGet`](#inflight-tryGet) | Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown. |
-| [`tryGetJson`](#inflight-tryGetJson) | Gets an object from the bucket if it exists, parsing it as Json. |
+| [`signedUrl`](#inflight-signedUrl-) | Returns a signed url to the given file. |
+| [`tryDelete`](#inflight-tryDelete-) | Delete an object from the bucket if it exists. |
+| [`tryGet`](#inflight-tryGet-) | Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown. |
+| [`tryGetJson`](#inflight-tryGetJson-) | Gets an object from the bucket if it exists, parsing it as Json. |
 
 ---
 
-##### preflight addFile <a id="preflight-addFile"></a>
+##### preflight addFile <a id="preflight-addFile-"></a>
 
 ```wing
 addFile(key: str, path: str, encoding?: str): void
@@ -101,7 +101,7 @@ Defaults to "utf-8".
 
 ---
 
-##### `preflight addObject` <a id="preflight-addObject"></a>
+##### `preflight addObject` <a id="preflight-addObject-"></a>
 
 ```wing
 addObject(key: str, body: str): void
@@ -124,7 +124,7 @@ referencing a file from the local filesystem.
 
 ---
 
-##### `preflight onCreate` <a id="preflight-onCreate"></a>
+##### `preflight onCreate` <a id="preflight-onCreate-"></a>
 
 ```wing
 onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
@@ -134,17 +134,17 @@ Run an inflight whenever a file is uploaded to the bucket.
 
 ###### `fn`<sup>Required</sup> <a id="Bucket.onCreate.parameter.fn"></a>
 
-- *Type:* [`IBucketEventHandler`](#IBucketEventHandler)
+- *Type:* [`IBucketEventHandler`](#IBucketEventHandler-)
 
 ---
 
 ###### `opts`<sup>Optional</sup> <a id="Bucket.onCreate.parameter.opts"></a>
 
-- *Type:* [`BucketOnCreateOptions`](#BucketOnCreateOptions)
+- *Type:* [`BucketOnCreateOptions`](#BucketOnCreateOptions-)
 
 ---
 
-##### `preflight onDelete` <a id="preflight-onDelete"></a>
+##### `preflight onDelete` <a id="preflight-onDelete-"></a>
 
 ```wing
 onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
@@ -154,17 +154,17 @@ Run an inflight whenever a file is deleted from the bucket.
 
 ###### `fn`<sup>Required</sup> <a id="Bucket.onDelete.parameter.fn"></a>
 
-- *Type:* [`IBucketEventHandler`](#IBucketEventHandler)
+- *Type:* [`IBucketEventHandler`](#IBucketEventHandler-)
 
 ---
 
 ###### `opts`<sup>Optional</sup> <a id="Bucket.onDelete.parameter.opts"></a>
 
-- *Type:* [`BucketOnDeleteOptions`](#BucketOnDeleteOptions)
+- *Type:* [`BucketOnDeleteOptions`](#BucketOnDeleteOptions-)
 
 ---
 
-##### `preflight onEvent` <a id="preflight-onEvent"></a>
+##### `preflight onEvent` <a id="preflight-onEvent-"></a>
 
 ```wing
 onEvent(fn: IBucketEventHandler, opts?: BucketOnEventOptions): void
@@ -174,17 +174,17 @@ Run an inflight whenever a file is uploaded, modified, or deleted from the bucke
 
 ###### `fn`<sup>Required</sup> <a id="Bucket.onEvent.parameter.fn"></a>
 
-- *Type:* [`IBucketEventHandler`](#IBucketEventHandler)
+- *Type:* [`IBucketEventHandler`](#IBucketEventHandler-)
 
 ---
 
 ###### `opts`<sup>Optional</sup> <a id="Bucket.onEvent.parameter.opts"></a>
 
-- *Type:* [`BucketOnEventOptions`](#BucketOnEventOptions)
+- *Type:* [`BucketOnEventOptions`](#BucketOnEventOptions-)
 
 ---
 
-##### `preflight onUpdate` <a id="preflight-onUpdate"></a>
+##### `preflight onUpdate` <a id="preflight-onUpdate-"></a>
 
 ```wing
 onUpdate(fn: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
@@ -194,13 +194,13 @@ Run an inflight whenever a file is updated in the bucket.
 
 ###### `fn`<sup>Required</sup> <a id="Bucket.onUpdate.parameter.fn"></a>
 
-- *Type:* [`IBucketEventHandler`](#IBucketEventHandler)
+- *Type:* [`IBucketEventHandler`](#IBucketEventHandler-)
 
 ---
 
 ###### `opts`<sup>Optional</sup> <a id="Bucket.onUpdate.parameter.opts"></a>
 
-- *Type:* [`BucketOnUpdateOptions`](#BucketOnUpdateOptions)
+- *Type:* [`BucketOnUpdateOptions`](#BucketOnUpdateOptions-)
 
 ---
 
@@ -248,7 +248,7 @@ Key of the object.
 
 ###### `opts`<sup>Optional</sup> <id="IBucketClient.delete.parameter.opts"></a>
 
-- *Type:* [`BucketDeleteOptions`](#BucketDeleteOptions)
+- *Type:* [`BucketDeleteOptions`](#BucketDeleteOptions-)
 
 Options available for delete an item from a bucket.
 
@@ -290,13 +290,13 @@ Key of the object.
 
 ###### `options`<sup>Optional</sup> <a id="Bucket.get.parameter.options"></a>
 
-- *Type:* [`BucketGetOptions`](#BucketGetOptions)
+- *Type:* [`BucketGetOptions`](#BucketGetOptions-)
 
 Additional get options.
 
 ---
 
-##### `inflight getJson` <a id="inflight-getJson"></a>
+##### `inflight getJson` <a id="inflight-getJson-"></a>
 
 ```wing
 inflight getJson(key: str): Json
@@ -344,7 +344,7 @@ Key of the object.
 
 ---
 
-##### `inflight publicUrl` <a id="inflight-publicUrl"></a>
+##### `inflight publicUrl` <a id="inflight-publicUrl-"></a>
 
 ```wing
 inflight publicUrl(key: str): str
@@ -384,13 +384,13 @@ Content of the object we want to store into the bucket.
 
 ###### `options`<sup>Optional</sup> <a id="Bucket.put.parameter.options"></a>
 
-- *Type:* [`BucketPutOptions`](#BucketPutOptions)
+- *Type:* [`BucketPutOptions`](#BucketPutOptions-)
 
 Additional options.
 
 ---
 
-##### `inflight putJson` <a id="inflight-putJson"></a>
+##### `inflight putJson` <a id="inflight-putJson-"></a>
 
 ```wing
 inflight putJson(key: str, body: Json): void
@@ -441,7 +441,7 @@ The key of the destination object after renaming.
 
 ---
 
-##### `inflight signedUrl` <a id="inflight-signedUrl"></a>
+##### `inflight signedUrl` <a id="inflight-signedUrl-"></a>
 
 ```wing
 inflight signedUrl(key: str, options?: BucketSignedUrlOptions): str
@@ -459,13 +459,13 @@ The key to access the cloud object.
 
 ###### `options`<sup>Optional</sup> <a id="Bucket.signedUrl.parameter.options"></a>
 
-- *Type:* [`BucketSignedUrlOptions`](#BucketSignedUrlOptions)
+- *Type:* [`BucketSignedUrlOptions`](#BucketSignedUrlOptions-)
 
 The signedUrlOptions where you can provide the configurations of the signed url.
 
 ---
 
-##### `inflight tryDelete` <a id="inflight-tryDelete"></a>
+##### `inflight tryDelete` <a id="inflight-tryDelete-"></a>
 
 ```wing
 inflight tryDelete(key: str): bool
@@ -481,7 +481,7 @@ Key of the object.
 
 ---
 
-##### `inflight tryGet` <a id="inflight-tryGet"></a>
+##### `inflight tryGet` <a id="inflight-tryGet-"></a>
 
 ```wing
 inflight tryGet(key: str, options?: BucketTryGetOptions): str?
@@ -499,13 +499,13 @@ Key of the object.
 
 ###### `options`<sup>Optional</sup> <a id="Bucket.tryGet.parameter.options"></a>
 
-- *Type:* [`BucketTryGetOptions`](#BucketTryGetOptions)
+- *Type:* [`BucketTryGetOptions`](#BucketTryGetOptions-)
 
 Additional get options.
 
 ---
 
-##### `inflight tryGetJson` <a id="inflight-tryGetJson"></a>
+##### `inflight tryGetJson` <a id="inflight-tryGetJson-"></a>
 
 ```wing
 inflight tryGetJson(key: str): Json?
@@ -523,7 +523,7 @@ Key of the object.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### BucketDeleteOptions <a id="BucketDeleteOptions"></a>
+### BucketDeleteOptions <a id="BucketDeleteOptions-"></a>
 
 Options for `Bucket.delete()`.
 
@@ -554,7 +554,7 @@ Check failures on the method and retrieve errors if any.
 
 ---
 
-### BucketEvent <a id="BucketEvent"></a>
+### BucketEvent <a id="BucketEvent-"></a>
 
 #### Initializer <a id="BucketEvent.Initializer"></a>
 
@@ -567,7 +567,7 @@ let BucketEvent = BucketEvent{ ... };
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | key | `str` | The bucket key that triggered the event. |
-| type | [`BucketEventType`](#BucketEventType) | Type of event. |
+| type | [`BucketEventType`](#BucketEventType-) | Type of event. |
 
 ---
 
@@ -589,13 +589,13 @@ The bucket key that triggered the event.
 type: BucketEventType;
 ```
 
-- *Type:* [`BucketEventType`](#BucketEventType)
+- *Type:* [`BucketEventType`](#BucketEventType-)
 
 Type of event.
 
 ---
 
-### BucketGetOptions <a id="BucketGetOptions"></a>
+### BucketGetOptions <a id="BucketGetOptions-"></a>
 
 Options for `Bucket.get()`.
 
@@ -640,7 +640,7 @@ The starting byte to read from.
 
 ---
 
-### BucketOnCreateOptions <a id="BucketOnCreateOptions"></a>
+### BucketOnCreateOptions <a id="BucketOnCreateOptions-"></a>
 
 `onCreate` event options.
 
@@ -650,7 +650,7 @@ The starting byte to read from.
 let BucketOnCreateOptions = BucketOnCreateOptions{ ... };
 ```
 
-### BucketOnDeleteOptions <a id="BucketOnDeleteOptions"></a>
+### BucketOnDeleteOptions <a id="BucketOnDeleteOptions-"></a>
 
 `onDelete` event options.
 
@@ -660,7 +660,7 @@ let BucketOnCreateOptions = BucketOnCreateOptions{ ... };
 let BucketOnDeleteOptions = BucketOnDeleteOptions{ ... };
 ```
 
-### BucketOnEventOptions <a id="BucketOnEventOptions"></a>
+### BucketOnEventOptions <a id="BucketOnEventOptions-"></a>
 
 `onEvent` options.
 
@@ -680,7 +680,7 @@ let BucketOnEventOptions = BucketOnEventOptions{ ... };
 let BucketOnUpdateOptions = BucketOnUpdateOptions{ ... };
 ```
 
-### BucketProps <a id="BucketProps"></a>
+### BucketProps <a id="BucketProps-"></a>
 
 Options for `Bucket`.
 
@@ -711,7 +711,7 @@ Whether the bucket's objects should be publicly accessible.
 
 ---
 
-### BucketPutOptions <a name id="BucketPutOptions"></a>
+### BucketPutOptions <a name id="BucketPutOptions-"></a>
 
 Options for `Bucket.put()`.
 
@@ -744,7 +744,7 @@ The HTTP Content-Type of the object.
 
 ---
 
-### BucketSignedUrlOptions <a id="BucketSignedUrlOptions"></a>
+### BucketSignedUrlOptions <a id="BucketSignedUrlOptions-"></a>
 
 Options for `Bucket.signedUrl()`.
 
@@ -758,7 +758,7 @@ let BucketSignedUrlOptions = BucketSignedUrlOptions{ ... };
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| action | [`BucketSignedUrlAction`](#BucketSignedUrlAction) | The action allowed by the signed URL. |
+| action | [`BucketSignedUrlAction`](#BucketSignedUrlAction-) | The action allowed by the signed URL. |
 | duration | [`duration`](#Duration) | The duration for the signed URL to expire. |
 
 ---
@@ -769,8 +769,8 @@ let BucketSignedUrlOptions = BucketSignedUrlOptions{ ... };
 action: BucketSignedUrlAction;
 ```
 
-- *Type:* [`BucketSignedUrlAction`](#BucketSignedUrlAction)
-- *Default:* [`BucketSignedUrlAction.DOWNLOAD`](#BucketSignedUrlAction.DOWNLOAD)
+- *Type:* [`BucketSignedUrlAction`](#BucketSignedUrlAction-)
+- *Default:* [`BucketSignedUrlAction.DOWNLOAD`](#BucketSignedUrlAction.DOWNLOAD-)
 
 The action allowed by the signed URL.
 
@@ -789,7 +789,7 @@ The duration for the signed URL to expire.
 
 ---
 
-### BucketTryGetOptions <a id="BucketTryGetOptions"></a>
+### BucketTryGetOptions <a id="BucketTryGetOptions-"></a>
 
 Options for `Bucket.tryGet()`.
 
@@ -834,7 +834,7 @@ The starting byte to read from.
 
 ---
 
-### ObjectMetadata <a id="ObjectMetadata"></a>
+### ObjectMetadata <a id="ObjectMetadata-"></a>
 
 Metadata of a bucket object.
 
@@ -892,7 +892,7 @@ The content type of the object, if it is known.
 
 ## Protocols <a id="Protocols"></a>
 
-### IBucketEventHandler <a id="IBucketEventHandler"></a>
+### IBucketEventHandler <a id="IBucketEventHandler-"></a>
 
 #### Methods <a id="IBucketEventHandler.Methods"></a>
 
@@ -918,13 +918,13 @@ Function that will be called when an event notification is fired.
 
 ###### `type`<sup>Required</sup> <a id="IBucketEventHandler.handle.parameter.type"></a>
 
-- *Type:* [`BucketEventType`](#BucketEventType)
+- *Type:* [`BucketEventType`](#BucketEventType-)
 
 ---
 
 ## Enums <a id="Enums"></a>
 
-### BucketEventType <a id="BucketEventType"></a>
+### BucketEventType <a id="BucketEventType-"></a>
 
 Bucket events to subscribe to.
 
@@ -938,25 +938,25 @@ Bucket events to subscribe to.
 
 ---
 
-##### `CREATE` <a id="BucketEventType.CREATE"></a>
+##### `CREATE` <a id="BucketEventType.CREATE-"></a>
 
 Create.
 
 ---
 
-##### `DELETE` <a id="BucketEventType.DELETE"></a>
+##### `DELETE` <a id="BucketEventType.DELETE-"></a>
 
 Delete.
 
 ---
 
-##### `UPDATE` <a id="BucketEventType.UPDATE"></a>
+##### `UPDATE` <a id="BucketEventType.UPDATE-"></a>
 
 Update.
 
 ---
 
-### BucketSignedUrlAction <a id="BucketSignedUrlAction"></a>
+### BucketSignedUrlAction <a id="BucketSignedUrlAction-"></a>
 
 Specifies the action permitted by a presigned URL for a bucket.
 
@@ -969,13 +969,13 @@ Specifies the action permitted by a presigned URL for a bucket.
 
 ---
 
-##### `DOWNLOAD` <a id="BucketSignedUrlAction.DOWNLOAD"></a>
+##### `DOWNLOAD` <a id="BucketSignedUrlAction.DOWNLOAD-"></a>
 
 Represents a HTTP GET request for a presigned URL, allowing read access for an object in the bucket.
 
 ---
 
-##### `UPLOAD` <a id="BucketSignedUrlAction.UPLOAD"></a>
+##### `UPLOAD` <a id="BucketSignedUrlAction.UPLOAD-"></a>
 
 Represents a HTTP PUT request for a presigned URL, allowing write access for an object in the bucket.
 
