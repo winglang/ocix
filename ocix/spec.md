@@ -20,10 +20,10 @@ To simplify search, all types are consolidated in a single table in alphabetic o
 
 | Name   | Definition                       |
 | ------ | -------------------------------- |
-| `Array<T>`    | Variable size array of a certain type.           |
+| `Array<T>`    | Represents variable size arrays of a certain type.           |
 | `bool` | Represents true or false values.        |
-| `Datetime` | Represents a single moment in time in a platform-independent format. |
-| `Duration` | Represents a time duration. |
+| `Datetime` | Represents single moments in time in a platform-independent format. |
+| `Duration` | Represents time durations. |
 |`(arg1: <type1>, arg2: <type2>, ...): <returnType> => <type>` | Represents preflight function references. |
 | `inflight (arg1: <type1>, arg2: <type2>, ...): <returnType> => <type>` | Represents inflight function references. |
 | `Json` | Represents untyped [JSON values](https://www.json.org/json-en.html), including JSON primitives (`string`, `number`,`boolean`),arrays (both heterogenous and homogeneous) and objects (key-value maps where keys are strings and values can be any other JSON value). |
