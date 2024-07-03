@@ -428,7 +428,7 @@ Gets an object from the bucket if it exists, parsing it as Json.
 
 ### BucketDeleteOptions <a id="BucketDeleteOptions-"></a>
 
-Options for [`Bucket.delete()`](#delete).
+Options for [`Bucket.delete()`](#inflight-delete).
 
 #### Properties <a id="BucketDeleteOptions.Properties"></a>
 
