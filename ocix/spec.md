@@ -18,6 +18,8 @@ In the context of the Open Cloud Interface Specification, standard types are def
 
 To simplify search, all types are consolidated in a single table in alphabetic order.
 
+### Standard Types <a id="standard-types"></a>
+
 | Name   | Definition                       |
 | ------ | -------------------------------- |
 | `Array<T>`    | Represents variable size arrays of a certain type.           |
