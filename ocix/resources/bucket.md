@@ -90,7 +90,7 @@ Add a file to the bucket from system folder.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.addFile.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The key or name to associate with the file.
 
@@ -98,7 +98,7 @@ The key or name to associate with the file.
 
 ###### `path`<sup>Required</sup> <a id="Bucket.addFile.parameter.path"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The path to the file on the local system.
 
@@ -106,7 +106,7 @@ The path to the file on the local system.
 
 ###### `encoding`<sup>Optional</sup> <a id="Bucket.addFile.parameter.encoding"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The encoding to use when reading the file.
 
@@ -127,13 +127,13 @@ referencing a file from the local filesystem.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.addObject.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 ---
 
 ###### `body`<sup>Required</sup> <a id="Bucket.addObject.parameter.body"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 ---
 
@@ -229,7 +229,7 @@ If the destination object already exists, it will be overwritten.
 
 ###### `srcKey`<sup>Required</sup> <a id="Bucket.copy.parameter.srcKey"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The key of the source object you wish to copy.
 
@@ -237,7 +237,7 @@ The key of the source object you wish to copy.
 
 ###### `dstKey`<sup>Required</sup> <a id="Bucket.copy.parameter.dstKey"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The key of the destination object after copying.
 
@@ -253,7 +253,7 @@ Delete an existing object using a key from the bucket.
 
 ###### `key`<sup>Required</sup> <id="Bucket.delete.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -277,7 +277,7 @@ Check if an object exists in the bucket.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.exists.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -295,7 +295,7 @@ If the bytes returned are not a valid UTF-8 string, an error is thrown.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.get.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -319,7 +319,7 @@ Retrieve a Json object from the bucket.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.getJson.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -335,7 +335,7 @@ Retrieve existing objects keys from the bucket.
 
 ###### `prefix`<sup>Optional</sup> <a id="Bucket.list.parameter.prefix"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Limits the response to keys that begin with the specified prefix.
 
@@ -351,7 +351,7 @@ Get the metadata of an object in the bucket.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.metadata.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -367,7 +367,7 @@ Returns a url to the given file.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.publicUrl.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 ---
 
@@ -381,7 +381,7 @@ Put an object in the bucket.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.put.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -389,7 +389,7 @@ Key of the object.
 
 ###### `body`<sup>Required</sup> <a id="Bucket.put.parameter.body"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Content of the object we want to store into the bucket.
 
@@ -413,7 +413,7 @@ Put a Json object in the bucket.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.putJson.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -421,7 +421,7 @@ Key of the object.
 
 ###### `body`<sup>Required</sup> <a id="Bucket.putJson.parameter.body"></a>
 
-- *Type:* [`Json`](../spec.md#type-system)
+- *Type:* [`Json`](../spec.md#standard-types)
 
 Json object that we want to store into the bucket.
 
@@ -440,7 +440,7 @@ Returns once the renaming is finished.
 
 ###### `srcKey`<sup>Required</sup> <a id="Bucket.rename.parameter.srcKey"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The key of the source object you wish to rename.
 
@@ -448,7 +448,7 @@ The key of the source object you wish to rename.
 
 ###### `dstKey`<sup>Required</sup> <a id="Bucket.rename.parameter.dstKey"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The key of the destination object after renaming.
 
@@ -464,7 +464,7 @@ Returns a signed url to the given file.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.signedUrl.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The key to access the cloud object.
 
@@ -488,7 +488,7 @@ Delete an object from the bucket if it exists.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.tryDelete.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -504,7 +504,7 @@ Get an object from the bucket if it exists If the bytes returned are not a valid
 
 ###### `key`<sup>Required</sup> <a id="Bucket.tryGet.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -528,7 +528,7 @@ Gets an object from the bucket if it exists, parsing it as Json.
 
 ###### `key`<sup>Required</sup> <a id="Bucket.tryGetJson.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 Key of the object.
 
@@ -544,7 +544,7 @@ Options for `Bucket.delete()`.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| mustExist | [`bool`](../spec.md#type-system) | Check failures on the method and retrieve errors if any. |
+| mustExist | [`bool`](../spec.md#standard-types) | Check failures on the method and retrieve errors if any. |
 
 ---
 
@@ -554,7 +554,7 @@ Options for `Bucket.delete()`.
 mustExist: bool;
 ```
 
-- *Type:* [`bool`](../spec.md#type-system)
+- *Type:* [`bool`](../spec.md#standard-types)
 - *Default:* false
 
 Check failures on the method and retrieve errors if any.
@@ -567,7 +567,7 @@ Check failures on the method and retrieve errors if any.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| key | [`str`](../spec.md#type-system) | The bucket key that triggered the event. |
+| key | [`str`](../spec.md#standard-types) | The bucket key that triggered the event. |
 | type | [`BucketEventType`](#BucketEventType-) | Type of event. |
 
 ---
@@ -578,7 +578,7 @@ Check failures on the method and retrieve errors if any.
 key: str;
 ```
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The bucket key that triggered the event.
 
@@ -604,8 +604,8 @@ Options for `Bucket.get()`.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| endByte | [`num`](../spec.md#type-system) | The ending byte to read up to (including). |
-| startByte | [`num`](../spec.md#type-system) | The starting byte to read from. |
+| endByte | [`num`](../spec.md#standard-types) | The ending byte to read up to (including). |
+| startByte | [`num`](../spec.md#standard-types) | The starting byte to read from. |
 
 ---
 
@@ -615,7 +615,7 @@ Options for `Bucket.get()`.
 endByte: num;
 ```
 
-- *Type:* [`num`](../spec.md#type-system)
+- *Type:* [`num`](../spec.md#standard-types)
 - *Default:* undefined
 
 The ending byte to read up to (including).
@@ -628,7 +628,7 @@ The ending byte to read up to (including).
 startByte: num;
 ```
 
-- *Type:* [`num`](../spec.md#type-system)
+- *Type:* [`num`](../spec.md#standard-types)
 - *Default:* undefined
 
 The starting byte to read from.
@@ -659,7 +659,7 @@ Options for `Bucket`.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| public | [`bool`](../spec.md#type-system) | Whether the bucket's objects should be publicly accessible. |
+| public | [`bool`](../spec.md#standard-types) | Whether the bucket's objects should be publicly accessible. |
 
 ---
 
@@ -669,7 +669,7 @@ Options for `Bucket`.
 public: bool;
 ```
 
-- *Type:* [`bool`](../spec.md#type-system)
+- *Type:* [`bool`](../spec.md#standard-types)
 - *Default:* false
 
 Whether the bucket's objects should be publicly accessible.
@@ -684,7 +684,7 @@ Options for `Bucket.put()`.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| contentType | [`str`](../spec.md#type-system) | The HTTP Content-Type of the object. |
+| contentType | [`str`](../spec.md#standard-types) | The HTTP Content-Type of the object. |
 
 ---
 
@@ -694,7 +694,7 @@ Options for `Bucket.put()`.
 contentType: str;
 ```
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 - *Default:* Determined by file extension or fallback to "application/octet-stream"
 
 The HTTP Content-Type of the object.
@@ -712,7 +712,7 @@ Options for `Bucket.signedUrl()`.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | action | [`BucketSignedUrlAction`](#BucketSignedUrlAction-) | The action allowed by the signed URL. |
-| duration | [`Duration`](../spec.md#type-system) | The duration for the signed URL to expire. |
+| duration | [`Duration`](../spec.md#standard-types) | The duration for the signed URL to expire. |
 
 ---
 
@@ -735,7 +735,7 @@ The action allowed by the signed URL.
 duration: duration;
 ```
 
-- *Type:* [`Duration`](../spec.md#type-system)
+- *Type:* [`Duration`](../spec.md#standard-types)
 - *Default:* 15m
 
 The duration for the signed URL to expire.
@@ -750,8 +750,8 @@ Options for `Bucket.tryGet()`.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| endByte | [`num`](../spec.md#type-system) | The ending byte to read up to (including). |
-| startByte | [`num`](../spec.md#type-system) | The starting byte to read from. |
+| endByte | [`num`](../spec.md#standard-types) | The ending byte to read up to (including). |
+| startByte | [`num`](../spec.md#standard-types) | The starting byte to read from. |
 
 ---
 
@@ -761,7 +761,7 @@ Options for `Bucket.tryGet()`.
 endByte: num;
 ```
 
-- *Type:* [`num`](../spec.md#type-system)
+- *Type:* [`num`](../spec.md#standard-types)
 - *Default:* undefined
 
 The ending byte to read up to (including).
@@ -774,7 +774,7 @@ The ending byte to read up to (including).
 startByte: num;
 ```
 
-- *Type:* [`num`](../spec.md#type-system)
+- *Type:* [`num`](../spec.md#standard-types)
 - *Default:* undefined
 
 The starting byte to read from.
@@ -789,9 +789,9 @@ Metadata of a bucket object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| lastModified | [`Datetime`](../spec.md#type-system) | The time the object was last modified. |
-| size | [`num`](../spec.md#type-system) | The size of the object in bytes. |
-| contentType | [`str`](../spec.md#type-system) | The content type of the object, if it is known. |
+| lastModified | [`Datetime`](../spec.md#standard-types) | The time the object was last modified. |
+| size | [`num`](../spec.md#standard-types) | The size of the object in bytes. |
+| contentType | [`str`](../spec.md#standard-types) | The content type of the object, if it is known. |
 
 ---
 
@@ -801,7 +801,7 @@ Metadata of a bucket object.
 lastModified: datetime;
 ```
 
-- *Type:* [`Datetime`](../spec.md#type-system)
+- *Type:* [`Datetime`](../spec.md#standard-types)
 
 The time the object was last modified.
 
@@ -813,7 +813,7 @@ The time the object was last modified.
 size: num;
 ```
 
-- *Type:* [`num`](../spec.md#type-system)
+- *Type:* [`num`](../spec.md#standard-types)
 
 The size of the object in bytes.
 
@@ -825,7 +825,7 @@ The size of the object in bytes.
 contentType: str;
 ```
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 The content type of the object, if it is known.
 
@@ -853,7 +853,7 @@ Function that will be called when an event notification is fired.
 
 ###### `key`<sup>Required</sup> <a id="IBucketEventHandler.handle.parameter.key"></a>
 
-- *Type:* [`str`](../spec.md#type-system)
+- *Type:* [`str`](../spec.md#standard-types)
 
 ---
 
