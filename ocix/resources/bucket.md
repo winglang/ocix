@@ -540,59 +540,24 @@ Key of the object.
 
 Options for `Bucket.delete()`.
 
-#### Properties <a name="Properties" id="BucketDeleteOptions.Properties"></a>
+#### Properties <a id="BucketDeleteOptions.Properties"></a>
 
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| mustExist | [`bool`](../spec.md#standard-types) | Check failures on the method and retrieve errors if any. |
-
----
-
-##### `mustExist`<sup>Optional</sup> <a id="BucketDeleteOptions.property.mustExist"></a>
-
-```wing
-mustExist: bool;
-```
-
-- *Type:* [`bool`](../spec.md#standard-types)
-- *Default:* false
-
-Check failures on the method and retrieve errors if any.
+| **Name**   | **Type**                    | **Description**                                         | **Required** | **Default** |
+|------------|-----------------------------|---------------------------------------------------------|--------------|-------------|
+| mustExist  | [`bool`](../spec.md#standard-types) | Check failures on the method and retrieve errors if any. | No           | `false`     |
 
 ---
 
 ### BucketEvent <a id="BucketEvent-"></a>
 
+On_event notification payload- will be in use after solving issue: https://github.com/winglang/wing/issues/1927.
+
 #### Properties <a id="BucketEvent.Properties"></a>
 
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| key | [`str`](../spec.md#standard-types) | The bucket key that triggered the event. |
-| type | [`BucketEventType`](#BucketEventType-) | Type of event. |
-
----
-
-##### `key`<sup>Required</sup> <a id="BucketEvent.property.key"></a>
-
-```wing
-key: str;
-```
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-The bucket key that triggered the event.
-
----
-
-##### `type`<sup>Required</sup> <a id="BucketEvent.property.type"></a>
-
-```wing
-type: BucketEventType;
-```
-
-- *Type:* [`BucketEventType`](#BucketEventType-)
-
-Type of event.
+| **Name**   | **Type**                              | **Description**                   | **Required** | **Default** |
+|------------|---------------------------------------|-----------------------------------|--------------|-------------|
+| key        | [`str`](../spec.md#standard-types)    | The bucket key that triggered the event. | Yes          |             |
+| type       | [`BucketEventType`](#BucketEventType-) | Type of event.                    | Yes          |             |
 
 ---
 
@@ -602,36 +567,10 @@ Options for `Bucket.get()`.
 
 #### Properties <a id="BucketGetOptions.Properties"></a>
 
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| endByte | [`num`](../spec.md#standard-types) | The ending byte to read up to (including). |
-| startByte | [`num`](../spec.md#standard-types) | The starting byte to read from. |
-
----
-
-##### `endByte`<sup>Optional</sup> <a id="BucketGetOptions.property.endByte"></a>
-
-```wing
-endByte: num;
-```
-
-- *Type:* [`num`](../spec.md#standard-types)
-- *Default:* undefined
-
-The ending byte to read up to (including).
-
----
-
-##### `startByte`<sup>Optional</sup> <a id="BucketGetOptions.property.startByte"></a>
-
-```wing
-startByte: num;
-```
-
-- *Type:* [`num`](../spec.md#standard-types)
-- *Default:* undefined
-
-The starting byte to read from.
+| **Name**   | **Type**                    | **Description**                          | **Required** | **Default**   |
+|------------|-----------------------------|------------------------------------------|--------------|---------------|
+| endByte    | [`num`](../spec.md#standard-types) | The ending byte to read up to (including). | No           | `undefined`   |
+| startByte  | [`num`](../spec.md#standard-types) | The starting byte to read from.          | No           | `undefined`   |
 
 ---
 
@@ -657,49 +596,21 @@ Options for `Bucket`.
 
 #### Properties <a id="BucketProps.Properties"></a>
 
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| public | [`bool`](../spec.md#standard-types) | Whether the bucket's objects should be publicly accessible. |
+| **Name**   | **Type**                    | **Description**                                    | **Required** | **Default** |
+|------------|-----------------------------|----------------------------------------------------|--------------|-------------|
+| public     | [`bool`](../spec.md#standard-types) | Whether the bucket's objects should be publicly accessible. | No           | `false`     |
 
 ---
 
-##### `public`<sup>Optional</sup> <a id="BucketProps.property.public"></a>
-
-```wing
-public: bool;
-```
-
-- *Type:* [`bool`](../spec.md#standard-types)
-- *Default:* false
-
-Whether the bucket's objects should be publicly accessible.
-
----
-
-### BucketPutOptions <a name id="BucketPutOptions-"></a>
+### BucketPutOptions <a id="BucketPutOptions-"></a>
 
 Options for `Bucket.put()`.
 
 #### Properties <a id="BucketPutOptions.Properties"></a>
 
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| contentType | [`str`](../spec.md#standard-types) | The HTTP Content-Type of the object. |
-
----
-
-##### `contentType`<sup>Required</sup> <a id="BucketPutOptions.property.contentType"></a>
-
-```wing
-contentType: str;
-```
-
-- *Type:* [`str`](../spec.md#standard-types)
-- *Default:* Determined by file extension or fallback to "application/octet-stream"
-
-The HTTP Content-Type of the object.
-
-> [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)
+| **Name**       | **Type**                    | **Description**                                                                                   | **Required** | **Default**                              |
+|----------------|-----------------------------|---------------------------------------------------------------------------------------------------|--------------|------------------------------------------|
+| contentType    | [`str`](../spec.md#standard-types) | The [HTTP Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) of the object. | No           | Determined by file extension or fallback to "application/octet-stream" |
 
 ---
 
@@ -709,36 +620,10 @@ Options for `Bucket.signedUrl()`.
 
 #### Properties <a id="BucketSignedUrlOptions.Properties"></a>
 
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| action | [`BucketSignedUrlAction`](#BucketSignedUrlAction-) | The action allowed by the signed URL. |
-| duration | [`Duration`](../spec.md#standard-types) | The duration for the signed URL to expire. |
-
----
-
-##### `action`<sup>Optional</sup> <a id="BucketSignedUrlOptions.property.action"></a>
-
-```wing
-action: BucketSignedUrlAction;
-```
-
-- *Type:* [`BucketSignedUrlAction`](#BucketSignedUrlAction-)
-- *Default:* [`BucketSignedUrlAction.DOWNLOAD`](#BucketSignedUrlAction.DOWNLOAD-)
-
-The action allowed by the signed URL.
-
----
-
-##### `duration`<sup>Optional</sup> <a id="BucketSignedUrlOptions.property.duration"></a>
-
-```wing
-duration: duration;
-```
-
-- *Type:* [`Duration`](../spec.md#standard-types)
-- *Default:* 15m
-
-The duration for the signed URL to expire.
+| **Name**   | **Type**                    | **Description**                                         | **Required** | **Default**                                         |
+|------------|-----------------------------|---------------------------------------------------------|--------------|-----------------------------------------------------|
+| action     | [`BucketSignedUrlAction`](#BucketSignedUrlAction-) | The action allowed by the signed URL.                   | No           | [`BucketSignedUrlAction.DOWNLOAD`](#BucketSignedUrlAction-) |
+| duration   | [`Duration`](../spec.md#standard-types) | The duration for the signed URL to expire.              | No           | `15m`                                               |
 
 ---
 
@@ -748,36 +633,10 @@ Options for `Bucket.tryGet()`.
 
 #### Properties <a id="BucketTryGetOptions.Properties"></a>
 
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| endByte | [`num`](../spec.md#standard-types) | The ending byte to read up to (including). |
-| startByte | [`num`](../spec.md#standard-types) | The starting byte to read from. |
-
----
-
-##### `endByte`<sup>Optional</sup> <a id="BucketTryGetOptions.property.endByte"></a>
-
-```wing
-endByte: num;
-```
-
-- *Type:* [`num`](../spec.md#standard-types)
-- *Default:* undefined
-
-The ending byte to read up to (including).
-
----
-
-##### `startByte`<sup>Optional</sup> <a id="BucketTryGetOptions.property.startByte"></a>
-
-```wing
-startByte: num;
-```
-
-- *Type:* [`num`](../spec.md#standard-types)
-- *Default:* undefined
-
-The starting byte to read from.
+| **Name**   | **Type**                    | **Description**                          | **Required** | **Default**   |
+|------------|-----------------------------|------------------------------------------|--------------|---------------|
+| endByte    | [`num`](../spec.md#standard-types) | The ending byte to read up to (including). | No           | `undefined`   |
+| startByte  | [`num`](../spec.md#standard-types) | The starting byte to read from.          | No           | `undefined`   |
 
 ---
 
@@ -787,47 +646,11 @@ Metadata of a bucket object.
 
 #### Properties <a id="ObjectMetadata.Properties"></a>
 
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| lastModified | [`Datetime`](../spec.md#standard-types) | The time the object was last modified. |
-| size | [`num`](../spec.md#standard-types) | The size of the object in bytes. |
-| contentType | [`str`](../spec.md#standard-types) | The content type of the object, if it is known. |
-
----
-
-##### `lastModified`<sup>Required</sup> <a id="ObjectMetadata.property.lastModified"></a>
-
-```wing
-lastModified: datetime;
-```
-
-- *Type:* [`Datetime`](../spec.md#standard-types)
-
-The time the object was last modified.
-
----
-
-##### `size`<sup>Required</sup> <a id="ObjectMetadata.property.size"></a>
-
-```wing
-size: num;
-```
-
-- *Type:* [`num`](../spec.md#standard-types)
-
-The size of the object in bytes.
-
----
-
-##### `contentType`<sup>Optional</sup> <a id="ObjectMetadata.property.contentType"></a>
-
-```wing
-contentType: str;
-```
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-The content type of the object, if it is known.
+| **Name**       | **Type**                    | **Description**                                  | **Required** | **Default** |
+|----------------|-----------------------------|--------------------------------------------------|--------------|-------------|
+| lastModified   | [`Datetime`](../spec.md#standard-types) | The time the object was last modified.             | Yes          |             |
+| size           | [`num`](../spec.md#standard-types)      | The size of the object in bytes.                   | Yes          |             |
+| contentType    | [`str`](../spec.md#standard-types)      | The content type of the object, if it is known.    | Yes          |             |
 
 ---
 
@@ -873,27 +696,9 @@ Bucket events to subscribe to.
 
 | **Name** | **Description** |
 | --- | --- |
-| CREATE | Create. |
-| DELETE | Delete. |
-| UPDATE | Update. |
-
----
-
-##### `CREATE` <a id="BucketEventType.CREATE-"></a>
-
-Create.
-
----
-
-##### `DELETE` <a id="BucketEventType.DELETE-"></a>
-
-Delete.
-
----
-
-##### `UPDATE` <a id="BucketEventType.UPDATE-"></a>
-
-Update.
+| CREATE | Object created. |
+| DELETE | Object deleted. |
+| UPDATE | Object updated. |
 
 ---
 
@@ -907,17 +712,5 @@ Specifies the action permitted by a presigned URL for a bucket.
 | --- | --- |
 | DOWNLOAD | Represents a HTTP GET request for a presigned URL, allowing read access for an object in the bucket. |
 | UPLOAD | Represents a HTTP PUT request for a presigned URL, allowing write access for an object in the bucket. |
-
----
-
-##### `DOWNLOAD` <a id="BucketSignedUrlAction.DOWNLOAD-"></a>
-
-Represents a HTTP GET request for a presigned URL, allowing read access for an object in the bucket.
-
----
-
-##### `UPLOAD` <a id="BucketSignedUrlAction.UPLOAD-"></a>
-
-Represents a HTTP PUT request for a presigned URL, allowing write access for an object in the bucket.
 
 ---
