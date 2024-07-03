@@ -82,7 +82,7 @@ addFile(key: str, path: str, encoding?: str): void
 
 Add a file to the bucket from system folder.
 
-###### Parameters <a id="Bucket.addFile.parameters></a>
+###### Parameters <a id="Bucket.addFile.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -192,8 +192,6 @@ Copy an object to a new location in the bucket. If the destination object alread
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `srcKey` | [`str`](../spec.md#standard-types) | The key of the source object you wish to copy. | Yes | |
 | `dstKey` | [`str`](../spec.md#standard-types) | The key of the destination object after copying. | Yes | |
-
-
 
 ##### `inflight delete` <a id="inflight-delete"></a>
 
@@ -442,7 +440,7 @@ Options for `Bucket.delete()`.
 
 ### BucketEvent <a id="BucketEvent-"></a>
 
-On_event notification payload- will be in use after solving issue: https://github.com/winglang/wing/issues/1927.
+On_event notification payload- will be in use after solving the [issue](https://github.com/winglang/wing/issues/1927).
 
 #### Properties <a id="BucketEvent.Properties"></a>
 
