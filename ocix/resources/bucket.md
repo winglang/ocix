@@ -428,7 +428,7 @@ Gets an object from the bucket if it exists, parsing it as Json.
 
 ### BucketDeleteOptions <a id="BucketDeleteOptions-"></a>
 
-Options for `Bucket.delete()`.
+Options for [`Bucket.delete()`](#delete).
 
 #### Properties <a id="BucketDeleteOptions.Properties"></a>
 
@@ -440,7 +440,7 @@ Options for `Bucket.delete()`.
 
 ### BucketEvent <a id="BucketEvent-"></a>
 
-On_event notification payload- will be in use after solving the [issue](https://github.com/winglang/wing/issues/1927).
+[onEvent](#onEvent-) notification payload- will be in use after solving the [issue](https://github.com/winglang/wing/issues/1927).
 
 #### Properties <a id="BucketEvent.Properties"></a>
 
@@ -453,7 +453,7 @@ On_event notification payload- will be in use after solving the [issue](https://
 
 ### BucketGetOptions <a id="BucketGetOptions-"></a>
 
-Options for `Bucket.get()`.
+Options for [`Bucket.get()`](#inflight-get).
 
 #### Properties <a id="BucketGetOptions.Properties"></a>
 
@@ -466,23 +466,23 @@ Options for `Bucket.get()`.
 
 ### BucketOnCreateOptions <a id="BucketOnCreateOptions-"></a>
 
-`onCreate` event options.
+[`onCreate`](#onCreate-) event options.
 
 ### BucketOnDeleteOptions <a id="BucketOnDeleteOptions-"></a>
 
-`onDelete` event options.
+[`onDelete`](#onDelete-) event options.
 
 ### BucketOnEventOptions <a id="BucketOnEventOptions-"></a>
 
-`onEvent` options.
+[`onEvent`](#onEvent-) options.
 
 ### BucketOnUpdateOptions <a id="BucketOnUpdateOptions-"></a>
 
-`onUpdate` event options.
+[`onUpdate`](#onUpdate-) event options.
 
 ### BucketProps <a id="BucketProps-"></a>
 
-Options for `Bucket`.
+Options for [`new Bucket`](#initializers).
 
 #### Properties <a id="BucketProps.Properties"></a>
 
@@ -494,7 +494,7 @@ Options for `Bucket`.
 
 ### BucketPutOptions <a id="BucketPutOptions-"></a>
 
-Options for `Bucket.put()`.
+Options for [`Bucket.put()`](#inflight-put).
 
 #### Properties <a id="BucketPutOptions.Properties"></a>
 
@@ -506,7 +506,7 @@ Options for `Bucket.put()`.
 
 ### BucketSignedUrlOptions <a id="BucketSignedUrlOptions-"></a>
 
-Options for `Bucket.signedUrl()`.
+Options for [`Bucket.signedUrl()`](#inflight-signedUrl-).
 
 #### Properties <a id="BucketSignedUrlOptions.Properties"></a>
 
@@ -519,7 +519,7 @@ Options for `Bucket.signedUrl()`.
 
 ### BucketTryGetOptions <a id="BucketTryGetOptions-"></a>
 
-Options for `Bucket.tryGet()`.
+Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 #### Properties <a id="BucketTryGetOptions.Properties"></a>
 
@@ -532,7 +532,7 @@ Options for `Bucket.tryGet()`.
 
 ### ObjectMetadata <a id="ObjectMetadata-"></a>
 
-Metadata of a bucket object.
+[Metadata](#inflight-metadata) of a bucket object.
 
 #### Properties <a id="ObjectMetadata.Properties"></a>
 
@@ -552,7 +552,7 @@ Metadata of a bucket object.
 
 | **Name** | **Description** |
 | --- | --- |
-| handle | Function that will be called when an event notification is fired. |
+| `handle` | Function that will be called when an event notification is fired. |
 
 ---
 
@@ -564,15 +564,12 @@ inflight handle(key: str, type: BucketEventType): void
 
 Function that will be called when an event notification is fired.
 
-###### `key`<sup>Required</sup> <a id="IBucketEventHandler.handle.parameter.key"></a>
+###### Parameters <a id="IBucketEventHandler.handle.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
----
-
-###### `type`<sup>Required</sup> <a id="IBucketEventHandler.handle.parameter.type"></a>
-
-- *Type:* [`BucketEventType`](#BucketEventType-)
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | The object key. | Yes | |
+| `type`   | [`BucketEventType`](#BucketEventType-) | The envet type. | Yes | |
 
 ---
 
