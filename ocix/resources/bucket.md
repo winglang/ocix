@@ -2,15 +2,11 @@
 
 The `Bucket` resource represents a container for storing data in the cloud.
 
-Buckets are a common way to store arbitrary files (images, videos, etc.), but
-can also be used to store structured data like JSON or CSV files.
+Buckets are commonly used to store arbitrary files such as images, videos, and documents, but they can also be utilized for structured data like JSON or CSV files.
 
-Buckets in the cloud use object storage, which is optimized for storing large
-amounts of data with high availability.
+Cloud buckets employ object storage, which is optimized for handling large volumes of data with high availability.
 
-Unlike other kinds of storage like file storage, data is not stored in a
-hierarchical structure, but rather as a flat list of objects, each associated
-with a key.
+Unlike file storage, which uses a hierarchical structure, object storage maintains a flat list of objects, each identified by a unique key.
 
 ## Table of Contents
 
@@ -43,34 +39,34 @@ new Bucket(props?: BucketProps);
 
 #### Preflight Methods <a id="preflight-methods"></a>
 
-| **Name** | **Description** |
-| --- | --- |
-| [`addFile`](#addFile-) | Add a file to the bucket from system folder. |
-| [`addObject`](#addObject-) | Add a file to the bucket that is uploaded when the app is deployed. |
-| [`onCreate`](#onCreate-) | Run an inflight whenever a file is uploaded to the bucket. |
-| [`onDelete`](#onDelete-) | Run an inflight whenever a file is deleted from the bucket. |
-| [`onEvent`](#onEvent-) | Run an inflight whenever a file is uploaded, modified, or deleted from the bucket. |
-| [`onUpdate`](#onUpdate-) | Run an inflight whenever a file is updated in the bucket. |
+| **Name**       | **Description**                                                      |
+|----------------|----------------------------------------------------------------------|
+| [`addFile`](#addFile-)    | Upload a file from the system folder to the bucket when the app is deployed. |
+| [`addObject`](#addObject-) | Upload object content to the bucket when the app is deployed.       |
+| [`onCreate`](#onCreate-)  | Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the bucket.        |
+| [`onDelete`](#onDelete-)  | Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the bucket. |
+| [`onEvent`](#onEvent-)    | Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created or an existing object is deleted or modified. |
+| [`onUpdate`](#onUpdate-)  | Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the bucket. |
 
 #### Inflight Methods <a id="inflight-methods"></a>
 
-| **Name** | **Description** |
-| --- | --- |
-| [`copy`](#inflight-copy) | Copy an object to a new location in the bucket. |
-| [`delete`](#inflight-delete) | Delete an existing object using a key from the bucket. |
-| [`exists`](#inflight-exists) | Check if an object exists in the bucket. |
-| [`get`](#inflight-get) | Retrieve an object from the bucket. |
-| [`getJson`](#inflight-getJson-) | Retrieve a Json object from the bucket. |
-| [`list`](#inflight-list) | Retrieve existing objects keys from the bucket. |
-| [`metadata`](#inflight-metadata) | Get the metadata of an object in the bucket. |
-| [`publicUrl`](#inflight-publicUrl-) | Returns a url to the given file. |
-| [`put`](#inflight-put) | Put an object in the bucket. |
-| [`putJson`](#inflight-putJson-) | Put a Json object in the bucket. |
-| [`rename`](#inflight-rename) | Move an object to a new location in the bucket. |
-| [`signedUrl`](#inflight-signedUrl-) | Returns a signed url to the given file. |
-| [`tryDelete`](#inflight-tryDelete-) | Delete an object from the bucket if it exists. |
-| [`tryGet`](#inflight-tryGet-) | Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown. |
-| [`tryGetJson`](#inflight-tryGetJson-) | Gets an object from the bucket if it exists, parsing it as Json. |
+| **Name**         | **Description**                                                                                              |
+|------------------|--------------------------------------------------------------------------------------------------------------|
+| [`copy`](#inflight-copy)           | Copy an object to a new location in the bucket.                        |
+| [`delete`](#inflight-delete)       | Delete an existing object using a key from the bucket.                 |
+| [`exists`](#inflight-exists)       | Check if an object exists in the bucket.                               |
+| [`get`](#inflight-get)             | Retrieve an object from the bucket.                                    |
+| [`getJson`](#inflight-getJson-)    | Retrieve a JSON object from the bucket.                                |
+| [`list`](#inflight-list)           | List the keys of existing objects in the bucket.                       |
+| [`metadata`](#inflight-metadata)   | Get metadata of an object in the bucket.                               |
+| [`publicUrl`](#inflight-publicUrl-) | Return a public URL to the given bucket object.                       |
+| [`put`](#inflight-put)             | Put an object in the bucket.                                           |
+| [`putJson`](#inflight-putJson-)    | Put a JSON object in the bucket.                                       |
+| [`rename`](#inflight-rename)       | Store the object content under a new key and delete the old key in the bucket. |
+| [`signedUrl`](#inflight-signedUrl-) | Return a signed URL to the given object.                              |
+| [`tryDelete`](#inflight-tryDelete-) | Delete an object from the bucket if it exists.                        |
+| [`tryGet`](#inflight-tryGet-)      | Retrieve an object from the bucket if it exists.                       |
+| [`tryGetJson`](#inflight-tryGetJson-) | Retrieve an object from the bucket if it exists, parsing it as JSON. |
 
 ---
 
@@ -80,7 +76,7 @@ new Bucket(props?: BucketProps);
 addFile(key: str, path: str, encoding?: str): void
 ```
 
-Add a file to the bucket from system folder.
+Upload a file from the system folder to the bucket when the app is deployed.
 
 ###### Parameters <a id="Bucket.addFile.parameters"></a>
 
@@ -98,10 +94,9 @@ Add a file to the bucket from system folder.
 addObject(key: str, body: str): void
 ```
 
-Add a file to the bucket that is uploaded when the app is deployed.
+Upload object content to the bucket when the app is deployed.
 
-TODO: In the future this will support uploading any `Blob` type or
-referencing a file from the local filesystem.
+TODO: In the future, this will support uploading any `Blob` type or referencing a file from the local filesystem.
 
 ###### Parameters <a id="Bucket.addObject.parameters"></a>
 
@@ -110,13 +105,15 @@ referencing a file from the local filesystem.
 | `key`    |[`str`](../spec.md#standard-types) | The key or name to associate with the file. | Yes | |
 | `body`   |[`str`](../spec.md#standard-types) | The object content. | Yes | |
 
+---
+
 ##### `onCreate` <a id="onCreate-"></a>
 
 ```wing
 onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
 ```
 
-Run an inflight whenever a file is uploaded to the bucket.
+Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the bucket.
 
 ###### Parameters <a id="Bucket.onCreate.parameters"></a>
 
@@ -133,7 +130,7 @@ Run an inflight whenever a file is uploaded to the bucket.
 onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
 ```
 
-Run an inflight whenever a file is deleted from the bucket.
+Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the bucket.
 
 ###### Parameters <a id="Bucket.onDelete.parameters"></a>
 
@@ -150,7 +147,7 @@ Run an inflight whenever a file is deleted from the bucket.
 onEvent(fn: IBucketEventHandler, opts?: BucketOnEventOptions): void
 ```
 
-Run an inflight whenever a file is uploaded, modified, or deleted from the bucket.
+Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created or an existing object is deleted or modified.
 
 ###### Parameters <a id="Bucket.onEvent.parameters"></a>
 
@@ -167,7 +164,7 @@ Run an inflight whenever a file is uploaded, modified, or deleted from the bucke
 onUpdate(fn: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
 ```
 
-Run an inflight whenever a file is updated in the bucket.
+Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the bucket.
 
 ###### Parameters <a id="Bucket.onUpdate.parameters"></a>
 
@@ -190,7 +187,7 @@ Copy an object to a new location in the bucket. If the destination object alread
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `srcKey` | [`str`](../spec.md#standard-types) | The key of the source object you wish to copy. | Yes | |
+| `srcKey` | [`str`](../spec.md#standard-types) | The key of the source object to be copied. | Yes | |
 | `dstKey` | [`str`](../spec.md#standard-types) | The key of the destination object after copying. | Yes | |
 
 ##### `inflight delete` <a id="inflight-delete"></a>
@@ -206,7 +203,7 @@ Delete an existing object using a key from the bucket.
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
-| `opts`   | [`BucketDeleteOptions`](#BucketDeleteOptions-) | Options available for delete an item from a bucket. | No | `{}` |
+| `opts`   | [`BucketDeleteOptions`](#BucketDeleteOptions-) | Options for deleting an object from the bucket. | No | `{}` |
 ---
 
 ##### `inflight exists` <a id="inflight-exists"></a>
@@ -231,7 +228,7 @@ Check if an object exists in the bucket.
 inflight get(key: str, opts?: BucketGetOptions): str
 ```
 
-Retrieve an object from the bucket. If the bytes returned are not a valid UTF-8 string, an error is thrown.
+Retrieve an object from the bucket. If the bytes returned are not a valid UTF-8 string, throw an exception.
 
 ###### Parameters <a id="Bucket.get.parameters"></a>
 
@@ -264,13 +261,13 @@ Retrieve a Json object from the bucket.
 inflight list(prefix?: str): Array<str>
 ```
 
-Retrieve existing objects keys from the bucket.
+List the keys of existing objects in the bucket.
 
 ###### Parameters <a id="Bucket.list.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `prefix`    | [`str`](../spec.md#standard-types) | Limits the response to keys that begin with the specified prefix. | No | "" |
+| `prefix`    | [`str`](../spec.md#standard-types) | Limit the response to keys that begin with the specified prefix. | No | "" |
 
 ---
 
@@ -280,7 +277,7 @@ Retrieve existing objects keys from the bucket.
 inflight metadata(key: str): ObjectMetadata
 ```
 
-Get the [metadata](#ObjectMetadata-) of an object in the bucket.
+Get [metadata](#ObjectMetadata-) of an object in the bucket.
 
 ###### Parameters <a id="Bucket.metadata.parameters"></a>
 
@@ -296,7 +293,7 @@ Get the [metadata](#ObjectMetadata-) of an object in the bucket.
 inflight publicUrl(key: str): str
 ```
 
-Returns a url to the given file.
+Return a public URL to the given bucket object.
 
 ###### Parameters <a id="Bucket.publicUrl.parameters"></a>
 
@@ -312,14 +309,14 @@ Returns a url to the given file.
 inflight put(key: str, body: str, opts?: BucketPutOptions): void
 ```
 
-Put an object in the bucket.
+Put an object in the bucket. If the object does not exist, a new one will be created. Otherwise, the existing object will be updated.
 
 ###### Parameters <a id="Bucket.put.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
-| `body`   | [`str`](../spec.md#standard-types) | Content of the object we want to store into the bucket. | Yes | |
+| `body`   | [`str`](../spec.md#standard-types) | The content of the object to be stored in the bucket. | Yes | |
 | `opts`   | [`BucketPutOptions`](#BucketPutOptions-) | Additional `put` options. | No | `{}` |
 
 ---
@@ -330,14 +327,14 @@ Put an object in the bucket.
 inflight putJson(key: str, body: Json): void
 ```
 
-Put a Json object in the bucket.
+Put a Json object in the bucket. If the object does not exist, a new one will be created. Otherwise, the existing object will be updated.
 
 ###### Parameters <a id="Bucket.putJson.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
-| `body`   | [`Json`](../spec.md#standard-types) | Json object that we want to store into the bucket. | Yes | |
+| `body`   | [`Json`](../spec.md#standard-types) | The JSON object to be stored in the bucket. | Yes | |
 
 ---
 
@@ -347,13 +344,13 @@ Put a Json object in the bucket.
 inflight rename(srcKey: str, dstKey: str): void
 ```
 
-Move an object to a new location in the bucket. If the destination object already exists, it will be overwritten.  Returns once the renaming is finished.
+Store the object content under a new key and delete the old key in the bucket. If the destination object already exists, it will be overwritten.
 
 ###### Parameters <a id="Bucket.rename.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `srcKey`    | [`str`](../spec.md#standard-types) | The key of the source object you wish to rename. | Yes | |
+| `srcKey`    | [`str`](../spec.md#standard-types) | The key of the source object to be renamed. | Yes | |
 | `dstKey`    | [`str`](../spec.md#standard-types) | The key of the destination object after renaming. | Yes | |
 
 ---
@@ -364,14 +361,14 @@ Move an object to a new location in the bucket. If the destination object alread
 inflight signedUrl(key: str, opts?: BucketSignedUrlOptions): str
 ```
 
-Returns a signed url to the given file.
+Return a signed URL to the given object.
 
 ###### Parameters <a id="Bucket.signedUrl.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `key`    | [`str`](../spec.md#standard-types) | The key to access the cloud object. | Yes | |
-| `opts`   | [`BucketSignedUrlOptions`](#BucketSignedUrlOptions-) | The signedUrlOptions where you can provide the configurations of the signed url. | No | `{}` |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
+| `opts`   | [`BucketSignedUrlOptions`](#BucketSignedUrlOptions-) | Additional URL signing options. | No | `{}` |
 
 ---
 
@@ -397,7 +394,7 @@ Delete an object from the bucket if it exists.
 inflight tryGet(key: str, opts?: BucketTryGetOptions): str?
 ```
 
-Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown.
+Get an object from the bucket if it exists. If the bytes returned are not a valid UTF-8 string, throw an exception.
 
 ###### Parameters <a id="Bucket.tryGet.parameters"></a>
 
@@ -414,7 +411,7 @@ Get an object from the bucket if it exists If the bytes returned are not a valid
 inflight tryGetJson(key: str): Json?
 ```
 
-Gets an object from the bucket if it exists, parsing it as Json.
+Retrieve an object from the bucket if it exists, parsing it as JSON.
 
 ###### Parameters <a id="Bucket.tryGetJson.parameters"></a>
 
@@ -434,7 +431,7 @@ Options for [`Bucket.delete()`](#inflight-delete).
 
 | **Name**   | **Type**                    | **Description**                                         | **Required** | **Default** |
 |------------|-----------------------------|---------------------------------------------------------|--------------|-------------|
-| mustExist  | [`bool`](../spec.md#standard-types) | Check failures on the method and retrieve errors if any. | No           | `false`     |
+| mustExist  | [`bool`](../spec.md#standard-types) | Throw an exception if the object does not exist. | No           | `false`     |
 
 ---
 
@@ -447,7 +444,7 @@ Options for [`Bucket.delete()`](#inflight-delete).
 | **Name**   | **Type**                              | **Description**                   | **Required** | **Default** |
 |------------|---------------------------------------|-----------------------------------|--------------|-------------|
 | key        | [`str`](../spec.md#standard-types)    | The bucket key that triggered the event. | Yes          |             |
-| type       | [`BucketEventType`](#BucketEventType-) | Type of event.                    | Yes          |             |
+| type       | [`BucketEventType`](#BucketEventType-) | The type of the event.           | Yes          |             |
 
 ---
 
@@ -513,7 +510,7 @@ Options for [`Bucket.signedUrl()`](#inflight-signedUrl-).
 | **Name**   | **Type**                    | **Description**                                         | **Required** | **Default**                                         |
 |------------|-----------------------------|---------------------------------------------------------|--------------|-----------------------------------------------------|
 | action     | [`BucketSignedUrlAction`](#BucketSignedUrlAction-) | The action allowed by the signed URL.                   | No           | [`BucketSignedUrlAction.DOWNLOAD`](#BucketSignedUrlAction-) |
-| duration   | [`Duration`](../spec.md#standard-types) | The duration for the signed URL to expire.              | No           | `15m`                                               |
+| duration   | [`Duration`](../spec.md#standard-types) | The duration for the signed URL before it expires.              | No           | `15m`                                               |
 
 ---
 
@@ -538,7 +535,7 @@ Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 | **Name**       | **Type**                    | **Description**                                  | **Required** | **Default** |
 |----------------|-----------------------------|--------------------------------------------------|--------------|-------------|
-| lastModified   | [`Datetime`](../spec.md#standard-types) | The time the object was last modified.             | Yes          |             |
+| lastModified   | [`Datetime`](../spec.md#standard-types) | The last time the object was modified.             | Yes          |             |
 | size           | [`num`](../spec.md#standard-types)      | The size of the object in bytes.                   | Yes          |             |
 | contentType    | [`str`](../spec.md#standard-types)      | The content type of the object, if it is known.    | Yes          |             |
 
@@ -556,7 +553,7 @@ Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 ---
 
-##### `handle` <a id="IBucketEventHandler.handle"></a>
+##### `handle` <a id="handle"></a>
 
 ```wing
 inflight handle(key: str, type: BucketEventType): void
@@ -569,7 +566,7 @@ Function that will be called when an event notification is fired.
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `key`    | [`str`](../spec.md#standard-types) | The object key. | Yes | |
-| `type`   | [`BucketEventType`](#BucketEventType-) | The envet type. | Yes | |
+| `type`   | [`BucketEventType`](#BucketEventType-) | The event type. | Yes | |
 
 ---
 
