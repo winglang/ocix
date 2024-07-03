@@ -26,8 +26,7 @@ To simplify search, all types are consolidated in a single table in alphabetic o
 | `Duration` | Represents a time duration. |
 |`(arg1: <type1>, arg2: <type2>, ...): <returnType> => <type>` | Represents preflight function references. |
 | `inflight (arg1: <type1>, arg2: <type2>, ...): <returnType> => <type>` | Represents inflight function references. |
-| `Json` | Represents untyped [JSON values](https://www.json.org/json-en.html), including JSON primitives (`string`, `number`, 
-`boolean`),arrays (both heterogenous and homogeneous) and objects (key-value maps where keys are strings and values can be any other JSON value). |
+| `Json` | Represents untyped [JSON values](https://www.json.org/json-en.html), including JSON primitives (`string`, `number`,`boolean`),arrays (both heterogenous and homogeneous) and objects (key-value maps where keys are strings and values can be any other JSON value). |
 | `Map<T>`      | Represents key-value data structures. |
 | `num`  | Represents numbers.     |
 | `void` | Represents the absence of a type. |
