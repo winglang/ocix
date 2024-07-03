@@ -280,7 +280,7 @@ Retrieve existing objects keys from the bucket.
 inflight metadata(key: str): ObjectMetadata
 ```
 
-Get the metadata of an object in the bucket.
+Get the [metadata](#ObjectMetadata-) of an object in the bucket.
 
 ###### Parameters <a id="Bucket.metadata.parameters"></a>
 
