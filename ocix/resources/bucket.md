@@ -82,7 +82,7 @@ addFile(key: str, path: str, encoding?: str): void
 
 Add a file to the bucket from system folder.
 
-###### Parameters ##### <a id="Bucket.addFile.parameters></a>
+###### Parameters <a id="Bucket.addFile.parameters></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -103,13 +103,12 @@ Add a file to the bucket that is uploaded when the app is deployed.
 TODO: In the future this will support uploading any `Blob` type or
 referencing a file from the local filesystem.
 
-###### Parameters ###### <a id="Bucket.addObject.parameters"></a>
+###### Parameters <a id="Bucket.addObject.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `key`    |[`str`](../spec.md#standard-types) | The key or name to associate with the file. | Yes | |
 | `body`   |[`str`](../spec.md#standard-types) | The object content. | Yes | |
-
 
 ##### `onCreate` <a id="onCreate-"></a>
 
@@ -119,7 +118,7 @@ onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
 
 Run an inflight whenever a file is uploaded to the bucket.
 
-###### Parameters ###### <a id="Bucket.onCreate.parameters"></a>
+###### Parameters <a id="Bucket.onCreate.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -136,7 +135,7 @@ onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
 
 Run an inflight whenever a file is deleted from the bucket.
 
-###### Parameters ###### <a id="Bucket.onDelete.parameters"></a>
+###### Parameters <a id="Bucket.onDelete.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -153,7 +152,7 @@ onEvent(fn: IBucketEventHandler, opts?: BucketOnEventOptions): void
 
 Run an inflight whenever a file is uploaded, modified, or deleted from the bucket.
 
-###### Parameters ###### <a id="Bucket.onEvent.parameters"></a>
+###### Parameters <a id="Bucket.onEvent.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -170,7 +169,7 @@ onUpdate(fn: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
 
 Run an inflight whenever a file is updated in the bucket.
 
-###### Parameters ###### <a id="Bucket.onUpdate.parameters"></a>
+###### Parameters <a id="Bucket.onUpdate.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -187,7 +186,7 @@ inflight copy(srcKey: str, dstKey: str): void
 
 Copy an object to a new location in the bucket. If the destination object already exists, it will be overwritten.
 
-###### Parameters ###### <a id="Bucket.copy.parameters"></a>
+###### Parameters <a id="Bucket.copy.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -204,7 +203,7 @@ inflight delete(key: str, opts?: BucketDeleteOptions): void
 
 Delete an existing object using a key from the bucket.
 
-###### Parameters ###### <a id="Bucket.delete.parameters"></a>
+###### Parameters <a id="Bucket.delete.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -220,7 +219,7 @@ inflight exists(key: str): bool
 
 Check if an object exists in the bucket.
 
-###### Parameters ###### <a id="Bucket.exists.parameters"></a>
+###### Parameters <a id="Bucket.exists.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -236,7 +235,7 @@ inflight get(key: str, opts?: BucketGetOptions): str
 
 Retrieve an object from the bucket. If the bytes returned are not a valid UTF-8 string, an error is thrown.
 
-###### Parameters ###### <a id="Bucket.get.parameters"></a>
+###### Parameters <a id="Bucket.get.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -253,7 +252,7 @@ inflight getJson(key: str): Json
 
 Retrieve a Json object from the bucket.
 
-###### Parameters ###### <a id="Bucket.getJson.parameters"></a>
+###### Parameters <a id="Bucket.getJson.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -269,7 +268,7 @@ inflight list(prefix?: str): Array<str>
 
 Retrieve existing objects keys from the bucket.
 
-###### Parameters ###### <a id="Bucket.list.parameters"></a>
+###### Parameters <a id="Bucket.list.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -285,7 +284,7 @@ inflight metadata(key: str): ObjectMetadata
 
 Get the metadata of an object in the bucket.
 
-###### Parameters ###### <a id="Bucket.metadata.parameters"></a>
+###### Parameters <a id="Bucket.metadata.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -301,7 +300,7 @@ inflight publicUrl(key: str): str
 
 Returns a url to the given file.
 
-###### Parameters ###### <a id="Bucket.publicUrl.parameters"></a>
+###### Parameters <a id="Bucket.publicUrl.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -317,7 +316,7 @@ inflight put(key: str, body: str, opts?: BucketPutOptions): void
 
 Put an object in the bucket.
 
-###### Parameters ###### <a id="Bucket.put.parameters"></a>
+###### Parameters <a id="Bucket.put.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -335,7 +334,7 @@ inflight putJson(key: str, body: Json): void
 
 Put a Json object in the bucket.
 
-###### Parameters ###### <a id="Bucket.putJson.parameters"></a>
+###### Parameters <a id="Bucket.putJson.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -352,7 +351,7 @@ inflight rename(srcKey: str, dstKey: str): void
 
 Move an object to a new location in the bucket. If the destination object already exists, it will be overwritten.  Returns once the renaming is finished.
 
-###### Parameters ###### <a id="Bucket.rename.parameters"></a>
+###### Parameters <a id="Bucket.rename.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -369,7 +368,7 @@ inflight signedUrl(key: str, opts?: BucketSignedUrlOptions): str
 
 Returns a signed url to the given file.
 
-###### Parameters ###### <a id="Bucket.signedUrl.parameters"></a>
+###### Parameters <a id="Bucket.signedUrl.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -386,7 +385,7 @@ inflight tryDelete(key: str): bool
 
 Delete an object from the bucket if it exists.
 
-###### Parameters ###### <a id="Bucket.tryDelete.parameters"></a>
+###### Parameters <a id="Bucket.tryDelete.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -402,7 +401,7 @@ inflight tryGet(key: str, opts?: BucketTryGetOptions): str?
 
 Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown.
 
-###### Parameters ###### <a id="Bucket.tryGet.parameters"></a>
+###### Parameters <a id="Bucket.tryGet.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
@@ -419,7 +418,7 @@ inflight tryGetJson(key: str): Json?
 
 Gets an object from the bucket if it exists, parsing it as Json.
 
-###### Parameters ###### <a id="Bucket.tryGetJson.parameters"></a>
+###### Parameters <a id="Bucket.tryGetJson.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
