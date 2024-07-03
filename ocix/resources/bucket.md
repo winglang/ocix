@@ -33,15 +33,9 @@ with a key.
 new Bucket(props?: BucketProps);
 ```
 
-| **Name** | **Type** | **Description** |
+| **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- |
-| `props` | [`BucketProps`](#BucketProps-) | *No description.* TODO |
-
----
-
-#### `props`<sup>Optional</sup>
-
-- *Type:* [`BucketProps`](#BucketProps-)
+| `props` | [`BucketProps`](#BucketProps-) | New Bucket properties | No | `{}` |
 
 ---
 
@@ -88,29 +82,13 @@ addFile(key: str, path: str, encoding?: str): void
 
 Add a file to the bucket from system folder.
 
-###### `key`<sup>Required</sup> <a id="Bucket.addFile.parameter.key"></a>
+###### Parameters <a id="Bucket.addFile.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-The key or name to associate with the file.
-
----
-
-###### `path`<sup>Required</sup> <a id="Bucket.addFile.parameter.path"></a>
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-The path to the file on the local system.
-
----
-
-###### `encoding`<sup>Optional</sup> <a id="Bucket.addFile.parameter.encoding"></a>
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-The encoding to use when reading the file.
-
-Defaults to "utf-8".
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    |[`str`](../spec.md#standard-types) | The key or name to associate with the file. | Yes | |
+| `path`   |[`str`](../spec.md#standard-types) | The path to the file on the local system. | Yes | |
+| `encoding` | [`str`](../spec.md#standard-types) | The encoding to use when reading the file. | No | "utf-8" |
 
 ---
 
@@ -125,17 +103,12 @@ Add a file to the bucket that is uploaded when the app is deployed.
 TODO: In the future this will support uploading any `Blob` type or
 referencing a file from the local filesystem.
 
-###### `key`<sup>Required</sup> <a id="Bucket.addObject.parameter.key"></a>
+###### Parameters <a id="Bucket.addObject.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
----
-
-###### `body`<sup>Required</sup> <a id="Bucket.addObject.parameter.body"></a>
-
-- *Type:* [`str`](../spec.md#standard-types)
-
----
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    |[`str`](../spec.md#standard-types) | The key or name to associate with the file. | Yes | |
+| `body`   |[`str`](../spec.md#standard-types) | The object content. | Yes | |
 
 ##### `onCreate` <a id="onCreate-"></a>
 
@@ -145,15 +118,12 @@ onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
 
 Run an inflight whenever a file is uploaded to the bucket.
 
-###### `fn`<sup>Required</sup> <a id="Bucket.onCreate.parameter.fn"></a>
+###### Parameters <a id="Bucket.onCreate.parameters"></a>
 
-- *Type:* [`IBucketEventHandler`](#IBucketEventHandler-)
-
----
-
-###### `opts`<sup>Optional</sup> <a id="Bucket.onCreate.parameter.opts"></a>
-
-- *Type:* [`BucketOnCreateOptions`](#BucketOnCreateOptions-)
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `fn`     | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
+| `opts`   | [`BucketOnCreateOptions`](#BucketOnCreateOptions-) | Event handling options | No | `{}` |
 
 ---
 
@@ -165,15 +135,12 @@ onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
 
 Run an inflight whenever a file is deleted from the bucket.
 
-###### `fn`<sup>Required</sup> <a id="Bucket.onDelete.parameter.fn"></a>
+###### Parameters <a id="Bucket.onDelete.parameters"></a>
 
-- *Type:* [`IBucketEventHandler`](#IBucketEventHandler-)
-
----
-
-###### `opts`<sup>Optional</sup> <a id="Bucket.onDelete.parameter.opts"></a>
-
-- *Type:* [`BucketOnDeleteOptions`](#BucketOnDeleteOptions-)
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `fn`     | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
+| `opts`   | [`BucketOnDeleteOptions`](#BucketOnDeleteOptions-) | Event handling options | No | `{}` |
 
 ---
 
@@ -185,15 +152,12 @@ onEvent(fn: IBucketEventHandler, opts?: BucketOnEventOptions): void
 
 Run an inflight whenever a file is uploaded, modified, or deleted from the bucket.
 
-###### `fn`<sup>Required</sup> <a id="Bucket.onEvent.parameter.fn"></a>
+###### Parameters <a id="Bucket.onEvent.parameters"></a>
 
-- *Type:* [`IBucketEventHandler`](#IBucketEventHandler-)
-
----
-
-###### `opts`<sup>Optional</sup> <a id="Bucket.onEvent.parameter.opts"></a>
-
-- *Type:* [`BucketOnEventOptions`](#BucketOnEventOptions-)
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `fn`     | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
+| `opts`   | [`BucketOnEventOptions`](#BucketOnEventOptions-) | Event handling options | No | `{}` |
 
 ---
 
@@ -205,15 +169,12 @@ onUpdate(fn: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
 
 Run an inflight whenever a file is updated in the bucket.
 
-###### `fn`<sup>Required</sup> <a id="Bucket.onUpdate.parameter.fn"></a>
+###### Parameters <a id="Bucket.onUpdate.parameters"></a>
 
-- *Type:* [`IBucketEventHandler`](#IBucketEventHandler-)
-
----
-
-###### `opts`<sup>Optional</sup> <a id="Bucket.onUpdate.parameter.opts"></a>
-
-- *Type:* [`BucketOnUpdateOptions`](#BucketOnUpdateOptions-)
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `fn`     | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
+| `opts`   | [`BucketOnUpdateOptions`](#BucketOnUpdateOptions-) | Event handling options | No | `{}` |
 
 ---
 
@@ -223,25 +184,14 @@ Run an inflight whenever a file is updated in the bucket.
 inflight copy(srcKey: str, dstKey: str): void
 ```
 
-Copy an object to a new location in the bucket.
+Copy an object to a new location in the bucket. If the destination object already exists, it will be overwritten.
 
-If the destination object already exists, it will be overwritten.
+###### Parameters <a id="Bucket.copy.parameters"></a>
 
-###### `srcKey`<sup>Required</sup> <a id="Bucket.copy.parameter.srcKey"></a>
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-The key of the source object you wish to copy.
-
----
-
-###### `dstKey`<sup>Required</sup> <a id="Bucket.copy.parameter.dstKey"></a>
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-The key of the destination object after copying.
-
----
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `srcKey` | [`str`](../spec.md#standard-types) | The key of the source object you wish to copy. | Yes | |
+| `dstKey` | [`str`](../spec.md#standard-types) | The key of the destination object after copying. | Yes | |
 
 ##### `inflight delete` <a id="inflight-delete"></a>
 
@@ -251,20 +201,12 @@ inflight delete(key: str, opts?: BucketDeleteOptions): void
 
 Delete an existing object using a key from the bucket.
 
-###### `key`<sup>Required</sup> <id="Bucket.delete.parameter.key"></a>
+###### Parameters <a id="Bucket.delete.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
-
----
-
-###### `opts`<sup>Optional</sup> <id="IBucketClient.delete.parameter.opts"></a>
-
-- *Type:* [`BucketDeleteOptions`](#BucketDeleteOptions-)
-
-Options available for delete an item from a bucket.
-
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
+| `opts`   | [`BucketDeleteOptions`](#BucketDeleteOptions-) | Options available for delete an item from a bucket. | No | `{}` |
 ---
 
 ##### `inflight exists` <a id="inflight-exists"></a>
@@ -275,37 +217,28 @@ inflight exists(key: str): bool
 
 Check if an object exists in the bucket.
 
-###### `key`<sup>Required</sup> <a id="Bucket.exists.parameter.key"></a>
+###### Parameters <a id="Bucket.exists.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
 
 ---
 
 ##### `inflight get` <a id="inflight-get"></a>
 
 ```wing
-inflight get(key: str, options?: BucketGetOptions): str
+inflight get(key: str, opts?: BucketGetOptions): str
 ```
 
-Retrieve an object from the bucket.
+Retrieve an object from the bucket. If the bytes returned are not a valid UTF-8 string, an error is thrown.
 
-If the bytes returned are not a valid UTF-8 string, an error is thrown.
+###### Parameters <a id="Bucket.get.parameters"></a>
 
-###### `key`<sup>Required</sup> <a id="Bucket.get.parameter.key"></a>
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
-
----
-
-###### `options`<sup>Optional</sup> <a id="Bucket.get.parameter.options"></a>
-
-- *Type:* [`BucketGetOptions`](#BucketGetOptions-)
-
-Additional get options.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
+| `opts`   | [`BucketGetOptions`](#BucketGetOptions-) | Additional `get` options. | No | `{}` |
 
 ---
 
@@ -317,27 +250,27 @@ inflight getJson(key: str): Json
 
 Retrieve a Json object from the bucket.
 
-###### `key`<sup>Required</sup> <a id="Bucket.getJson.parameter.key"></a>
+###### Parameters <a id="Bucket.getJson.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
 
 ---
 
 ##### `inflight list` <a id="inflight-list"></a>
 
 ```wing
-inflight list(prefix?: str): MutArray<str>
+inflight list(prefix?: str): Array<str>
 ```
 
 Retrieve existing objects keys from the bucket.
 
-###### `prefix`<sup>Optional</sup> <a id="Bucket.list.parameter.prefix"></a>
+###### Parameters <a id="Bucket.list.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Limits the response to keys that begin with the specified prefix.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `prefix`    | [`str`](../spec.md#standard-types) | Limits the response to keys that begin with the specified prefix. | No | "" |
 
 ---
 
@@ -349,11 +282,11 @@ inflight metadata(key: str): ObjectMetadata
 
 Get the metadata of an object in the bucket.
 
-###### `key`<sup>Required</sup> <a id="Bucket.metadata.parameter.key"></a>
+###### Parameters <a id="Bucket.metadata.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
 
 ---
 
@@ -365,41 +298,29 @@ inflight publicUrl(key: str): str
 
 Returns a url to the given file.
 
-###### `key`<sup>Required</sup> <a id="Bucket.publicUrl.parameter.key"></a>
+###### Parameters <a id="Bucket.publicUrl.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
 
 ---
 
 ##### `inflight put` <a id="inflight-put"></a>
 
 ```wing
-inflight put(key: str, body: str, options?: BucketPutOptions): void
+inflight put(key: str, body: str, opts?: BucketPutOptions): void
 ```
 
 Put an object in the bucket.
 
-###### `key`<sup>Required</sup> <a id="Bucket.put.parameter.key"></a>
+###### Parameters <a id="Bucket.put.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
-
----
-
-###### `body`<sup>Required</sup> <a id="Bucket.put.parameter.body"></a>
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-Content of the object we want to store into the bucket.
-
----
-
-###### `options`<sup>Optional</sup> <a id="Bucket.put.parameter.options"></a>
-
-- *Type:* [`BucketPutOptions`](#BucketPutOptions-)
-
-Additional options.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
+| `body`   | [`str`](../spec.md#standard-types) | Content of the object we want to store into the bucket. | Yes | |
+| `opts`   | [`BucketPutOptions`](#BucketPutOptions-) | Additional `put` options. | No | `{}` |
 
 ---
 
@@ -411,19 +332,12 @@ inflight putJson(key: str, body: Json): void
 
 Put a Json object in the bucket.
 
-###### `key`<sup>Required</sup> <a id="Bucket.putJson.parameter.key"></a>
+###### Parameters <a id="Bucket.putJson.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
-
----
-
-###### `body`<sup>Required</sup> <a id="Bucket.putJson.parameter.body"></a>
-
-- *Type:* [`Json`](../spec.md#standard-types)
-
-Json object that we want to store into the bucket.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
+| `body`   | [`Json`](../spec.md#standard-types) | Json object that we want to store into the bucket. | Yes | |
 
 ---
 
@@ -433,48 +347,31 @@ Json object that we want to store into the bucket.
 inflight rename(srcKey: str, dstKey: str): void
 ```
 
-Move an object to a new location in the bucket.
+Move an object to a new location in the bucket. If the destination object already exists, it will be overwritten.  Returns once the renaming is finished.
 
-If the destination object already exists, it will be overwritten. 
-Returns once the renaming is finished.
+###### Parameters <a id="Bucket.rename.parameters"></a>
 
-###### `srcKey`<sup>Required</sup> <a id="Bucket.rename.parameter.srcKey"></a>
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-The key of the source object you wish to rename.
-
----
-
-###### `dstKey`<sup>Required</sup> <a id="Bucket.rename.parameter.dstKey"></a>
-
-- *Type:* [`str`](../spec.md#standard-types)
-
-The key of the destination object after renaming.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `srcKey`    | [`str`](../spec.md#standard-types) | The key of the source object you wish to rename. | Yes | |
+| `dstKey`    | [`str`](../spec.md#standard-types) | The key of the destination object after renaming. | Yes | |
 
 ---
 
 ##### `inflight signedUrl` <a id="inflight-signedUrl-"></a>
 
 ```wing
-inflight signedUrl(key: str, options?: BucketSignedUrlOptions): str
+inflight signedUrl(key: str, opts?: BucketSignedUrlOptions): str
 ```
 
 Returns a signed url to the given file.
 
-###### `key`<sup>Required</sup> <a id="Bucket.signedUrl.parameter.key"></a>
+###### Parameters <a id="Bucket.signedUrl.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-The key to access the cloud object.
-
----
-
-###### `options`<sup>Optional</sup> <a id="Bucket.signedUrl.parameter.options"></a>
-
-- *Type:* [`BucketSignedUrlOptions`](#BucketSignedUrlOptions-)
-
-The signedUrlOptions where you can provide the configurations of the signed url.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | The key to access the cloud object. | Yes | |
+| `opts`   | [`BucketSignedUrlOptions`](#BucketSignedUrlOptions-) | The signedUrlOptions where you can provide the configurations of the signed url. | No | `{}` |
 
 ---
 
@@ -486,35 +383,28 @@ inflight tryDelete(key: str): bool
 
 Delete an object from the bucket if it exists.
 
-###### `key`<sup>Required</sup> <a id="Bucket.tryDelete.parameter.key"></a>
+###### Parameters <a id="Bucket.tryDelete.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
 
 ---
 
 ##### `inflight tryGet` <a id="inflight-tryGet-"></a>
 
 ```wing
-inflight tryGet(key: str, options?: BucketTryGetOptions): str?
+inflight tryGet(key: str, opts?: BucketTryGetOptions): str?
 ```
 
 Get an object from the bucket if it exists If the bytes returned are not a valid UTF-8 string, an error is thrown.
 
-###### `key`<sup>Required</sup> <a id="Bucket.tryGet.parameter.key"></a>
+###### Parameters <a id="Bucket.tryGet.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
-
----
-
-###### `options`<sup>Optional</sup> <a id="Bucket.tryGet.parameter.options"></a>
-
-- *Type:* [`BucketTryGetOptions`](#BucketTryGetOptions-)
-
-Additional get options.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
+| `opts`   | [`BucketTryGetOptions`](#BucketTryGetOptions-) | Additional `get` options. | No | `{}` |
 
 ---
 
@@ -526,11 +416,11 @@ inflight tryGetJson(key: str): Json?
 
 Gets an object from the bucket if it exists, parsing it as Json.
 
-###### `key`<sup>Required</sup> <a id="Bucket.tryGetJson.parameter.key"></a>
+###### Parameters <a id="Bucket.tryGetJson.parameters"></a>
 
-- *Type:* [`str`](../spec.md#standard-types)
-
-Key of the object.
+| **Name** | **Type** | **Description** | **Required** | **Default** |
+| -------- | -------- | --------------- | ------------ | ----------- |
+| `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
 
 ---
 
@@ -550,7 +440,7 @@ Options for `Bucket.delete()`.
 
 ### BucketEvent <a id="BucketEvent-"></a>
 
-On_event notification payload- will be in use after solving issue: https://github.com/winglang/wing/issues/1927.
+On_event notification payload- will be in use after solving the [issue](https://github.com/winglang/wing/issues/1927).
 
 #### Properties <a id="BucketEvent.Properties"></a>
 
