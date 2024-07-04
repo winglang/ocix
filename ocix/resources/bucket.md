@@ -30,7 +30,7 @@ new Bucket(props?: BucketProps);
 ```
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
-| --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | `props` | [`BucketProps`](#BucketProps-) | New Bucket properties | No | `{}` |
 
 ---
@@ -545,6 +545,8 @@ Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 ### IBucketEventHandler <a id="IBucketEventHandler-"></a>
 
+Defines an inflight handle method that is invoked to process bucket events.
+
 #### Methods <a id="IBucketEventHandler.Methods"></a>
 
 | **Name** | **Description** |
@@ -553,7 +555,7 @@ Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 ---
 
-##### `handle` <a id="handle"></a>
+##### `handle` <a id="IBucketEventHandler.handle"></a>
 
 ```wing
 inflight handle(key: str, type: BucketEventType): void
