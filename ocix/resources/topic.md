@@ -43,7 +43,7 @@ new Topic(props?: TopicProps);
 
 | **Name** | **Description** |
 | --- | --- |
-| `publish` | Publish messages to the `Topic`. If multiple messages are provided, they will be published as a batch provided that this is supported by the target platform. |
+| [`publish`](#publish) | Publish messages to the `Topic`. If multiple messages are provided, they will be published as a batch provided that this is supported by the target platform. |
 
 ---
 
