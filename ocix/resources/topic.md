@@ -70,13 +70,13 @@ Configure the `Topic` to invoke the inflight [`handle`](#handle) method of a cla
 subscribeQueue(queue: Queue, props?: TopicSubscribeQueueOptions): void
 ```
 
-Create a new `Queue` and configure the `Topic` to forward messages to it. 
+Create a new `Queue` and configure the `Topic` to forward messages to it.
 
 ###### Parameters <a id ="Topic.subscribeQueue.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `queue` | [`Queue`](queue.md) | Reference to a `Queue` where the `Topic` messages will be forwarded. | Yes |
+| `queue` | [`Queue`](queue.md) | Reference to a `Queue` where the `Topic` messages will be forwarded. | Yes | |
 | `props` | [`TopicSubscribeQueueOptions`](#TopicSubscribeQueueOptions-) | Additional subscription properties | No | `{}` |
 
 ---
