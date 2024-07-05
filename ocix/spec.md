@@ -41,3 +41,4 @@ To simplify search, all types are consolidated in a single table in alphabetic o
 | :------------ | :----------------------- |
 | [Bucket](resources/bucket.md) | Represents a container for storing data in the cloud. |
 | [Queue](resources/queue.md) | Represents a distributed data structure for managing a sequence of messages. |
+| [Topic](resources/topic.md) | Represents a channel for publishing messages that subscribers can receive. |
