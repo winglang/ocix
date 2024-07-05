@@ -43,10 +43,10 @@ new Bucket(props?: BucketProps);
 |----------------|----------------------------------------------------------------------|
 | [`addFile`](#addFile-)    | Upload a file from the system folder to the bucket when the app is deployed. |
 | [`addObject`](#addObject-) | Upload object content to the bucket when the app is deployed.       |
-| [`onCreate`](#onCreate-)  | Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the bucket.        |
-| [`onDelete`](#onDelete-)  | Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the bucket. |
-| [`onEvent`](#onEvent-)    | Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created or an existing object is deleted or modified. |
-| [`onUpdate`](#onUpdate-)  | Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the bucket. |
+| [`onCreate`](#onCreate-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the bucket.|
+| [`onDelete`](#onDelete-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the bucket. |
+| [`onEvent`](#onEvent-)    | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created or an existing object is deleted or modified. |
+| [`onUpdate`](#onUpdate-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the bucket. |
 
 #### Inflight Methods <a id="inflight-methods"></a>
 
@@ -113,7 +113,7 @@ TODO: In the future, this will support uploading any `Blob` type or referencing 
 onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
 ```
 
-Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the bucket.
+Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the bucket.
 
 ###### Parameters <a id="Bucket.onCreate.parameters"></a>
 
@@ -130,7 +130,7 @@ Run the inflight [`handle`](#handle) method of a class implementing the [`IBucke
 onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
 ```
 
-Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the bucket.
+Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the bucket.
 
 ###### Parameters <a id="Bucket.onDelete.parameters"></a>
 
@@ -147,7 +147,7 @@ Run the inflight [`handle`](#handle) method of a class implementing the [`IBucke
 onEvent(fn: IBucketEventHandler, opts?: BucketOnEventOptions): void
 ```
 
-Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created or an existing object is deleted or modified.
+Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created or an existing object is deleted or modified.
 
 ###### Parameters <a id="Bucket.onEvent.parameters"></a>
 
@@ -164,7 +164,7 @@ Run the inflight [`handle`](#handle) method of a class implementing the [`IBucke
 onUpdate(fn: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
 ```
 
-Run the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the bucket.
+Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the bucket.
 
 ###### Parameters <a id="Bucket.onUpdate.parameters"></a>
 
@@ -555,7 +555,7 @@ Defines an inflight handle method that is invoked to process bucket events.
 
 ---
 
-##### `handle` <a id="IBucketEventHandler.handle"></a>
+##### `handle` <a id="handle"></a>
 
 ```wing
 inflight handle(key: str, type: BucketEventType): void

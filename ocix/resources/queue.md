@@ -38,9 +38,9 @@ new Queue(props?: QueueProps);
 
 | **Name** | **Description** |
 | --- | --- |
-| [`setConsumer`](#setConsumer-) | Create a function to consume messages from this queue. |
+| [`setConsumer`](#setConsumer-) | Configure the `Queue` to invoke the inflight [`handle`](#handle) method of a class implementing the [`IQueueMessageHandler`](#IQueueMessageHandler-) interface whenever a new message is available. |
 
-##### Inflight Methods
+##### Inflight Methods <a id="inflight-methods"></a>
 
 | **Name** | **Description** |
 | --- | --- |
@@ -57,14 +57,14 @@ new Queue(props?: QueueProps);
 setConsumer(handler: IQueueMessageHandler, props?: QueueSetConsumerOptions): Function
 ```
 
-Create a function to consume messages from this queue.
+Configure the `Queue` to invoke the inflight [`handle`](#handle) method of a class implementing the [`IQueueMessageHandler`](#IQueueMessageHandler-) interface whenever a new message is available.
 
 ###### Parameters <a id ="Queue.setConsumer.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `handler` | [`IQueueMessageHandler`](#IQueueMessageHandler-) | Message handler pointer | Yes | |
-| `props` | [`QueueSetConsumerOptions`](#QueueSetConsumerOptions-) | Additional message hanlder pproperties | No | `{}` |
+| `props` | [`QueueSetConsumerOptions`](#QueueSetConsumerOptions-) | Additional message hanlder properties | No | `{}` |
 
 ---
 
@@ -131,7 +131,7 @@ New `Queue` properties.
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
-| `dlq` | `DeadLetterQueueProps`(#DeadLetterQueueProps-) | A dead-letter queue. | No | `nil` |
+| `dlq` | [`DeadLetterQueueProps`](#DeadLetterQueueProps-) | A dead-letter queue. | No | `nil` |
 | `retentionPeriod` | ['Duration`](../spec.md#standard-types) | Maximum period of time to keep a message in the queue. | No | 1h |
 | `timeout` | ['Duration`](../spec.md#standard-types) | Maximum time allowed for a message to be processed by a consumer. | No | 30s |
 
@@ -141,7 +141,7 @@ New `Queue` properties.
 
 Options for [`Queue.setConsumer`](#setConsumer-).
 
-#### Properties <a name="Properties" id="Queue.setConsumer.Properties"></a>
+#### Properties <a id="Queue.setConsumer.Properties"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
@@ -158,23 +158,23 @@ Options for [`Queue.setConsumer`](#setConsumer-).
 
 ### IQueueMessageHandler <a id="IQueueMessageHandler-"></a>
 
-The [`Queue.setConsumer`](#setConsumer-) parameter.  Defines an inflight `handle` method that is invoked to process the queue messages.
+The [`Queue.setConsumer`](#setConsumer-) parameter.  Defines an inflight `handle` method that is invoked to process the `Queue` messages.
 
 #### Methods <a id="IQueueMessageHandler.Methods"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| `handle` | Function that is called to process the next available queue message. |
+| `handle` | Function that is called to process the next available `Queue` message. |
 
 ---
 
-##### `handle` <a id="IQueueMessageHandler.handle"></a>
+##### `handle` <a id="handle"></a>
 
 ```wing
 inflight handle(message: str): void
 ```
 
-Function that is called to process the next available  queue message.
+Function that is called to process the next available  `Queue` message.
 
 ###### Parameters <a id="IQueueMessageHandler.handle.parameters"></a>
 
