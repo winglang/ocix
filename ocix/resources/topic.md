@@ -147,7 +147,7 @@ TBD: this is a duplication of the [`Queue.QueueProps`](./queue.md#queueprops-)
 
 ## Protocols <a name="Protocols" id="protocols"></a>
 
-TBD: could be generalized to IMessageHandler and shared with `Queue`.
+TBD: could be generalized to [`IMessageHandler`](./queue.md#IQueueMessageHandler) and shared with [`Queue`](./queue.md).
 
 ### ITopicMessageHandler <a id="ITopicMessageHandler-"></a>
 

@@ -1,8 +1,8 @@
 # Secret
 
-The `Secret` resource represents a sensetive value (like an API key, certificate, etc.) securely stored in the cloud.
+The `Secret` resource represents a sensitive value (like an API key, certificate, etc.) securely stored in the cloud.
 
-Secrets are encrypted both at rest and in transit, and are only decrypted when used in a task. That enables their usage in different compute tasks, while rotation or revocation are managed in a single location.
+`Secret` values are encrypted both at rest and in transit, and are only decrypted when used in a task. That enables their usage in different compute tasks, while rotation or revocation are managed in a single location.
 
 ## Table of Contents
 

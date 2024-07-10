@@ -2,7 +2,7 @@
 
 The `Bucket` resource represents a container for storing data in the cloud.
 
-`Bucket` rsources are commonly used to store arbitrary files such as images, videos, and documents, but they can also be utilized for structured data like JSON or CSV files.
+`Bucket` resources are commonly used to store arbitrary files such as images, videos, and documents, but they can also be utilized for structured data like JSON or CSV files.
 
 Cloud `Bucket` resources employ object storage, which is optimized for handling large volumes of data with high availability.
 

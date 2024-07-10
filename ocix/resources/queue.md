@@ -2,7 +2,7 @@
 
 The `Queue` resource represents a distributed data structure for managing a sequence of messages.
 
-Queues are typically used to decouple the producers and consumers of data in distributed systems.
+`Queue` resources are typically used to decouple the producers and consumers of data in distributed systems.
 
 By default, cloud `Queue` resources are not FIFO (first in, first out), and do not guarantee strict order of messages.
 
