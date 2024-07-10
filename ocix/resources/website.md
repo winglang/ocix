@@ -1,6 +1,6 @@
 # Website
 
-The Website resource represents a static website that can be hosted in the cloud. Websites typically serve static content, such as HTML, CSS, and JavaScript files, which are updated whenever the application is redeployed.
+The `Website` resource represents a static website that can be hosted in the cloud. `Website` resources typically serve static content, such as HTML, CSS, and JavaScript files, which are updated whenever the application is redeployed.
 
 ## Table of Contents
 
@@ -86,7 +86,7 @@ If a file with the same path already exists in the `Website` static assets, thro
 
 ### AddFileOptions <a id="AddFileOptions-"></a>
 
-Options for adding a file with custom value during the website's deployment.
+Options for adding a file with custom value during the application deployment.
 
 #### Properties <a id="AddFileOptions.Properties"></a>
 
@@ -105,7 +105,7 @@ New `Website` properties.
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
 | `path` | [`str`](../spec.md#standard-types) | Local path to the `Website` static files, relative to the source file or absolute. | Yes | |
-| `errorDocument` | [`str`](../spec.md#standard-types) | Name of the error document for the website. | No | Undefined |
+| `errorDocument` | [`str`](../spec.md#standard-types) | Name of the error document for the `Website`. | No | Undefined |
 | `domain` | [`Domain`](./domain.md) | The `Website` custom domain object. | No | Undefined |
 
 ---

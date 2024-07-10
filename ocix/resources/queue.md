@@ -4,7 +4,7 @@ The `Queue` resource represents a distributed data structure for managing a sequ
 
 Queues are typically used to decouple the producers and consumers of data in distributed systems.
 
-By default, queues are not FIFO (first in, first out), so the order of messages is not guaranteed.
+By default, cloud `Queue` resources are not FIFO (first in, first out), and do not guarantee strict order of messages.
 
 ## Table of Contents
 
@@ -61,10 +61,10 @@ Configure the `Queue` to invoke the inflight [`handle`](#handle) method of a cla
 
 | **Name** | **Description** |
 | --- | --- |
-| [`approxSize`](#approxSize-) | Retrieve the approximate number of messages in the queue. |
-| [`pop`](#pop) | Pop a message from the queue if any. |
-| [`purge`](#purge) | Remove all messages from the queue. |
-| [`push`](#push) | Push one or more messages to the queue. |
+| [`approxSize`](#approxSize-) | Retrieve the approximate number of messages in the `Queue`. |
+| [`pop`](#pop) | Pop a message from the `Queue` if any. |
+| [`purge`](#purge) | Remove all messages from the `Queue`. |
+| [`push`](#push) | Push one or more messages to the `Queue`. |
 
 ---
 
@@ -74,7 +74,7 @@ Configure the `Queue` to invoke the inflight [`handle`](#handle) method of a cla
 inflight approxSize(): num
 ```
 
-Retrieve the approximate number of messages in the queue.
+Retrieve the approximate number of messages in the `Queue`.
 
 ##### `pop` <a id="pop"></a>
 
@@ -82,7 +82,7 @@ Retrieve the approximate number of messages in the queue.
 inflight pop(): str?
 ```
 
-Pop a message from the queue if any.
+Pop a message from the `Queue` if any.
 
 ##### `purge` <a id="purge"></a>
 
@@ -90,7 +90,7 @@ Pop a message from the queue if any.
 inflight purge(): void
 ```
 
-Remove all messages from the queue.
+Remove all messages from the `Queue`.
 
 ##### `push` <a id="push"></a>
 
@@ -98,13 +98,13 @@ Remove all messages from the queue.
 inflight push(...messages: Array<str>): void
 ```
 
-Push one or more messages to the queue.
+Push one or more messages to the `Queue`.
 
 ###### Parameters <a id ="Queue.push.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `messages` | [`Array<str>`](../spec.md#startndard-types) | Message payloads to send to the queue. Each message must be non-empty. | Yes | |
+| `messages` | [`Array<str>`](../spec.md#startndard-types) | Message payloads to send to the `Queue`. Each message must be non-empty. | Yes | |
 
 ---
 
@@ -112,14 +112,14 @@ Push one or more messages to the queue.
 
 ### DeadLetterQueueProps <a id="DeadLetterQueueProps-"></a>
 
-Dead letter queue options.
+Dead letter `Queue` options.
 
 #### Properties <a name="Properties" id="DeadLetterQueueProps.Properties"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
 | `queue` | [`Queue`](#Queue) | Queue to receive messages that could not be processed successfully. | Yes | |
-| `maxDeliveryAttempts` | [`num`](../spec.md#standard-types) | Number of retries before sending the message to the dead-letter queue. | No | 1 |
+| `maxDeliveryAttempts` | [`num`](../spec.md#standard-types) | Number of retries before sending the message to the dead-letter `Queue`. | No | 1 |
 
 ---
 
@@ -131,8 +131,8 @@ New `Queue` properties.
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
-| `dlq` | [`DeadLetterQueueProps`](#DeadLetterQueueProps-) | A dead-letter queue. | No | `nil` |
-| `retentionPeriod` | ['Duration`](../spec.md#standard-types) | Maximum period of time to keep a message in the queue. | No | 1h |
+| `dlq` | [`DeadLetterQueueProps`](#DeadLetterQueueProps-) | A dead-letter `Queue`. | No | `nil` |
+| `retentionPeriod` | ['Duration`](../spec.md#standard-types) | Maximum period of time to keep a message in the `Queue`. | No | 1h |
 | `timeout` | ['Duration`](../spec.md#standard-types) | Maximum time allowed for a message to be processed by a consumer. | No | 30s |
 
 ---
