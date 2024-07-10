@@ -2,7 +2,7 @@
 
 The `Topic` represents a channel for publishing messages that subscribers can receive.
 
-Topics are fundamental in event-driven architectures, particularly in pub-sub messaging systems, as they help decouple data producers from multiple data consumers.
+`Topic` resources are fundamental in event-driven architectures, particularly in pub-sub messaging systems, as they help decouple data producers from multiple data consumers.
 
 ## Table of Contents
 
@@ -36,7 +36,7 @@ new Topic(props?: TopicProps);
 
 | **Name** | **Description** |
 | --- | --- |
-| [`onMessage`](#onMessage-) | Configure the `Topic` to invoke the inflight [`handle`](#handle) method of a class implementing the [`ITopicMessageHandler`](#ITopicMessageHandler-) interface whenever a new topic message is available. |
+| [`onMessage`](#onMessage-) | Configure the `Topic` to invoke the inflight [`handle`](#handle) method of a class implementing the [`ITopicMessageHandler`](#ITopicMessageHandler-) interface whenever a new `Topic` message is available. |
 | [`subscribeQueue`](#subscribeQueue-) | Create a new `Queue` and configure the `Topic` to forward messages to it. |
 
 ##### `onMessage` <a id="onMessage-"></a>
@@ -45,7 +45,7 @@ new Topic(props?: TopicProps);
 onMessage(handler: ITopicMessageHandler, props?: TopicOnMessageOptions): Function
 ```
 
-Configure the `Topic` to invoke the inflight [`handle`](#handle) method of a class implementing the [`ITopicMessageHandler`](#ITopicMessageHandler-) interface whenever a new topic message is available.
+Configure the `Topic` to invoke the inflight [`handle`](#handle) method of a class implementing the [`ITopicMessageHandler`](#ITopicMessageHandler-) interface whenever a new `Topic` message is available.
 
 ###### Parameters <a id ="Topic.onMessage.parameters"></a>
 
@@ -147,7 +147,7 @@ TBD: this is a duplication of the [`Queue.QueueProps`](./queue.md#queueprops-)
 
 ## Protocols <a name="Protocols" id="protocols"></a>
 
-TBD: could be generalized to IMessageHandler and shared with `Queue`.
+TBD: could be generalized to [`IMessageHandler`](./queue.md#IQueueMessageHandler) and shared with [`Queue`](./queue.md).
 
 ### ITopicMessageHandler <a id="ITopicMessageHandler-"></a>
 

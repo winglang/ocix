@@ -2,9 +2,9 @@
 
 The `Bucket` resource represents a container for storing data in the cloud.
 
-Buckets are commonly used to store arbitrary files such as images, videos, and documents, but they can also be utilized for structured data like JSON or CSV files.
+`Bucket` resources are commonly used to store arbitrary files such as images, videos, and documents, but they can also be utilized for structured data like JSON or CSV files.
 
-Cloud buckets employ object storage, which is optimized for handling large volumes of data with high availability.
+Cloud `Bucket` resources employ object storage, which is optimized for handling large volumes of data with high availability.
 
 Unlike file storage, which uses a hierarchical structure, object storage maintains a flat list of objects, each identified by a unique key.
 
@@ -43,7 +43,7 @@ new Bucket(props?: BucketProps);
 |----------------|----------------------------------------------------------------------|
 | [`addFile`](#addFile-)    | Upload a file from the system folder to the `Bucket` when the app is deployed. |
 | [`addObject`](#addObject-) | Upload object content to the `Bucket` when the app is deployed.       |
-| [`onCreate`](#onCreate-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the bucket.|
+| [`onCreate`](#onCreate-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the `Bucket`.|
 | [`onDelete`](#onDelete-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the `Bucket`. |
 | [`onEvent`](#onEvent-)    | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created or an existing object is deleted or modified. |
 | [`onUpdate`](#onUpdate-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the `Bucket`. |
@@ -72,7 +72,7 @@ Upload a file from the system folder to the `Bucket` when the app is deployed.
 addObject(key: str, body: str): void
 ```
 
-Upload object content to the bucket when the app is deployed.
+Upload object content to the `Bucket` when the app is deployed.
 
 TODO: In the future, this will support uploading any `Blob` type or referencing a file from the local filesystem.
 
@@ -91,7 +91,7 @@ TODO: In the future, this will support uploading any `Blob` type or referencing 
 onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
 ```
 
-Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the bucket.
+Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the `Bucket`.
 
 ###### Parameters <a id="Bucket.onCreate.parameters"></a>
 
@@ -108,7 +108,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
 ```
 
-Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the bucket.
+Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the `Bucket`.
 
 ###### Parameters <a id="Bucket.onDelete.parameters"></a>
 
@@ -142,7 +142,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 onUpdate(fn: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
 ```
 
-Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the bucket.
+Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the `Bucket`.
 
 ###### Parameters <a id="Bucket.onUpdate.parameters"></a>
 
@@ -160,18 +160,18 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 | [`copy`](#inflight-copy)           | Copy an object to a new location in the `Bucket`.                        |
 | [`delete`](#inflight-delete)       | Delete an existing object using a key from the `Bucket`.                 |
 | [`exists`](#inflight-exists)       | Check if an object exists in the `Bucket`.                               |
-| [`get`](#inflight-get)             | Retrieve an object from the bucket.                                    |
-| [`getJson`](#inflight-getJson-)    | Retrieve a JSON object from the bucket.                                |
-| [`list`](#inflight-list)           | List the keys of existing objects in the bucket.                       |
-| [`metadata`](#inflight-metadata)   | Get metadata of an object in the bucket.                               |
-| [`publicUrl`](#inflight-publicUrl-) | Return a public URL to the given bucket object.                       |
-| [`put`](#inflight-put)             | Put an object in the bucket.                                           |
-| [`putJson`](#inflight-putJson-)    | Put a JSON object in the bucket.                                       |
-| [`rename`](#inflight-rename)       | Store the object content under a new key and delete the old key in the bucket. |
+| [`get`](#inflight-get)             | Retrieve an object from the `Bucket`.                                    |
+| [`getJson`](#inflight-getJson-)    | Retrieve a JSON object from the `Bucket`.                                |
+| [`list`](#inflight-list)           | List the keys of existing objects in the `Bucket`.                       |
+| [`metadata`](#inflight-metadata)   | Get metadata of an object in the `Bucket`.                               |
+| [`publicUrl`](#inflight-publicUrl-) | Return a public URL to the given `Bucket` object.                       |
+| [`put`](#inflight-put)             | Put an object in the `Bucket`.                                           |
+| [`putJson`](#inflight-putJson-)    | Put a JSON object in the `Bucket`.                                       |
+| [`rename`](#inflight-rename)       | Store the object content under a new key and delete the old key in the `Bucket`. |
 | [`signedUrl`](#inflight-signedUrl-) | Return a signed URL to the given object.                              |
-| [`tryDelete`](#inflight-tryDelete-) | Delete an object from the bucket if it exists.                        |
-| [`tryGet`](#inflight-tryGet-)      | Retrieve an object from the bucket if it exists.                       |
-| [`tryGetJson`](#inflight-tryGetJson-) | Retrieve an object from the bucket if it exists, parsing it as JSON. |
+| [`tryDelete`](#inflight-tryDelete-) | Delete an object from the `Bucket` if it exists.                        |
+| [`tryGet`](#inflight-tryGet-)      | Retrieve an object from the `Bucket` if it exists.                       |
+| [`tryGetJson`](#inflight-tryGetJson-) | Retrieve an object from the `Bucket` if it exists, parsing it as JSON. |
 
 ---
 
@@ -181,7 +181,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 inflight copy(srcKey: str, dstKey: str): void
 ```
 
-Copy an object to a new location in the bucket. If the destination object already exists, it will be overwritten.
+Copy an object to a new location in the `Bucket`. If the destination object already exists, it will be overwritten.
 
 ###### Parameters <a id="Bucket.copy.parameters"></a>
 
@@ -196,14 +196,14 @@ Copy an object to a new location in the bucket. If the destination object alread
 inflight delete(key: str, opts?: BucketDeleteOptions): void
 ```
 
-Delete an existing object using a key from the bucket.
+Delete an existing object using a key from the `Bucket`.
 
 ###### Parameters <a id="Bucket.delete.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
-| `opts`   | [`BucketDeleteOptions`](#BucketDeleteOptions-) | Options for deleting an object from the bucket. | No | `{}` |
+| `opts`   | [`BucketDeleteOptions`](#BucketDeleteOptions-) | Options for deleting an object from the `Bucket`. | No | `{}` |
 ---
 
 ##### `inflight exists` <a id="inflight-exists"></a>
@@ -212,7 +212,7 @@ Delete an existing object using a key from the bucket.
 inflight exists(key: str): bool
 ```
 
-Check if an object exists in the bucket.
+Check if an object exists in the `Bucket`.
 
 ###### Parameters <a id="Bucket.exists.parameters"></a>
 
@@ -228,7 +228,7 @@ Check if an object exists in the bucket.
 inflight get(key: str, opts?: BucketGetOptions): str
 ```
 
-Retrieve an object from the bucket. If the bytes returned are not a valid UTF-8 string, throw an exception.
+Retrieve an object from the `Bucket`. If the bytes returned are not a valid UTF-8 string, throw an exception.
 
 ###### Parameters <a id="Bucket.get.parameters"></a>
 
@@ -245,7 +245,7 @@ Retrieve an object from the bucket. If the bytes returned are not a valid UTF-8 
 inflight getJson(key: str): Json
 ```
 
-Retrieve a Json object from the bucket.
+Retrieve a Json object from the `Bucket`.
 
 ###### Parameters <a id="Bucket.getJson.parameters"></a>
 
@@ -261,7 +261,7 @@ Retrieve a Json object from the bucket.
 inflight list(prefix?: str): Array<str>
 ```
 
-List the keys of existing objects in the bucket.
+List the keys of existing objects in the `Bucket`.
 
 ###### Parameters <a id="Bucket.list.parameters"></a>
 
@@ -277,7 +277,7 @@ List the keys of existing objects in the bucket.
 inflight metadata(key: str): ObjectMetadata
 ```
 
-Get [metadata](#ObjectMetadata-) of an object in the bucket.
+Get [metadata](#ObjectMetadata-) of an object in the `Bucket`.
 
 ###### Parameters <a id="Bucket.metadata.parameters"></a>
 
@@ -293,7 +293,7 @@ Get [metadata](#ObjectMetadata-) of an object in the bucket.
 inflight publicUrl(key: str): str
 ```
 
-Return a public URL to the given bucket object.
+Return a public URL to the given `Bucket` object.
 
 ###### Parameters <a id="Bucket.publicUrl.parameters"></a>
 
@@ -309,14 +309,14 @@ Return a public URL to the given bucket object.
 inflight put(key: str, body: str, opts?: BucketPutOptions): void
 ```
 
-Put an object in the bucket. If the object does not exist, a new one will be created. Otherwise, the existing object will be updated.
+Put an object in the `Bucket`. If the object does not exist, a new one will be created. Otherwise, the existing object will be updated.
 
 ###### Parameters <a id="Bucket.put.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
-| `body`   | [`str`](../spec.md#standard-types) | The content of the object to be stored in the bucket. | Yes | |
+| `body`   | [`str`](../spec.md#standard-types) | The content of the object to be stored in the `Bucket`. | Yes | |
 | `opts`   | [`BucketPutOptions`](#BucketPutOptions-) | Additional `put` options. | No | `{}` |
 
 ---
@@ -327,14 +327,14 @@ Put an object in the bucket. If the object does not exist, a new one will be cre
 inflight putJson(key: str, body: Json): void
 ```
 
-Put a Json object in the bucket. If the object does not exist, a new one will be created. Otherwise, the existing object will be updated.
+Put a Json object in the `Bucket`. If the object does not exist, a new one will be created. Otherwise, the existing object will be updated.
 
 ###### Parameters <a id="Bucket.putJson.parameters"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `key`    | [`str`](../spec.md#standard-types) | Key of the object. | Yes | |
-| `body`   | [`Json`](../spec.md#standard-types) | The JSON object to be stored in the bucket. | Yes | |
+| `body`   | [`Json`](../spec.md#standard-types) | The JSON object to be stored in the `Bucket`. | Yes | |
 
 ---
 
@@ -344,7 +344,7 @@ Put a Json object in the bucket. If the object does not exist, a new one will be
 inflight rename(srcKey: str, dstKey: str): void
 ```
 
-Store the object content under a new key and delete the old key in the bucket. If the destination object already exists, it will be overwritten.
+Store the object content under a new key and delete the old key in the `Bucket`. If the destination object already exists, it will be overwritten.
 
 ###### Parameters <a id="Bucket.rename.parameters"></a>
 
@@ -378,7 +378,7 @@ Return a signed URL to the given object.
 inflight tryDelete(key: str): bool
 ```
 
-Delete an object from the bucket if it exists.
+Delete an object from the `Bucket` if it exists.
 
 ###### Parameters <a id="Bucket.tryDelete.parameters"></a>
 
@@ -394,7 +394,7 @@ Delete an object from the bucket if it exists.
 inflight tryGet(key: str, opts?: BucketTryGetOptions): str?
 ```
 
-Get an object from the bucket if it exists. If the bytes returned are not a valid UTF-8 string, throw an exception.
+Get an object from the `Bucket` if it exists. If the bytes returned are not a valid UTF-8 string, throw an exception.
 
 ###### Parameters <a id="Bucket.tryGet.parameters"></a>
 
@@ -411,7 +411,7 @@ Get an object from the bucket if it exists. If the bytes returned are not a vali
 inflight tryGetJson(key: str): Json?
 ```
 
-Retrieve an object from the bucket if it exists, parsing it as JSON.
+Retrieve an object from the `Bucket` if it exists, parsing it as JSON.
 
 ###### Parameters <a id="Bucket.tryGetJson.parameters"></a>
 
@@ -443,7 +443,7 @@ Options for [`Bucket.delete()`](#inflight-delete).
 
 | **Name**   | **Type**                              | **Description**                   | **Required** | **Default** |
 |------------|---------------------------------------|-----------------------------------|--------------|-------------|
-| key        | [`str`](../spec.md#standard-types)    | The bucket key that triggered the event. | Yes          |             |
+| key        | [`str`](../spec.md#standard-types)    | The `Bucket` key that triggered the event. | Yes          |             |
 | type       | [`BucketEventType`](#BucketEventType-) | The type of the event.           | Yes          |             |
 
 ---
@@ -485,7 +485,7 @@ Options for [`new Bucket`](#initializers).
 
 | **Name**   | **Type**                    | **Description**                                    | **Required** | **Default** |
 |------------|-----------------------------|----------------------------------------------------|--------------|-------------|
-| public     | [`bool`](../spec.md#standard-types) | Whether the bucket's objects should be publicly accessible. | No           | `false`     |
+| public     | [`bool`](../spec.md#standard-types) | Whether the `Bucket`'s objects should be publicly accessible. | No           | `false`     |
 
 ---
 
@@ -529,7 +529,7 @@ Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 ### ObjectMetadata <a id="ObjectMetadata-"></a>
 
-[Metadata](#inflight-metadata) of a bucket object.
+[Metadata](#inflight-metadata) of a `Bucket` object.
 
 #### Properties <a id="ObjectMetadata.Properties"></a>
 
@@ -545,7 +545,7 @@ Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 ### IBucketEventHandler <a id="IBucketEventHandler-"></a>
 
-Defines an inflight handle method that is invoked to process bucket events.
+Defines an inflight handle method that is invoked to process `Bucket` events.
 
 #### Methods <a id="IBucketEventHandler.Methods"></a>
 
@@ -590,13 +590,13 @@ Bucket events to subscribe to.
 
 ### BucketSignedUrlAction <a id="BucketSignedUrlAction-"></a>
 
-Specifies the action permitted by a presigned URL for a bucket.
+Specifies the action permitted by a presigned URL for a `Bucket`.
 
 #### Members <a id="BucketSignedUrlAction.Members"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| DOWNLOAD | Represents a HTTP GET request for a presigned URL, allowing read access for an object in the bucket. |
-| UPLOAD | Represents a HTTP PUT request for a presigned URL, allowing write access for an object in the bucket. |
+| DOWNLOAD | Represents a HTTP GET request for a presigned URL, allowing read access for an object in the `Bucket`. |
+| UPLOAD | Represents a HTTP PUT request for a presigned URL, allowing write access for an object in the `Bucket`. |
 
 ---

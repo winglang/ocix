@@ -1,8 +1,8 @@
 # Secret
 
-The `Secret` resource represents a secret value (like an API key, certificate, etc.) securely stored in the cloud.
+The `Secret` resource represents a sensitive value (like an API key, certificate, etc.) securely stored in the cloud.
 
-Secrets are encrypted both at rest and in transit, and are only decrypted when used in a task. Storing a secret enables its use in different compute tasks, with rotation or revocation managed in a single location.
+`Secret` values are encrypted both at rest and in transit, and are only decrypted when used in a task. That enables their usage in different compute tasks, while rotation or revocation are managed in a single location.
 
 ## Table of Contents
 
@@ -34,8 +34,8 @@ new Secret(props?: SecretProps);
 
 | **Name** | **Description** |
 | --- | --- |
-| `value` | Retrieve the secret string value. |
-| `valueJson` | Retrieve the secret JSON value. |
+| `value` | Retrieve the `Secret` string value. |
+| `valueJson` | Retrieve the `Secret` JSON value. |
 
 ---
 
@@ -45,7 +45,7 @@ new Secret(props?: SecretProps);
 inflight value(options?: GetSecretValueOptions): str
 ```
 
-Retrieve the secret string value.
+Retrieve the `Secret` string value.
 
 ###### Parameters <a id="Secret.value.parameters"></a>
 
@@ -61,7 +61,7 @@ Retrieve the secret string value.
 inflight valueJson(options?: GetSecretValueOptions): Json
 ```
 
-Retrieve the secret JSON value.
+Retrieve the `Secret` JSON value.
 
 ###### Parameters <a id="Secret.valueJson.parameters"></a>
 
@@ -93,8 +93,8 @@ Options for the [`Secret`](#initializers) initializer.
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `name` | [`str`](../spec.md#standard-types) | The secret's name. | No | A new secret is provisioned with a generated name |
+| `name` | [`str`](../spec.md#standard-types) | The `Secret`'s name. | No | A new `Secret` is provisioned with a generated name |
 
-If a name is provided then the resource will reference an existing secret.
+If a name is provided then the resource will reference an existing `Secret`.
 
 ---
