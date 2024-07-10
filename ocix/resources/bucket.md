@@ -41,20 +41,20 @@ new Bucket(props?: BucketProps);
 
 | **Name**       | **Description**                                                      |
 |----------------|----------------------------------------------------------------------|
-| [`addFile`](#addFile-)    | Upload a file from the system folder to the bucket when the app is deployed. |
-| [`addObject`](#addObject-) | Upload object content to the bucket when the app is deployed.       |
+| [`addFile`](#addFile-)    | Upload a file from the system folder to the `Bucket` when the app is deployed. |
+| [`addObject`](#addObject-) | Upload object content to the `Bucket` when the app is deployed.       |
 | [`onCreate`](#onCreate-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the bucket.|
-| [`onDelete`](#onDelete-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the bucket. |
+| [`onDelete`](#onDelete-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the `Bucket`. |
 | [`onEvent`](#onEvent-)    | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created or an existing object is deleted or modified. |
-| [`onUpdate`](#onUpdate-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the bucket. |
+| [`onUpdate`](#onUpdate-)  | Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the `Bucket`. |
 
 #### Inflight Methods <a id="inflight-methods"></a>
 
 | **Name**         | **Description**                                                                                              |
 |------------------|--------------------------------------------------------------------------------------------------------------|
-| [`copy`](#inflight-copy)           | Copy an object to a new location in the bucket.                        |
-| [`delete`](#inflight-delete)       | Delete an existing object using a key from the bucket.                 |
-| [`exists`](#inflight-exists)       | Check if an object exists in the bucket.                               |
+| [`copy`](#inflight-copy)           | Copy an object to a new location in the `Bucket`.                        |
+| [`delete`](#inflight-delete)       | Delete an existing object using a key from the `Bucket`.                 |
+| [`exists`](#inflight-exists)       | Check if an object exists in the `Bucket`.                               |
 | [`get`](#inflight-get)             | Retrieve an object from the bucket.                                    |
 | [`getJson`](#inflight-getJson-)    | Retrieve a JSON object from the bucket.                                |
 | [`list`](#inflight-list)           | List the keys of existing objects in the bucket.                       |
@@ -76,7 +76,7 @@ new Bucket(props?: BucketProps);
 addFile(key: str, path: str, encoding?: str): void
 ```
 
-Upload a file from the system folder to the bucket when the app is deployed.
+Upload a file from the system folder to the `Bucket` when the app is deployed.
 
 ###### Parameters <a id="Bucket.addFile.parameters"></a>
 
