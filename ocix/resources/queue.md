@@ -40,17 +40,6 @@ new Queue(props?: QueueProps);
 | --- | --- |
 | [`setConsumer`](#setConsumer-) | Configure the `Queue` to invoke the inflight [`handle`](#handle) method of a class implementing the [`IQueueMessageHandler`](#IQueueMessageHandler-) interface whenever a new message is available. |
 
-##### Inflight Methods <a id="inflight-methods"></a>
-
-| **Name** | **Description** |
-| --- | --- |
-| [`approxSize`](#approxSize-) | Retrieve the approximate number of messages in the queue. |
-| [`pop`](#pop) | Pop a message from the queue if any. |
-| [`purge`](#purge) | Remove all messages from the queue. |
-| [`push`](#push) | Push one or more messages to the queue. |
-
----
-
 ##### `setConsumer` <a id="setConsumer-"></a>
 
 ```wing
@@ -65,6 +54,17 @@ Configure the `Queue` to invoke the inflight [`handle`](#handle) method of a cla
 | -------- | -------- | --------------- | ------------ | ----------- |
 | `handler` | [`IQueueMessageHandler`](#IQueueMessageHandler-) | Message handler pointer | Yes | |
 | `props` | [`QueueSetConsumerOptions`](#QueueSetConsumerOptions-) | Additional message hanlder properties | No | `{}` |
+
+---
+
+##### Inflight Methods <a id="inflight-methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| [`approxSize`](#approxSize-) | Retrieve the approximate number of messages in the queue. |
+| [`pop`](#pop) | Pop a message from the queue if any. |
+| [`purge`](#purge) | Remove all messages from the queue. |
+| [`push`](#push) | Push one or more messages to the queue. |
 
 ---
 

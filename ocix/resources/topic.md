@@ -39,14 +39,6 @@ new Topic(props?: TopicProps);
 | [`onMessage`](#onMessage-) | Configure the `Topic` to invoke the inflight [`handle`](#handle) method of a class implementing the [`ITopicMessageHandler`](#ITopicMessageHandler-) interface whenever a new topic message is available. |
 | [`subscribeQueue`](#subscribeQueue-) | Create a new `Queue` and configure the `Topic` to forward messages to it. |
 
-##### Inflight Methods <a id="inflight-methods"></a>
-
-| **Name** | **Description** |
-| --- | --- |
-| [`publish`](#publish) | Publish messages to the `Topic`. If multiple messages are provided, they will be published as a batch provided that this is supported by the target platform. |
-
----
-
 ##### `onMessage` <a id="onMessage-"></a>
 
 ```wing
@@ -81,7 +73,15 @@ Create a new `Queue` and configure the `Topic` to forward messages to it.
 
 ---
 
-##### `publish` <a id="publish"></a>
+##### Inflight Methods <a id="inflight-methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| [`publish`](#inflight-publish) | Publish messages to the `Topic`. If multiple messages are provided, they will be published as a batch provided that this is supported by the target platform. |
+
+---
+
+##### `publish` <a id="inflight-publish"></a>
 
 ```wing
 inflight publish(...messages: Array<str>): void
