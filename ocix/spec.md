@@ -43,4 +43,4 @@ To simplify search, all types are consolidated in a single table in alphabetic o
 | [Queue](resources/queue.md) | Represents a distributed data structure for managing a sequence of messages. |
 | [Secret](resources/secret.md) | Represents a secret value (such as an API key, certificate, etc.) securely stored in the cloud. |
 | [Topic](resources/topic.md) | Represents a channel for publishing messages that subscribers can receive. |
-| [Website](resource/website.md) | Represents a static website that can be hosted in the cloud. |
+| [Website](resources/website.md) | Represents a static website that can be hosted in the cloud. |
