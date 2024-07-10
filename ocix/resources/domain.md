@@ -1,5 +1,6 @@
 # Domain
 
+TBC: is it only for a `Website`? What about `Api`?
 The `Domain` resource represents a network domain configuration of a [`Website`](./website.md) in the cloud.
 
 ## Table of Contents
