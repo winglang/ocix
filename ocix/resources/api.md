@@ -209,16 +209,16 @@ Configure the `Api` resource to call the inflight [`handle`](#handle) method of 
 | **Name** | **Description** |
 | --- | --- |
 | [`ApiConnectOptions`](#ApiConnectOptions-) | Options for the [`Api.connect`](#connect) method. |
-| ['ApiCorsOptions`](#ApiCorsOptions-) | CORS Options for `Api`. |
-| ['ApiDeleteOptions`](#ApiDeleteOptions-) | Options for the [`Api.delete`](#delete) method. |
+| [`ApiCorsOptions`](#ApiCorsOptions-) | CORS Options for `Api`. |
+| [`ApiDeleteOptions`](#ApiDeleteOptions-) | Options for the [`Api.delete`](#delete) method. |
 | [`ApiEndpointOptions`](#ApiEndpointOptions-) | Common default options for all `Api` endpoint methods. |
-| ['ApiGetOptions`](#ApiGetOptions-) | Options for the [`Api.get`](#get) method. |
-| ['ApiHeadOptions`](#ApiHeadOptions-) | Options for the [`Api.head`](#head) method. |
-| ['ApiOptionsOptions`](#ApiOptionsOptions-) | Options for the [`Api.options`](#options) method. |
-| ['ApiPatchOptions`](#ApiPatchOptions-) | Options for the [`Api.patch`](#patch) method. |
-| ['ApiPostOptions`](#ApiPostOptions-) | Options for the [`Api.post`](#post) method. |
-| ['ApiProps`](#ApiProps-) | Options for the [`Api.new`](#initializers) method. |
-| ['ApiPutOptions`](#ApiPutOptions-) | Options for the [`Api.put`](#put) method. |
+| [`ApiGetOptions`](#ApiGetOptions-) | Options for the [`Api.get`](#get) method. |
+| [`ApiHeadOptions`](#ApiHeadOptions-) | Options for the [`Api.head`](#head) method. |
+| [`ApiOptionsOptions`](#ApiOptionsOptions-) | Options for the [`Api.options`](#options) method. |
+| [`ApiPatchOptions`](#ApiPatchOptions-) | Options for the [`Api.patch`](#patch) method. |
+| [`ApiPostOptions`](#ApiPostOptions-) | Options for the [`Api.post`](#post) method. |
+| [`ApiProps`](#ApiProps-) | Options for the [`Api.new`](#initializers) method. |
+| [`ApiPutOptions`](#ApiPutOptions-) | Options for the [`Api.put`](#put) method. |
 | [`ApiRequest`](#ApiRequest-) | Input parameter type for the [`IApiEndpointHandler.handle`](#handle) method. |
 | [`ApiResponse`](#ApiResponse-) | The return value type of the [`IApiEndpointHandler.handle`](#handle) method. |
 
