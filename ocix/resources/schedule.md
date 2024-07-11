@@ -80,7 +80,7 @@ Options for [`new Schedule`](#initializers).
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
-| `cron` | [`str`](../spec.md#standard-types) | Event trigger schedule in the [UNIX cron](#unix-cron-format) format. | No | Undefined |
+| `cron` | [`str`](../spec.md#standard-types) | Event trigger schedule in the [UNIX cron format](#unix-cron-format). | No | Undefined |
 | `rate` | [`Duration`](../spec.md#standard-types) | Trigger events at a periodic time interval. | No | Undefined |
 
 TBD: these two fields are presumably mutually exclusive, but at least one has to be defined.
@@ -90,15 +90,17 @@ TBD: these two fields are presumably mutually exclusive, but at least one has to
 ##### `UNIX cron Format` <a id="unix-cron-format" ></a>
 
 Timezone is UTC.
+
 [minute] [hour] [day of month] [month] [day of week]
-'*' means all possible values.
-'-' means a range of values.
-',' means a list of values.
-[minute] allows 0-59.
-[hour] allows 0-23.
-[day of month] allows 1-31.
-[month] allows 1-12 or JAN-DEC.
-[day of week] allows 0-6 or SUN-SAT.
+
+- '*' means all possible values.
+- '-' means a range of values.
+- ',' means a list of values.
+- [minute] allows 0-59.
+- [hour] allows 0-23.
+- [day of month] allows 1-31.
+- [month] allows 1-12 or JAN-DEC.
+- [day of week] allows 0-6 or SUN-SAT.
 
 For more details look [here](https://en.wikipedia.org/wiki/Cron)
 
