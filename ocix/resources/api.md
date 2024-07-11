@@ -376,7 +376,7 @@ Options for the [`Api.new`](#initializers) method.
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
 | `cors` | [`bool`](../spec.md#standard-types) | Enable API's CORS behavior across all routes. When enabled this will add CORS headers with default options. Can be customized by passing `corsOptions`. | No | false, CORS configuration is disabled. |
-| `corsOptions` | [`ApiCorsOptions`](#ApiCorsOptions-) | Options for configuring the API's CORS behavior across all routes. | No | Default CORS options are applied when `cors` is set to `true`<br>- allowOrigin: "*"<br>- allowMethods: [ HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE, HttpMethod.HEAD, HttpMethod.OPTIONS, ]<br>- allowHeaders: ["Content-Type", "Authorization"]<br>- exposeHeaders: []<br>- allowCredentials: false |
+| `corsOptions` | [`ApiCorsOptions`](#ApiCorsOptions-) | Options for configuring the API's CORS behavior across all routes. | No | Default CORS options are applied when `cors` is set to `true`<br>- allowOrigin: "*"<br>- allowMethods: [HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE, HttpMethod.HEAD, HttpMethod.OPTIONS]<br>- allowHeaders: ["Content-Type", "Authorization"]<br>- exposeHeaders: []<br>- allowCredentials: false |
 
 ---
 
