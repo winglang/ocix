@@ -2,7 +2,7 @@
 
 The `Api` resource represents a cloud-managed API Gateway that hosts a collection of HTTP endpoints which clients can invoke over the internet. APIs often serve as the front door for applications to access data, business logic, or functionality from backend services.
 
-The `Api` resource models an endpoint as a collection of routes. Each route is defined by a combination of a path, such as "/users/:userid", and a set of HTTP methods, such as GET, POST, or DELETE. When a client invokes a route, the API Gateway triggers the corresponding backend integration to handle the request.
+The `Api` resource models an endpoint as a collection of routes. Each route is defined by a combination of a path, such as "/users/:userid", and a set of HTTP methods, such as [GET](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET), [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST), or [DELETE](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE). When a client invokes a route, the API Gateway triggers the corresponding backend integration to handle the request.
 
 ## Table of Contents
 
@@ -207,8 +207,9 @@ Configure the `Api` resource to call the inflight [`handle`](#handle) method of 
 ## Structs <a id="structs"></a>
 
 | **Name** | **Description** |
+| --- | --- |
 | [`ApiConnectOptions`](#ApiConnectOptions-) | Options for the [`Api.connect`](#connect) method. |
-| ['ApiCorsOptions`](#ApiCorsOptions-") | |
+| ['ApiCorsOptions`](#ApiCorsOptions-) | CORS Options for `Api`. |
 | ['ApiDeleteOptions`](#ApiDeleteOptions-) | Options for the [`Api.delete`](#delete) method. |
 | [`ApiEndpointOptions`](#ApiEndpointOptions-) | Common default options for all `Api` endpoint methods. |
 | ['ApiGetOptions`](#ApiGetOptions-) | Options for the [`Api.get`](#get) method. |
@@ -239,12 +240,12 @@ Options for the [`Api.connect`](#connect) method.
 
 ### ApiCorsOptions <a id="ApiCorsOptions-"></a>
 
-Cors Options for `Api`.
+CORS Options for `Api`.
 
 #### Properties <a id="ApiCors.Properties"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
-| --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | `allowCredentials` | [`bool`](../spec.md#standard-types) | Whether to allow credentials. | No | false |
 | `allowHeaders` | [`Array<str>`](../spec.md#standard-types) | The list of allowed headers. | No | ["Content-Type", "Authorization"] |
 | `allowMethods` | [`Array<HttpMethod>`](../spec.md#standard-types) | The list of allowed [HTTP methods](#HttpMethod-). | No | [HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.PATCH, HttpMethod.DELETE, HttpMethod.HEAD, HttpMethod.OPTIONS] |
@@ -375,7 +376,7 @@ Options for the [`Api.new`](#initializers) method.
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
 | `cors` | [`bool`](../spec.md#standard-types) | Enable API's CORS behavior across all routes. When enabled this will add CORS headers with default options. Can be customized by passing `corsOptions`. | No | false, CORS configuration is disabled. |
-| `corsOptions` | [`ApiCorsOptions`](#ApiCorsOptions-) | Options for configuring the API's CORS behavior across all routes. | No | Default CORS options are applied when `cors` is set to `true` allowOrigin: "*", allowMethods: [ HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE, HttpMethod.HEAD, HttpMethod.OPTIONS, ], allowHeaders: ["Content-Type", "Authorization"], exposeHeaders: [], allowCredentials: false |
+| `corsOptions` | [`ApiCorsOptions`](#ApiCorsOptions-) | Options for configuring the API's CORS behavior across all routes. | No | Default CORS options are applied when `cors` is set to `true`<br>- allowOrigin: "*"<br>- allowMethods: [ HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE, HttpMethod.HEAD, HttpMethod.OPTIONS, ]<br>- allowHeaders: ["Content-Type", "Authorization"]<br>- exposeHeaders: []<br>- allowCredentials: false |
 
 ---
 
