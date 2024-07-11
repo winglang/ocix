@@ -97,8 +97,8 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `handler` | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
-| `opts`   | [`BucketOnCreateOptions`](#BucketOnCreateOptions-) | Event handling options | No | `{}` |
+| `handler` | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer. | Yes ||
+| `opts`   | [`BucketOnCreateOptions`](#BucketOnCreateOptions-) | Event handling options. | No | `{}` |
 
 ---
 
