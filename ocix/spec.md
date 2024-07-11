@@ -39,6 +39,7 @@ To simplify search, all types are consolidated in a single table in alphabetic o
 
 | Resource Name | Description              |
 | :------------ | :----------------------- |
+| [Api](resources/api.md) | Represents a cloud-managed API Gateway hosting a collection of HTTP endpoints. |
 | [Bucket](resources/bucket.md) | Represents a container for storing data in the cloud. |
 | [Queue](resources/queue.md) | Represents a distributed data structure for managing a sequence of messages. |
 | [Schedule](resources/schedule.md) | Represents a trigger for events at regular intervals for periodic tasks. |
