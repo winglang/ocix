@@ -88,7 +88,7 @@ TODO: In the future, this will support uploading any `Blob` type or referencing 
 ##### `onCreate` <a id="onCreate-"></a>
 
 ```wing
-onCreate(fn: IBucketEventHandler, opts?: BucketOnCreateOptions): void
+onCreate(handler: IBucketEventHandler, opts?: BucketOnCreateOptions): void
 ```
 
 Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created in the `Bucket`.
@@ -97,7 +97,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `fn`     | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
+| `handler` | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
 | `opts`   | [`BucketOnCreateOptions`](#BucketOnCreateOptions-) | Event handling options | No | `{}` |
 
 ---
@@ -105,7 +105,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 ##### `onDelete` <a id="onDelete-"></a>
 
 ```wing
-onDelete(fn: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
+onDelete(handler: IBucketEventHandler, opts?: BucketOnDeleteOptions): void
 ```
 
 Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is deleted from the `Bucket`.
@@ -114,7 +114,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `fn`     | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
+| `handler` | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
 | `opts`   | [`BucketOnDeleteOptions`](#BucketOnDeleteOptions-) | Event handling options | No | `{}` |
 
 ---
@@ -122,7 +122,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 ##### `onEvent` <a id="onEvent-"></a>
 
 ```wing
-onEvent(fn: IBucketEventHandler, opts?: BucketOnEventOptions): void
+onEvent(handler: IBucketEventHandler, opts?: BucketOnEventOptions): void
 ```
 
 Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever a new object is created or an existing object is deleted or modified.
@@ -131,7 +131,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `fn`     | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
+| `handler` | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
 | `opts`   | [`BucketOnEventOptions`](#BucketOnEventOptions-) | Event handling options | No | `{}` |
 
 ---
@@ -139,7 +139,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 ##### `onUpdate` <a id="onUpdate-"></a>
 
 ```wing
-onUpdate(fn: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
+onUpdate(handler: IBucketEventHandler, opts?: BucketOnUpdateOptions): void
 ```
 
 Configure the `Bucket` to call the inflight [`handle`](#handle) method of a class implementing the [`IBucketEventHandler`](#IBucketEventHandler-) interface whenever an existing object is modified within the `Bucket`.
@@ -148,7 +148,7 @@ Configure the `Bucket` to call the inflight [`handle`](#handle) method of a clas
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | -------- | -------- | --------------- | ------------ | ----------- |
-| `fn`     | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
+| `handler` | [`IBucketEventHandler`](#IBucketEventHandler-) | Event handler pointer | Yes ||
 | `opts`   | [`BucketOnUpdateOptions`](#BucketOnUpdateOptions-) | Event handling options | No | `{}` |
 
 ---

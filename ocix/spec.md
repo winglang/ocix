@@ -41,6 +41,7 @@ To simplify search, all types are consolidated in a single table in alphabetic o
 | :------------ | :----------------------- |
 | [Bucket](resources/bucket.md) | Represents a container for storing data in the cloud. |
 | [Queue](resources/queue.md) | Represents a distributed data structure for managing a sequence of messages. |
+| [Schedule](resources/schedule.md) | Represents a trigger for events at regular intervals for periodic tasks. |
 | [Secret](resources/secret.md) | Represents a secret value (such as an API key, certificate, etc.) securely stored in the cloud. |
 | [Topic](resources/topic.md) | Represents a channel for publishing messages that subscribers can receive. |
 | [Website](resources/website.md) | Represents a static website that can be hosted in the cloud. |
