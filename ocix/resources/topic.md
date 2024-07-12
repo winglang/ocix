@@ -151,7 +151,7 @@ TBD: could be generalized to [`IMessageHandler`](./queue.md#IQueueMessageHandler
 
 ### ITopicMessageHandler <a id="ITopicMessageHandler-"></a>
 
-The [`Topic.onMessage`](#onMessage-) parameter.  Defines an inflight `handle` method that is invoked to process the `Topic` messages.
+The [`Topic.onMessage`](#onMessage-) parameter.  Defines an inflight [`handle`](#handle) method that is invoked to process the `Topic` messages.
 
 #### Methods <a id="ITopicMessageHandler.Methods"></a>
 

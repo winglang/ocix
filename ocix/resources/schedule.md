@@ -110,7 +110,7 @@ For more details look [here](https://en.wikipedia.org/wiki/Cron)
 
 ### IScheduleOnTickHandler <a id="IScheduleOnTickHandler-"></a>
 
-Defines an inflight handle method that is invoked to process the [`Schedule.onTick`](#onTick-) events.
+Defines an inflight [`handle`](#handle) method that is invoked to process the [`Schedule.onTick`](#onTick-) events.
 
 #### Methods <a id="IScheduleOnTickHandler.Methods"></a>
 

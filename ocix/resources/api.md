@@ -435,7 +435,7 @@ The return value type of the [`IApiEndpointHandler.handle`](#handle) method.
 
 ### IApiEndpointHandler <a id="IApiEndpointHandler-"></a>
 
-Defines an inflight `handle` method that is invoked to process an HTTP request.
+Defines an inflight [`handle`](#handle) method that is invoked to process an HTTP request.
 
 #### Methods <a id="IApiEndpointHandler.Methods"></a>
 
