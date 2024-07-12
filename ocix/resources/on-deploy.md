@@ -19,7 +19,7 @@ The `OnDeploy` resource represents a block of inflight code that runs each time 
 new OnDeploy(handler: IOnDeployHandler, props?: OnDeployProps);
 ```
 
-| **Name** | **Type** | **Description** || **Name** | **Type** | **Description** | **Required** | **Default** |
+| **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
 | `handler` | [`IOnDeployHandler`](#IOnDeployHandler-) | Configure the `onDeploy` resource to invoke the inflight [`handle`](#handle) method of a class implementing the [`IOnDeployHandler`](#IOnDeployHandler-) interface whenever the application is deployed.| Yes | |
 | `props` | [`OnDeployProps`](#OnDeployProps-) | Additional `onDeploy` resource properties. | No | `{}` |
