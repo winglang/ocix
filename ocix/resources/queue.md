@@ -158,7 +158,7 @@ Options for [`Queue.setConsumer`](#setConsumer-).
 
 ### IQueueMessageHandler <a id="IQueueMessageHandler-"></a>
 
-The [`Queue.setConsumer`](#setConsumer-) parameter.  Defines an inflight `handle` method that is invoked to process the `Queue` messages.
+The [`Queue.setConsumer`](#setConsumer-) parameter.  Defines an inflight [`handle`](#handle) method that is invoked to process the `Queue` messages.
 
 #### Methods <a id="IQueueMessageHandler.Methods"></a>
 

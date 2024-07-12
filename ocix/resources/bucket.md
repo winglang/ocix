@@ -545,7 +545,7 @@ Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 ### IBucketEventHandler <a id="IBucketEventHandler-"></a>
 
-Defines an inflight handle method that is invoked to process `Bucket` events.
+Defines an inflight [`handle`](#handle) method that is invoked to process `Bucket` events.
 
 #### Methods <a id="IBucketEventHandler.Methods"></a>
 
