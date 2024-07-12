@@ -164,7 +164,7 @@ The [`Queue.setConsumer`](#setConsumer-) parameter.  Defines an inflight [`handl
 
 | **Name** | **Description** |
 | --- | --- |
-| `handle` | Function that is called to process the next available `Queue` message. |
+| [`handle`](#handle) | Function that is called to process the next available `Queue` message. |
 
 ---
 

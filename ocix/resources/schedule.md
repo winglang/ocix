@@ -116,7 +116,7 @@ Defines an inflight [`handle`](#handle) method that is invoked to process the [`
 
 | **Name** | **Description** |
 | --- | --- |
-| `handle` | Function that will be called at scheduled time intervals. |
+| [`handle`](#handle) | Function that will be called at scheduled time intervals. |
 
 ---
 

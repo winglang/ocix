@@ -551,7 +551,7 @@ Defines an inflight [`handle`](#handle) method that is invoked to process `Bucke
 
 | **Name** | **Description** |
 | --- | --- |
-| `handle` | Function that will be called when an event notification is fired. |
+| [`handle`](#handle) | Function that will be called when an event notification is fired. |
 
 ---
 
