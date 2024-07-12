@@ -157,7 +157,7 @@ The [`Topic.onMessage`](#onMessage-) parameter.  Defines an inflight [`handle`](
 
 | **Name** | **Description** |
 | --- | --- |
-| `handle` | Function that is called to process the next available `Topic` message. |
+| [`handle`](#handle) | Function that is called to process the next available `Topic` message. |
 
 ---
 

@@ -441,7 +441,7 @@ Defines an inflight [`handle`](#handle) method that is invoked to process an HTT
 
 | **Name** | **Description** |
 | --- | --- |
-| `handle` | Function that is called to handle a particular HTTP request. |
+| [`handle`](#handle) | Function that is called to handle a particular HTTP request. |
 
 ---
 

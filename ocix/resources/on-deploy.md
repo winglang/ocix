@@ -56,7 +56,7 @@ The [`new onDeploy`](#initializers) parameters. Defines an inflight [`handle`](#
 
 | **Name** | **Description** |
 | --- | --- |
-| `handle` | Entrypoint function to be invoked when the applications is deployed. |
+| [`handle`](#handle) | Entrypoint function to be invoked when the applications is deployed. |
 
 ---
 
