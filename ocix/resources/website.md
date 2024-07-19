@@ -4,13 +4,11 @@ The `Website` resource represents a static website that can be hosted in the clo
 
 ## Table of Contents
 
-<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
         - [Preflight Methods](#preflight-methods)
 - [Structs](#structs)
-<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
@@ -86,6 +84,12 @@ If a file with the same path already exists in the `Website` static assets, thro
 
 ### AddFileOptions <a id="AddFileOptions-"></a>
 
+```wing
+enum AddFileOptions {
+    contentType: str?;
+}
+```
+
 Options for adding a file with custom value during the application deployment.
 
 #### Properties <a id="AddFileOptions.Properties"></a>
@@ -97,6 +101,19 @@ Options for adding a file with custom value during the application deployment.
 ---
 
 ### WebsiteProps <a id="WebsiteProps-"></a>
+
+```wing
+struct WebsiteOptions {
+    errorDocument: str?;
+    path: str;
+}
+
+struct WebsiteDomainOptions {
+    domain: Domain?;
+}
+
+struct WebsiteProps extends WebsiteOptions, WebsiteDomainOptions {}
+```
 
 New `Website` properties.
 

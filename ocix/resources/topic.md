@@ -6,7 +6,6 @@ The `Topic` represents a channel for publishing messages that subscribers can re
 
 ## Table of Contents
 
-<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
@@ -14,7 +13,6 @@ The `Topic` represents a channel for publishing messages that subscribers can re
         - [Inflight Methods](#inflight-methods)
 - [Structs](#structs)
 - [Protocols](#protocols)
-<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
@@ -99,6 +97,10 @@ Publish messages to the `Topic`. If multiple messages are provided, they will be
 
 ### TopicOnMessageOptions <a id="TopicOnMessageOptions-" ></a>
 
+```wing
+struct TopicOnMessageOptions extends FunctionProps {}
+```
+
 Options for [`Topic.onMessage`](#onMessage-).
 
 #### Properties <a name="Properties" id="Topic.onMessage.Properties"></a>
@@ -115,9 +117,20 @@ Options for [`Topic.onMessage`](#onMessage-).
 
 ### TopicProps <a id="TopicProps-"></a>
 
+```wing
+struct TopicProps {}
+```
+
 New `Topic` options.
 
 ### DeadLetterQueueProps <a id="DeadLetterQueueProps-"></a>
+
+```wing
+struct DeadLetterQueueProps {
+    maxDeliveryAttempts: num?;
+    queue: Queue;
+}
+```
 
 Dead letter queue options. TBD: this is a duplication of the [`Queue.DeadLetterQueueProps`](./queue.md#deadletterqueueprops-)
 
@@ -131,6 +144,10 @@ Dead letter queue options. TBD: this is a duplication of the [`Queue.DeadLetterQ
 ---
 
 ### TopicSubscribeQueueOptions <a id="TopicSubscribeQueueOptions-"></a>
+
+```wing
+struct TopicSubscribeQueueOptions extends QueueProps {}
+```
 
 Options for [`Topic.subscribeQueue`](#subscribeQueue-).
 TBD: this is a duplication of the [`Queue.QueueProps`](./queue.md#queueprops-)

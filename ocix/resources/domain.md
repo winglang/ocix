@@ -5,11 +5,9 @@ The `Domain` resource represents a network domain configuration of a [`Website`]
 
 ## Table of Contents
 
-<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
 - [Structs](#structs)
-<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
@@ -27,10 +25,15 @@ new Domain(props: DomainProps);
 
 ## Structs <a id="structs"></a>
 
+```wing
+struct DomainProps {
+    domainName: str;
+}
+```
+
 ### DomainProps <a id="DomainProps-"></a>
 
 New `Domain` properties.
-
 
 #### Properties <a name="Properties" id="Properties"></a>
 

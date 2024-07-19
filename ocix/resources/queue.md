@@ -8,7 +8,6 @@ By default, cloud `Queue` resources are not FIFO (first in, first out), and do n
 
 ## Table of Contents
 
-<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
@@ -16,7 +15,6 @@ By default, cloud `Queue` resources are not FIFO (first in, first out), and do n
         - [Inflight Methods](#inflight-methods)
 - [Structs](#structs)
 - [Protocols](#protocols)
-<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
@@ -112,6 +110,13 @@ Push one or more messages to the `Queue`.
 
 ### DeadLetterQueueProps <a id="DeadLetterQueueProps-"></a>
 
+```wing
+struct DeadLetterQueueProps {
+    maxDeliveryAttempts: num?;
+    queue: Queue;
+}
+```
+
 Dead letter `Queue` options.
 
 #### Properties <a name="Properties" id="DeadLetterQueueProps.Properties"></a>
@@ -124,6 +129,14 @@ Dead letter `Queue` options.
 ---
 
 ### QueueProps <a id="QueueProps-"></a>
+
+```wing
+export interface QueueProps {
+    dlq: DeadLetterQueueProps?;
+    retentionPeriod: Duration?;
+    timeout: Duration?;
+}
+```
 
 New `Queue` properties.
 
@@ -138,6 +151,12 @@ New `Queue` properties.
 ---
 
 ### QueueSetConsumerOptions <a id="QueueSetConsumerOptions-"></a>
+
+```wing
+struct QueueSetConsumerOptions extends FunctionProps {
+    batchSize: num?;
+}
+```
 
 Options for [`Queue.setConsumer`](#setConsumer-).
 

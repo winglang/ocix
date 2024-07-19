@@ -4,14 +4,12 @@ The `Schedule` resource represents a trigger for events at regular intervals. Sc
 
 ## Table of Contents
 
-<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
         - [Preflight Methods](#preflight-methods)
 - [Structs](#structs)
 - [Protocols](#protocols)
-<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
@@ -58,6 +56,10 @@ Configure the `Schedule` to call the inflight [`handle`](#handle) method of a cl
 
 ### ScheduleOnTickOptions <a id="ScheduleOnTickOptions-"></a>
 
+```wing
+struct ScheduleOnTickOptions extends FunctionProps {}
+```
+
 Options for the [`Schedule.onTick`](#onTick-) method.
 
 #### Properties <a id="ScheduleOnTickOptions.Properties"></a>
@@ -73,6 +75,13 @@ Options for the [`Schedule.onTick`](#onTick-) method.
 ---
 
 ### ScheduleProps <a id="ScheduleProps-"></a>
+
+```wing
+struct ScheduleProps {
+    cron: str?;
+    rate: Duration?;
+}
+```
 
 Options for [`new Schedule`](#initializers).
 

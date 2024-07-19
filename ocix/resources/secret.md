@@ -6,13 +6,11 @@ The `Secret` resource represents a sensitive value (like an API key, certificate
 
 ## Table of Contents
 
-<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
         - [Inflight Methods](#inflight-methods)
 - [Structs](#structs)
-<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
@@ -75,6 +73,12 @@ Retrieve the `Secret` JSON value.
 
 ### GetSecretValueOptions <a id="GetSecretValueOptions-"></a>
 
+```wing
+struct GetSecretValueOptions {
+    cache: bool?;
+}
+```
+
 Secret retrieval options.
 
 #### Properties <a id="Properties"></a>
@@ -86,6 +90,12 @@ Secret retrieval options.
 ---
 
 ### SecretProps <a id="SecretProps-"></a>
+
+```wing
+export interface SecretProps {
+    name: str?;
+}
+```
 
 Options for the [`Secret`](#initializers) initializer.
 
