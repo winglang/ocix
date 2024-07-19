@@ -27,7 +27,7 @@ new Domain(props: DomainProps);
 
 | **Name** | **Description** |
 | -------- | --------------- |
-| [DomainProps](#DomainProps-) | New `Domain` properties. |
+| [DomainProps](#DomainProps-) | Options for [`new Domain`](#initializers) initializer. |
 
 ---
 
@@ -39,7 +39,7 @@ struct DomainProps {
 }
 ```
 
-New `Domain` properties.
+Options for [`new Domain`](#initializers) initializer.
 
 #### Properties <a name="Properties" id="Properties"></a>
 

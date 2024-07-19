@@ -432,7 +432,7 @@ Retrieve an object from the `Bucket` if it exists, parsing it as JSON.
 | [BucketOnDeleteOptions](#BucketOnDeleteOptions-) | [`onDelete`](#onDelete-) event options. |
 | [BucketOnEventOptions](#BucketOnEventOptions-) | [`onEvent`](#onEvent-) event options. |
 | [BucketOnUpdateOptions](#BucketOnUpdateOptions-) | [`onUpdate`](#onUpdate-) event options. |
-| [BucketProps](#BucketProps-) | Options for [`new Bucket`](#initializers). |
+| [BucketProps](#BucketProps-) | Options for [`new Bucket`](#initializers) initializer. |
 | [BucketPutOptions](#BucketPutOptions-) | Options for [`Bucket.put()`](#inflight-put). |
 | [BucketSignedUrlOptions](#BucketSignedUrlOptions-) | Options for [`Bucket.signedUrl()`](#inflight-signedUrl-). |
 | [BucketTryGetOptions](#BucketTryGetOptions-) | Options for [`Bucket.tryGet()`](#inflight-tryGet-). |
@@ -539,7 +539,7 @@ struct BucketProps {
 }
 ```
 
-Options for [`new Bucket`](#initializers).
+Options for [`new Bucket`](#initializers) initializer.
 
 #### Properties <a id="BucketProps.Properties"></a>
 

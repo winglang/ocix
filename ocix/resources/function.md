@@ -97,7 +97,7 @@ Invoke the `Function` asynchronously without waiting for the result.
 
 | **Name** | **Description** |
 | -------- | --------------- |
-| [FunctionProps](#FunctionProps-) | Optional argument for the [`new Function`](#initializers) intializer. |
+| [FunctionProps](#FunctionProps-) | Optional argument for the [`new Function`](#initializers) initializer. |
 
 ---
 

@@ -73,8 +73,8 @@ Retrieve the `Secret` JSON value.
 
 | **Name** | **Description** |
 | -------- | --------------- |
-| [GetSecretValueOptions](#GetSecretValueOptions-) | Secret retrieval options. |
-| [SecretProps](#SecretProps-) | Options for the [`Secret`](#initializers) initializer. |
+| [GetSecretValueOptions](#GetSecretValueOptions-) | Options for the [value](#value) and [valueJson](#valueJson-) methods. |
+| [SecretProps](#SecretProps-) | Options for the [`new Secret`](#initializers) initializer. |
 
 ---
 
@@ -86,7 +86,7 @@ struct GetSecretValueOptions {
 }
 ```
 
-Secret retrieval options.
+Options for the [value](#value) and [valueJson](#valueJson-) methods.
 
 #### Properties <a id="Properties"></a>
 

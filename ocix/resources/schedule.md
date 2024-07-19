@@ -57,7 +57,7 @@ Configure the `Schedule` to call the inflight [`handle`](#handle) method of a cl
 | **Name** | **Description** |
 | -------- | --------------- |
 | [ScheduleOnTickOptions](#ScheduleOnTickOptions-) | Options for the [`Schedule.onTick`](#onTick-) method. |
-| [ScheduleProps](#ScheduleProps-) | Options for [`new Schedule`](#initializers). |
+| [ScheduleProps](#ScheduleProps-) | Options for [`new Schedule`](#initializers) initializer. |
 
 ---
 
@@ -90,7 +90,7 @@ struct ScheduleProps {
 }
 ```
 
-Options for [`new Schedule`](#initializers).
+Options for [`new Schedule`](#initializers) initializer.
 
 #### Properties <a id="ScheduleProps.Properties"></a>
 

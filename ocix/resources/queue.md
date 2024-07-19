@@ -111,7 +111,7 @@ Push one or more messages to the `Queue`.
 | **Name** | **Description** |
 | -------- | --------------- |
 | [DeadLetterQueueProps](#DeadLetterQueueProps-) | Dead letter `Queue` options. |
-| [QueueProps](#QueueProps-) | New `Queue` properties. |
+| [QueueProps](#QueueProps-) | Options for [`new Queue`](#initializers) initializer. |
 | [QueueSetConsumerOptions](#QueueSetConsumerOptions-) | Options for [`Queue.setConsumer`](#setConsumer-). |
 
 ---
@@ -146,7 +146,7 @@ export interface QueueProps {
 }
 ```
 
-New `Queue` properties.
+Options for [`new Queue`](#initializers) initializer.
 
 #### Properties <a id="QueueProps.Properties"></a>
 

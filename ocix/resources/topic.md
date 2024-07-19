@@ -99,7 +99,7 @@ Publish messages to the `Topic`. If multiple messages are provided, they will be
 | -------- | --------------- |
 | [DeadLetterQueueProps](#DeadLetterQueueProps-) | Dead letter queue options. |
 | [TopicOnMessageOptions](#TopicOnMessageOptions-) | Options for [`Topic.onMessage`](#onMessage-). |
-| [TopicProps](#TopicProps-) | New `Topic` options. |
+| [TopicProps](#TopicProps-) | Options for [`new Topic`](#initializers) initializer. |
 | [TopicSubscribeQueueOptions](#TopicSubscribeQueueOptions-) | Options for [`Topic.subscribeQueue`](#subscribeQueue-). |
 
 ---
@@ -130,7 +130,7 @@ Options for [`Topic.onMessage`](#onMessage-).
 struct TopicProps {}
 ```
 
-New `Topic` options.
+Options for [`new Topic`](#initializers) initializer.
 
 ### DeadLetterQueueProps <a id="DeadLetterQueueProps-"></a>
 

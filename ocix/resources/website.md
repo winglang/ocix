@@ -84,8 +84,8 @@ If a file with the same path already exists in the `Website` static assets, thro
 
 | **Name** | **Description** |
 | -------- | --------------- |
-| [AddFileOptions](#AddFileOptions-) | Options for adding a file with custom value during the application deployment. |
-| [WebsiteProps](#WebsiteProps-) | New `Website` properties. |
+| [AddFileOptions](#AddFileOptions-) | Options for the [addFile](#addFile-) method. |
+| [WebsiteProps](#WebsiteProps-) | Options for [`new Website`](#initializers) initializer. |
 
 ---
 
@@ -97,7 +97,7 @@ enum AddFileOptions {
 }
 ```
 
-Options for adding a file with custom value during the application deployment.
+Options for the [addFile](#addFile-) method.
 
 #### Properties <a id="AddFileOptions.Properties"></a>
 
