@@ -95,6 +95,12 @@ Invoke the `Function` asynchronously without waiting for the result.
 
 ## Structs <a id="structs"></a>
 
+| **Name** | **Description** |
+| -------- | --------------- |
+| [FunctionProps](#FunctionProps-) | Optional argument for the [`new Function`](#initializers) intializer. |
+
+---
+
 ### FunctionProps <a id="FunctionProps-"></a>
 
 ```wing

@@ -423,6 +423,23 @@ Retrieve an object from the `Bucket` if it exists, parsing it as JSON.
 
 ## Structs <a id="structs"></a>
 
+| **Name** | **Description** |
+| -------- | --------------- |
+| [BucketDeleteOptions](#BucketDeleteOptions-) | Options for [`Bucket.delete()`](#inflight-delete). |
+| [BucketEvent](#BucketEvent-) | [onEvent](#onEvent-) notification payload. |
+| [BucketGetOptions](#BucketGetOptions-) | Options for [`Bucket.get()`](#inflight-get). |
+| [BucketOnCreateOptions](#BucketOnCreateOptions-) | [`onCreate`](#onCreate-) event options. |
+| [BucketOnDeleteOptions](#BucketOnDeleteOptions-) | [`onDelete`](#onDelete-) event options. |
+| [BucketOnEventOptions](#BucketOnEventOptions-) | [`onEvent`](#onEvent-) event options. |
+| [BucketOnUpdateOptions](#BucketOnUpdateOptions-) | [`onUpdate`](#onUpdate-) event options. |
+| [BucketProps](#BucketProps-) | Options for [`new Bucket`](#initializers). |
+| [BucketPutOptions](#BucketPutOptions-) | Options for [`Bucket.put()`](#inflight-put). |
+| [BucketSignedUrlOptions](#BucketSignedUrlOptions-) | Options for [`Bucket.signedUrl()`](#inflight-signedUrl-). |
+| [BucketTryGetOptions](#BucketTryGetOptions-) | Options for [`Bucket.tryGet()`](#inflight-tryGet-). |
+| [ObjectMetadata](#ObjectMetadata-) | [Metadata](#inflight-metadata) of a `Bucket` object. |
+
+---
+
 ### BucketDeleteOptions <a id="BucketDeleteOptions-"></a>
 
 ```wing
@@ -450,7 +467,8 @@ struct BucketEvent {
 }
 ```
 
-[onEvent](#onEvent-) notification payload- will be in use after solving the [issue](https://github.com/winglang/wing/issues/1927).
+[onEvent](#onEvent-) notification payload.
+TODO: will be in use after solving the [issue](https://github.com/winglang/wing/issues/1927).
 
 #### Properties <a id="BucketEvent.Properties"></a>
 
@@ -639,6 +657,12 @@ Function that will be called when an event notification is fired.
 ---
 
 ## Enums <a id="enums"></a>
+
+| **Name** | **Description** |
+| -------- | --------------- |
+| [BucketEventType](#BucketEventType-) | Bucket events to subscribe to. |
+
+---
 
 ### BucketEventType <a id="BucketEventType-"></a>
 

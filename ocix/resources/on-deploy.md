@@ -26,6 +26,12 @@ new OnDeploy(handler: IOnDeployHandler, props?: OnDeployProps);
 
 ## Structs <a id="structs"></a>
 
+| **Name** | **Description** |
+| -------- | --------------- |
+| [OnDeployProps](#OnDeployProps-) | Optional properties for the [`new OnDeploy`](#initializers) initializer. |
+
+---
+
 ### OnDeployProps <a id="OnDeployProps-"></a>
 
 ```wing
