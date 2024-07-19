@@ -215,7 +215,7 @@ Configure the `Api` resource to call the inflight [`handle`](#handle) method of 
 | [`ApiOptionsOptions`](#ApiOptionsOptions-) | Options for the [`Api.options`](#options) method. |
 | [`ApiPatchOptions`](#ApiPatchOptions-) | Options for the [`Api.patch`](#patch) method. |
 | [`ApiPostOptions`](#ApiPostOptions-) | Options for the [`Api.post`](#post) method. |
-| [`ApiProps`](#ApiProps-) | Options for the [`Api.new`](#initializers) method. |
+| [`ApiProps`](#ApiProps-) | Options for the [`Api.new`](#initializers) initializer. |
 | [`ApiPutOptions`](#ApiPutOptions-) | Options for the [`Api.put`](#put) method. |
 | [`ApiRequest`](#ApiRequest-) | Input parameter type for the [`IApiEndpointHandler.handle`](#handle) method. |
 | [`ApiResponse`](#ApiResponse-) | The return value type of the [`IApiEndpointHandler.handle`](#handle) method. |
@@ -419,7 +419,7 @@ struct ApiProps {
 }
 ```
 
-Options for the [`Api.new`](#initializers) method.
+Options for the [`Api.new`](#initializers) initializer.
 
 #### Properties <a id="ApiProps.Properties"></a>
 
