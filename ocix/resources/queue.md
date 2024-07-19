@@ -108,6 +108,14 @@ Push one or more messages to the `Queue`.
 
 ## Structs <a id="structs"></a>
 
+| **Name** | **Description** |
+| -------- | --------------- |
+| [DeadLetterQueueProps](#DeadLetterQueueProps-) | Dead letter `Queue` options. |
+| [QueueProps](#QueueProps-) | New `Queue` properties. |
+| [QueueSetConsumerOptions](#QueueSetConsumerOptions-) | Options for [`Queue.setConsumer`](#setConsumer-). |
+
+---
+
 ### DeadLetterQueueProps <a id="DeadLetterQueueProps-"></a>
 
 ```wing

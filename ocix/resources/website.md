@@ -82,6 +82,13 @@ If a file with the same path already exists in the `Website` static assets, thro
 
 ## Structs <a id="structs"></a>
 
+| **Name** | **Description** |
+| -------- | --------------- |
+| [AddFileOptions](#AddFileOptions-) | Options for adding a file with custom value during the application deployment. |
+| [WebsiteProps](#WebsiteProps-) | New `Website` properties. |
+
+---
+
 ### AddFileOptions <a id="AddFileOptions-"></a>
 
 ```wing

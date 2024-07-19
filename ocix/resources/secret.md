@@ -71,6 +71,13 @@ Retrieve the `Secret` JSON value.
 
 ## Structs <a id="structs"></a>
 
+| **Name** | **Description** |
+| -------- | --------------- |
+| [GetSecretValueOptions](#GetSecretValueOptions-) | Secret retrieval options. |
+| [SecretProps](#SecretProps-) | Options for the [`Secret`](#initializers) initializer. |
+
+---
+
 ### GetSecretValueOptions <a id="GetSecretValueOptions-"></a>
 
 ```wing

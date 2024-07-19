@@ -25,13 +25,19 @@ new Domain(props: DomainProps);
 
 ## Structs <a id="structs"></a>
 
+| **Name** | **Description** |
+| -------- | --------------- |
+| [DomainProps](#DomainProps-) | New `Domain` properties. |
+
+---
+
+### DomainProps <a id="DomainProps-"></a>
+
 ```wing
 struct DomainProps {
     domainName: str;
 }
 ```
-
-### DomainProps <a id="DomainProps-"></a>
 
 New `Domain` properties.
 

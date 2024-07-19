@@ -220,6 +220,8 @@ Configure the `Api` resource to call the inflight [`handle`](#handle) method of 
 | [`ApiRequest`](#ApiRequest-) | Input parameter type for the [`IApiEndpointHandler.handle`](#handle) method. |
 | [`ApiResponse`](#ApiResponse-) | The return value type of the [`IApiEndpointHandler.handle`](#handle) method. |
 
+---
+
 ### ApiConnectOptions <a id="ApiConnectOptions-"></a>
 
 ```wing
@@ -533,6 +535,12 @@ Function that is called to handle a particular HTTP request.
 ---
 
 ## Enums <a id="enums"></a>
+
+| **Name** | **Description** |
+| -------- | --------------- |
+| [HttpMethod](#HttpMethod-) | Supported HTTP methods. |
+
+---
 
 ### HttpMethod <a id="HttpMethod-"></a>
 

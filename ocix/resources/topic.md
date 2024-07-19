@@ -95,6 +95,15 @@ Publish messages to the `Topic`. If multiple messages are provided, they will be
 
 ## Structs <a id="structs"></a>
 
+| **Name** | **Description** |
+| -------- | --------------- |
+| [DeadLetterQueueProps](#DeadLetterQueueProps-) | Dead letter queue options. |
+| [TopicOnMessageOptions](#TopicOnMessageOptions-) | Options for [`Topic.onMessage`](#onMessage-). |
+| [TopicProps](#TopicProps-) | New `Topic` options. |
+| [TopicSubscribeQueueOptions](#TopicSubscribeQueueOptions-) | Options for [`Topic.subscribeQueue`](#subscribeQueue-). |
+
+---
+
 ### TopicOnMessageOptions <a id="TopicOnMessageOptions-" ></a>
 
 ```wing

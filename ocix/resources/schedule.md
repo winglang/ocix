@@ -54,6 +54,13 @@ Configure the `Schedule` to call the inflight [`handle`](#handle) method of a cl
 
 ## Structs <a id="structs"></a>
 
+| **Name** | **Description** |
+| -------- | --------------- |
+| [ScheduleOnTickOptions](#ScheduleOnTickOptions-) | Options for the [`Schedule.onTick`](#onTick-) method. |
+| [ScheduleProps](#ScheduleProps-) | Options for [`new Schedule`](#initializers). |
+
+---
+
 ### ScheduleOnTickOptions <a id="ScheduleOnTickOptions-"></a>
 
 ```wing
