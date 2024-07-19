@@ -545,7 +545,7 @@ enum HttpMethod {
   OPTIONS,
   PATCH,
   POST,
-  PUT,
+  PUT
 }
 ```
 

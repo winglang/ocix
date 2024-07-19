@@ -123,8 +123,8 @@ Dead letter `Queue` options.
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
-| `queue` | [`Queue`](#Queue) | Queue to receive messages that could not be processed successfully. | Yes | |
 | `maxDeliveryAttempts` | [`num`](../spec.md#standard-types) | Number of retries before sending the message to the dead-letter `Queue`. | No | 1 |
+| `queue` | [`Queue`](#Queue) | Queue to receive messages that could not be processed successfully. | Yes | |
 
 ---
 

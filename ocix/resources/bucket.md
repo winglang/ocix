@@ -601,9 +601,9 @@ struct ObjectMetadata {
 
 | **Name**       | **Type**                    | **Description**                                  | **Required** | **Default** |
 |----------------|-----------------------------|--------------------------------------------------|--------------|-------------|
+| contentType    | [`str`](../spec.md#standard-types)      | The content type of the object, if it is known.    | No          | Undefined.   |
 | lastModified   | [`Datetime`](../spec.md#standard-types) | The last time the object was modified.             | Yes          |             |
 | size           | [`num`](../spec.md#standard-types)      | The size of the object in bytes.                   | Yes          |             |
-| contentType    | [`str`](../spec.md#standard-types)      | The content type of the object, if it is known.    | Yes          |             |
 
 ---
 
