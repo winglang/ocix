@@ -4,12 +4,10 @@ The `OnDeploy` resource represents a block of inflight code that runs each time 
 
 ## Table of Contents
 
-<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
 - [Structs](#structs)
 - [Protocols](#protocols)
-<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
@@ -29,6 +27,13 @@ new OnDeploy(handler: IOnDeployHandler, props?: OnDeployProps);
 ## Structs <a id="structs"></a>
 
 ### OnDeployProps <a id="OnDeployProps-"></a>
+
+```wing
+struct OnDeployProps extends FunctionProps {
+    executeAfter: Array<Construct>?;
+    executeBefore: Array<Construct>?;
+}
+```
 
 Optional properties for the [`new OnDeploy`](#initializers) initializer.
 

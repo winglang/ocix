@@ -425,6 +425,12 @@ Retrieve an object from the `Bucket` if it exists, parsing it as JSON.
 
 ### BucketDeleteOptions <a id="BucketDeleteOptions-"></a>
 
+```wing
+struct BucketDeleteOptions {
+    mustExist: bool?;
+}
+```
+
 Options for [`Bucket.delete()`](#inflight-delete).
 
 #### Properties <a id="BucketDeleteOptions.Properties"></a>
@@ -436,6 +442,13 @@ Options for [`Bucket.delete()`](#inflight-delete).
 ---
 
 ### BucketEvent <a id="BucketEvent-"></a>
+
+```wing
+struct BucketEvent {
+    key: str;
+    type: BucketEventType;
+}
+```
 
 [onEvent](#onEvent-) notification payload- will be in use after solving the [issue](https://github.com/winglang/wing/issues/1927).
 
@@ -450,6 +463,13 @@ Options for [`Bucket.delete()`](#inflight-delete).
 
 ### BucketGetOptions <a id="BucketGetOptions-"></a>
 
+```wing
+struct BucketGetOptions {
+    endByte: num?;
+    startByte: num?;
+}
+```
+
 Options for [`Bucket.get()`](#inflight-get).
 
 #### Properties <a id="BucketGetOptions.Properties"></a>
@@ -463,21 +483,43 @@ Options for [`Bucket.get()`](#inflight-get).
 
 ### BucketOnCreateOptions <a id="BucketOnCreateOptions-"></a>
 
+```wing
+struct BucketOnCreateOptions {}
+```
+
 [`onCreate`](#onCreate-) event options.
 
 ### BucketOnDeleteOptions <a id="BucketOnDeleteOptions-"></a>
+
+```wing
+struct BucketOnDeleteOptions {}
+```
 
 [`onDelete`](#onDelete-) event options.
 
 ### BucketOnEventOptions <a id="BucketOnEventOptions-"></a>
 
+```wing
+struct BucketOnEventOptions {}
+```
+
 [`onEvent`](#onEvent-) options.
 
 ### BucketOnUpdateOptions <a id="BucketOnUpdateOptions-"></a>
 
+```wing
+struct BucketOnUpdateOptions {}
+```
+
 [`onUpdate`](#onUpdate-) event options.
 
 ### BucketProps <a id="BucketProps-"></a>
+
+```wing
+struct BucketProps {
+    public: bool?;
+}
+```
 
 Options for [`new Bucket`](#initializers).
 
@@ -491,6 +533,12 @@ Options for [`new Bucket`](#initializers).
 
 ### BucketPutOptions <a id="BucketPutOptions-"></a>
 
+```wing
+struct BucketPutOptions {
+    contentType: str;
+}
+```
+
 Options for [`Bucket.put()`](#inflight-put).
 
 #### Properties <a id="BucketPutOptions.Properties"></a>
@@ -502,6 +550,13 @@ Options for [`Bucket.put()`](#inflight-put).
 ---
 
 ### BucketSignedUrlOptions <a id="BucketSignedUrlOptions-"></a>
+
+```wing
+struct BucketSignedUrlOptions {
+    action: BucketSignedUrlAction?;
+    duration: Duration?;
+}
+```
 
 Options for [`Bucket.signedUrl()`](#inflight-signedUrl-).
 
@@ -516,6 +571,10 @@ Options for [`Bucket.signedUrl()`](#inflight-signedUrl-).
 
 ### BucketTryGetOptions <a id="BucketTryGetOptions-"></a>
 
+```wing
+struct BucketTryGetOptions extends BucketGetOptions {}
+```
+
 Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 #### Properties <a id="BucketTryGetOptions.Properties"></a>
@@ -529,15 +588,22 @@ Options for [`Bucket.tryGet()`](#inflight-tryGet-).
 
 ### ObjectMetadata <a id="ObjectMetadata-"></a>
 
+```wing
+struct ObjectMetadata {
+    contentType: str?;
+    lastModified: Datetime;
+    size: num;
+}
+```
 [Metadata](#inflight-metadata) of a `Bucket` object.
 
 #### Properties <a id="ObjectMetadata.Properties"></a>
 
 | **Name**       | **Type**                    | **Description**                                  | **Required** | **Default** |
 |----------------|-----------------------------|--------------------------------------------------|--------------|-------------|
+| contentType    | [`str`](../spec.md#standard-types)      | The content type of the object, if it is known.    | No          | Undefined.   |
 | lastModified   | [`Datetime`](../spec.md#standard-types) | The last time the object was modified.             | Yes          |             |
 | size           | [`num`](../spec.md#standard-types)      | The size of the object in bytes.                   | Yes          |             |
-| contentType    | [`str`](../spec.md#standard-types)      | The content type of the object, if it is known.    | Yes          |             |
 
 ---
 
@@ -576,6 +642,14 @@ Function that will be called when an event notification is fired.
 
 ### BucketEventType <a id="BucketEventType-"></a>
 
+```wing
+enum BucketEventType {
+  CREATE,
+  DELETE,
+  UPDATE
+}
+```
+
 Bucket events to subscribe to.
 
 #### Members <a id="BucketEventType.Members"></a>
@@ -589,6 +663,13 @@ Bucket events to subscribe to.
 ---
 
 ### BucketSignedUrlAction <a id="BucketSignedUrlAction-"></a>
+
+```wing
+enum BucketSignedUrlAction {
+  DOWNLOAD,
+  UPLOAD
+}
+```
 
 Specifies the action permitted by a presigned URL for a `Bucket`.
 

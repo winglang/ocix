@@ -6,7 +6,6 @@ The `Api` resource models an endpoint as a collection of routes. Each route is d
 
 ## Table of Contents
 
-<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Properties](#api-properties)
@@ -15,7 +14,6 @@ The `Api` resource models an endpoint as a collection of routes. Each route is d
 - [Structs](#structs)
 - [Protocols](#protocols)
 - [Enums](#enums)
-<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
@@ -224,6 +222,10 @@ Configure the `Api` resource to call the inflight [`handle`](#handle) method of 
 
 ### ApiConnectOptions <a id="ApiConnectOptions-"></a>
 
+```wing
+struct ApiConnectOptions extends ApiEndpointOptions {}
+```
+
 Options for the [`Api.connect`](#connect) method.
 
 #### Properties <a id="ApiConnectOptions.Properties"></a>
@@ -239,6 +241,17 @@ Options for the [`Api.connect`](#connect) method.
 ---
 
 ### ApiCorsOptions <a id="ApiCorsOptions-"></a>
+
+```wing
+struct ApiCorsOptions {
+    allowCredentials: bool?;
+    allowMethods: Array<HttpMethod>?;
+    allowHeaders: Array<str>?;
+    allowOrigin: str?;
+    exposeHeaders: Array<str>?;
+    maxAge: Duration?;
+}
+```
 
 CORS Options for `Api`.
 
@@ -257,6 +270,10 @@ CORS Options for `Api`.
 
 ### ApiDeleteOptions <a id="ApiDeleteOptions-"></a>
 
+```wing
+struct ApiDeleteOptions extends ApiEndpointOptions {}
+```
+
 Options for the [`Api.delete`](#delete) method.
 
 #### Properties <a id="ApiDeleteOptions.Properties"></a>
@@ -272,6 +289,10 @@ Options for the [`Api.delete`](#delete) method.
 ---
 
 ### ApiEndpointOptions <a id="ApiEndpointOptions-"></a>
+
+```wing
+struct ApiEndpointOptions extends FunctionProps {}
+```
 
 Common default options for all `Api` endpoint method.
 
@@ -289,6 +310,10 @@ Common default options for all `Api` endpoint method.
 
 ### ApiGetOptions <a id="ApiGetOptions-"></a>
 
+```wing
+struct ApiGetOptions extends ApiEndpointOptions {}
+```
+
 Options for the [`Api.get`](#get) method.
 
 #### Properties <a id="ApiGetOptions.Properties"></a>
@@ -304,6 +329,10 @@ Options for the [`Api.get`](#get) method.
 ---
 
 ### ApiHeadOptions <a id="ApiHeadOptions-"></a>
+
+```wing
+struct ApiHeadOptions extends ApiEndpointOptions {}
+```
 
 Options for the [`Api.head`](#head) method.
 
@@ -321,6 +350,10 @@ Options for the [`Api.head`](#head) method.
 
 ### ApiOptionsOptions <a id="ApiOptionsOptions-"></a>
 
+```wing
+struct ApiOptionsOptions extends ApiEndpointOptions {}
+```
+
 Options for the [`Api.options`](#options) method.
 
 #### Properties <a id="ApiOptionsOptions.Properties"></a>
@@ -336,6 +369,10 @@ Options for the [`Api.options`](#options) method.
 ---
 
 ### ApiPatchOptions <a id="ApiPatchOptions-"></a>
+
+```wing
+struct ApiPatchOptions extends ApiEndpointOptions {}
+```
 
 Options for the [`Api.patch`](#patch) method.
 
@@ -353,6 +390,10 @@ Options for the [`Api.patch`](#patch) method.
 
 ### ApiPostOptions <a id="ApiPostOptions-"></a>
 
+```wing
+struct ApiPostOptions extends ApiEndpointOptions {}
+```
+
 Options for the [`Api.post`](#post) method.
 
 #### Properties <a id="ApiPostOptions.Properties"></a>
@@ -368,6 +409,13 @@ Options for the [`Api.post`](#post) method.
 ---
 
 ### ApiProps <a id="ApiProps-"></a>
+
+```wing
+struct ApiProps {
+    cors: bool?;
+    corsOptions: ApiCorsOptions?;
+}
+```
 
 Options for the [`Api.new`](#initializers) method.
 
@@ -386,6 +434,10 @@ TODO: Support CORS options override on a per-route basis.
 
 ### ApiPutOptions <a id="ApiPutOptions-"></a>
 
+```wing
+struct ApiPutOptions extends ApiEndpointOptions {}
+```
+
 Options for the [`Api.put`](#put) method.
 
 #### Properties <a id="ApiPutOptions.Properties"></a>
@@ -402,22 +454,41 @@ Options for the [`Api.put`](#put) method.
 
 ### ApiRequest <a id="ApiRequest-"></a>
 
+```wing
+struct ApiRequest {
+    body: str?;
+    headers: Map<str>?;
+    method: HttpMethod;
+    path: str;
+    query: Map<str>;
+    vars: Map<str>;
+}
+```
+
 Input parameter type for the [`IApiEndpointHandler.handle`](#handle) method.
 
 #### Properties <a id="ApiRequest.Properties"></a>
 
 | **Name** | **Type** | **Description** | **Required** | **Default** |
 | --- | --- | --- | --- | --- |
+| `body` | [`str`](../spec.md#standard-types) | The body of the request. | No | Undefined |
+| `headers` | [`Map<str>`](../spec.md#standard-types) | The headers of the request. | No | Undefined |
 | `method` | [`HttpMethod`](#HttpMethod-) | The HTTP method of the request. | Yes | |
 | `path` | [`str`](../spec.md#standard-types) | TThe URL path of the request. | Yes | |
 | `query` | [`Map<str>`](../spec.md#standard-types) | The query string values of the request. | Yes | |
 | `vars` | [`Map<str>`](../spec.md#standard-types) | The path variables. | Yes | |
-| `body` | [`str`](../spec.md#standard-types) | The body of the request. | No | Undefined |
-| `headers` | [`Map<str>`](../spec.md#standard-types) | The headers of the request. | No | Undefined |
 
 ---
 
 ### ApiResponse <a id="ApiResponse-"></a>
+
+```wing
+struct ApiResponse {
+    body: str?;    
+    headers: Map<str>?;
+    status: num?;
+}
+```
 
 The return value type of the [`IApiEndpointHandler.handle`](#handle) method.
 
@@ -464,6 +535,19 @@ Function that is called to handle a particular HTTP request.
 ## Enums <a id="enums"></a>
 
 ### HttpMethod <a id="HttpMethod-"></a>
+
+```wing
+enum HttpMethod {
+  CONNECT,
+  DELETE,
+  GET,
+  HEAD,
+  OPTIONS,
+  PATCH,
+  POST,
+  PUT
+}
+```
 
 Supported HTTP methods.
 
