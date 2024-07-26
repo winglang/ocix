@@ -41,6 +41,8 @@ To simplify search, all types are consolidated in a single table in alphabetic o
 | :------------ | :----------------------- |
 | [Api](resources/api.md) | Represents a cloud-managed API Gateway hosting a collection of HTTP endpoints. |
 | [Bucket](resources/bucket.md) | Represents a container for storing data in the cloud. |
+| [Counter](resources/counter.md) | Represents a stateful container for one or more numbers in the cloud. |
+| [Domain](resources/domain.md) | Represents a network domain configuration of a [`Website`](resources/website.md) in the cloud. |
 | [Function](resources/function.md) | Represents a serverless function for performing short, stateless tasks. |
 | [onDeploy](resources/on-deploy.md) | Represents a block of inflight code that runs each time the application is deployed. |
 | [Queue](resources/queue.md) | Represents a distributed data structure for managing a sequence of messages. |

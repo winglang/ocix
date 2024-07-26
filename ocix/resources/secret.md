@@ -6,11 +6,13 @@ The `Secret` resource represents a sensitive value (like an API key, certificate
 
 ## Table of Contents
 
+<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
         - [Inflight Methods](#inflight-methods)
 - [Structs](#structs)
+<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 

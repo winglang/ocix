@@ -6,6 +6,7 @@ The `Api` resource models an endpoint as a collection of routes. Each route is d
 
 ## Table of Contents
 
+<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Properties](#api-properties)
@@ -14,6 +15,7 @@ The `Api` resource models an endpoint as a collection of routes. Each route is d
 - [Structs](#structs)
 - [Protocols](#protocols)
 - [Enums](#enums)
+<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 

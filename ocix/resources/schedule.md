@@ -4,12 +4,14 @@ The `Schedule` resource represents a trigger for events at regular intervals. Sc
 
 ## Table of Contents
 
+<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
         - [Preflight Methods](#preflight-methods)
 - [Structs](#structs)
 - [Protocols](#protocols)
+<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 

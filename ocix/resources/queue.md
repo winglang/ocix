@@ -8,6 +8,7 @@ By default, cloud `Queue` resources are not FIFO (first in, first out), and do n
 
 ## Table of Contents
 
+<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
@@ -15,6 +16,7 @@ By default, cloud `Queue` resources are not FIFO (first in, first out), and do n
         - [Inflight Methods](#inflight-methods)
 - [Structs](#structs)
 - [Protocols](#protocols)
+<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
