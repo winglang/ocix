@@ -4,6 +4,7 @@ The `Function` resource represents a serverless function for performing short, s
 
 When a function is invoked on a cloud provider, it is usually executed in a container or host that is provisioned on demand. Functions may be invoked multiple times, and some cloud providers may automatically retry failed invocations. For performance reasons, most cloud providers impose a timeout on functions, after which the function execution is automatically terminated.
 
+<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
@@ -11,6 +12,7 @@ When a function is invoked on a cloud provider, it is usually executed in a cont
         - [Inflight Methods](#inflight-methods)
 - [Structs](#structs)
 - [Protocols](#protocols)
+<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 

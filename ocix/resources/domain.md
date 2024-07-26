@@ -5,9 +5,11 @@ The `Domain` resource represents a network domain configuration of a [`Website`]
 
 ## Table of Contents
 
+<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
 - [Structs](#structs)
+<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 

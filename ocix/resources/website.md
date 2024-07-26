@@ -4,11 +4,13 @@ The `Website` resource represents a static website that can be hosted in the clo
 
 ## Table of Contents
 
+<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
         - [Preflight Methods](#preflight-methods)
 - [Structs](#structs)
+<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 

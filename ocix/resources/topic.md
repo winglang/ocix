@@ -6,6 +6,7 @@ The `Topic` represents a channel for publishing messages that subscribers can re
 
 ## Table of Contents
 
+<!-- markdownlint-disable MD007 -->
 - [API Reference](#api-reference)
     - [Initializers](#initializers)
     - [Methods](#methods)
@@ -13,6 +14,7 @@ The `Topic` represents a channel for publishing messages that subscribers can re
         - [Inflight Methods](#inflight-methods)
 - [Structs](#structs)
 - [Protocols](#protocols)
+<!-- markdownlint-enable MD007 -->
 
 ## API Reference <a id="api-reference"></a>
 
